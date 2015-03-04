@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="bustimes">
     <head>
         <title>Oxford Bus Times</title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
@@ -8,12 +8,12 @@
     </head>
     <body>
         <div class="container">
-            <div class="row bg-oxblue">
+            <div class="row top-banner bg-oxblue">
                 <div class="col-xs-8">
-                    <h3 class="top-banner"><i class="icon ion-android-bus"></i>&#160;&#160;Oxford Bus Times</h3>
+                    <h3 style="margin-top: 0px; margin-bottom: 0px"><i class="icon ion-android-bus"></i>&#160;&#160;Oxford Bus Times</h3>
                 </div>
                 <div class="col-xs-4 text-right">
-                    <div style="margin-top: 20px;">
+                    <div>
                         <button class="btn btn-sm btn-primary"><i class="icon ion-search"></i>&#160;Search stops</button>
                     </div>
                 </div>
@@ -22,5 +22,18 @@
                 <div class="col-xs-12"></div>
             </div>
         </div>
+        
+        <script type="text/javascript" src="assets/js/jquery/2.1.3/jquery-2.1.3.min.js"></script>
+        
+        <script type="text/javascript" src="assets/js/angular/1.3.14/angular.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular/1.3.14/angular-route.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular/1.3.14/angular-animate.min.js"></script>
+
+        <script type="text/javascript" src="assets/js/angular-ui/ui-bootstrap/0.12.1/ui-bootstrap-tpls-0.12.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular-ui/ui-utils/0.2.2/ui-utils.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular-ui/ui-utils/0.2.2/ui-utils-ieshiv.min.js"></script>
+        
+        <script type="text/javascript" src="app/app.module.js"></script>
+        <script type="text/javascript" src="app/shared/dataService.js"></script>
     </body>
 </html>

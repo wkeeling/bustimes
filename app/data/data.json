@@ -219,7 +219,7 @@
                 "longitude": -1.269511
             },
             "services": ["S3"]
-        },        
+        }        
     ],
     "services": [
         {
