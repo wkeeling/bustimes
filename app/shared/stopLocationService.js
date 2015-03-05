@@ -8,12 +8,14 @@ function StopLocationService($q, DataService) {
     
     this.getStopsNearestMe = function(limit, excluding) {
         var deferred = $q.defer();
+        
         if (navigator.geolocation) {
             var options = {
                 timeout : 5000,
                 maximumAge : 0
             }; 
-            navigator.geolocation.getCurrentPosition(function(pos) {
+            var watchId = navigator.geolocation.watchPosition(function(pos) {
+                navigator.geolocation.clearWatch(watchId);
                 getStopsNearest(pos, limit, excluding).then(function(stops) {
                     deferred.resolve(stops);
                 });
@@ -49,7 +51,7 @@ function StopLocationService($q, DataService) {
         var deferred = $q.deferred;
         DataService.getStops().then(function(allStops) {
             var nearestStops = [];
-            // Do logic
+            // Do logic. ETADirective
             deferred.resolve(nearestStops);
         });
         return deferred.promise;
@@ -58,7 +60,8 @@ function StopLocationService($q, DataService) {
 
 function getNearestStop(func) {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(pos) {   
+        var watchId = navigator.geolocation.watchPosition(function(pos) {   
+            navigator.geolocation.clearWatch(watchId);
             var lastDist = -1,
                 lastStop = null;
             stops.forEach(function(stop) {
