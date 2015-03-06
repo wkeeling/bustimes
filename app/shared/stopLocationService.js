@@ -49,7 +49,7 @@ function StopLocationService($q, DataService) {
     
     function getStopsNearest(pos, limit, excluding) {
         var deferred = $q.deferred;
-        DataService.getStops().then(function(allStops) {
+        DataService.getStops().then(function(stops) {
             var nearestStops = [];
             // Do logic. ETADirective
             deferred.resolve(nearestStops);

@@ -20,6 +20,7 @@ function DataService($http, $q) {
             stops: data.stops,
             services: data.services,
             operators: data.operators,
+            stopsByName: {},
             stopsByService: {}
         };
         
@@ -30,6 +31,8 @@ function DataService($http, $q) {
                 } 
                 processed.stopsByService[service].push(stop);
             });
+            
+            processed.stopsByName[stop.name] = stop;
         });
         
         return processed;
@@ -53,5 +56,14 @@ function DataService($http, $q) {
         });
         return deferred.promise;
     };
+    
+    this.getStopNames = function() {
+        var deferred = $q.defer();
+        promise = promise.then(function(data) {
+            deferred.resolve(Object.keys(data.stopsByName).sort());
+            return data;
+        });
+        return deferred.promise;
+    }
 }
     

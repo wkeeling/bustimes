@@ -1,0 +1,9 @@
+{
+    "name": "bustimes",
+    "version": "0.1.0",
+    "author": "Will Keeling",
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-serve": "~0.1.6"
+    }
+}

@@ -6,6 +6,7 @@ bustimes.directive('topBar', function() {
         scope: {},
         restrict: 'E',
         templateUrl: '/app/shared/topbar/topBar.ngtmpl.html',
+        controller: 'TopBarController'
     };
 
 });

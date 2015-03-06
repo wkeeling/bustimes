@@ -1,8 +1,20 @@
-.top-bar {
-    height: 60px;
+.navbar {
+}
+
+.navbar h3 {
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 .bg-oxblue {
     color: #FFFFFF;
     background-color: #002147
+}
+
+.navbar-form {
+    margin-bottom: 0px;
+}
+
+.navbar-form, .navbar-default, .navbar-collapse {
+    border: 0px;
 }
