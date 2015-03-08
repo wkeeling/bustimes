@@ -1,22 +1,18 @@
-bustimes.controller('TopBarController', ['$scope', '$timeout', 'DataService', TopBarController]);
+bustimes.controller('TopBarController', ['$scope', 'StopSearchService', TopBarController]);
 
-function TopBarController($scope, $timeout, DataService) {
+function TopBarController($scope, StopSearchService) {
     'use strict';
     
     $scope.navbar = {
         search: {
             selected: undefined,
-            getMatchingStops: function(val) {
-                val = val && val.toLowerCase() || val;
-                return DataService.getStops().then(function(stops) {
-                    var matching = [];
-                    stops.forEach(function(stop) {
-                        if (stop.qualifiedName().toLowerCase().indexOf(val) > -1) {
-                            matching.push(stop);
-                        }
-                    });
-                    return matching;
-                });
+            
+            textEntered: function(text) {
+                return StopSearchService.getMatchingStops(text);
+            },
+            
+            onSelect: function($item, $model, $label) {
+                StopSearchService.onStopSelected($item);
             }
         }
     };
