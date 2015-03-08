@@ -8,11 +8,11 @@ function TopBarController($scope, $timeout, DataService) {
             selected: undefined,
             getMatchingStops: function(val) {
                 val = val && val.toLowerCase() || val;
-                return DataService.getStopQualifiedNames().then(function(names) {
+                return DataService.getStops().then(function(stops) {
                     var matching = [];
-                    names.forEach(function(name) {
-                        if (name.toLowerCase().indexOf(val) > -1) {
-                            matching.push(name);
+                    stops.forEach(function(stop) {
+                        if (stop.qualifiedName().toLowerCase().indexOf(val) > -1) {
+                            matching.push(stop);
                         }
                     });
                     return matching;
