@@ -1,8 +1,7 @@
-'use strict';
-
 bustimes.service('DataService', ['$http', '$q', DataService]);
 
 function DataService($http, $q) {
+    'use strict';
     var DATA_SOURCE = '/app/data/data.json',
         promise = null,
         that = this;
@@ -20,7 +19,7 @@ function DataService($http, $q) {
             stops: data.stops,
             services: data.services,
             operators: data.operators,
-            stopsByName: {},
+            stopsByQualifiedName: {},
             stopsByService: {}
         };
         
@@ -32,7 +31,7 @@ function DataService($http, $q) {
                 processed.stopsByService[service].push(stop);
             });
             
-            processed.stopsByName[stop.name] = stop;
+            processed.stopsByQualifiedName[stop.name + ' - ' + stop['town/village']] = stop;
         });
         
         return processed;
@@ -57,13 +56,13 @@ function DataService($http, $q) {
         return deferred.promise;
     };
     
-    this.getStopNames = function() {
+    this.getStopQualifiedNames = function() {
         var deferred = $q.defer();
         promise = promise.then(function(data) {
-            deferred.resolve(Object.keys(data.stopsByName).sort());
+            deferred.resolve(Object.keys(data.stopsByQualifiedName).sort());
             return data;
         });
         return deferred.promise;
-    }
+    };
 }
     

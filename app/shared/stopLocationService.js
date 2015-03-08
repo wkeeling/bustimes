@@ -1,8 +1,8 @@
-'use strict';
 
 bustimes.service('StopLocationService', ['$q', 'DataService', StopLocationService]);
 
 function StopLocationService($q, DataService) {
+    'use strict';
     
     var that = this;
     
@@ -40,7 +40,7 @@ function StopLocationService($q, DataService) {
     };
     
     function resolveManually(limit, excluding, deferred) {
-        this.setMyLocation().then(function(position) {
+        that.setMyLocation().then(function(position) {
             getStopsNearest(position, limit, excluding).then(function(stops) {
                 deferred.resolve(stops);
             });

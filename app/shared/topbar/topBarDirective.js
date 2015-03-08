@@ -1,6 +1,5 @@
-'use strict';
-
 bustimes.directive('topBar', function() {
+    'use strict';
    
     return {
         scope: {},

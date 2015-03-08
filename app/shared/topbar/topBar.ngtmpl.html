@@ -1,18 +1,14 @@
 <nav class="navbar navbar-default bg-oxblue">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle bg-oxblue" ng-click="navbar.onSearchClick()">
-                <span class="sr-only">Search for stop</span>
-                <i class="icon ion-android-search"></i>&#160;Search for stop
-            </button>
             <h3><i class="icon ion-android-bus"></i>&#160;&#160;Oxford Buses in Real-time</h3>
         </div>
 
-        <div collapse="navbar.collapsed">
+        <div>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search for stop" focus-on="searchOpened" 
-                            typeahead="name for name in navbar.search.getStopNames()" ng-model="navbar.search.selected">
+                            typeahead="name for name in navbar.search.getMatchingStops($viewValue)" ng-model="navbar.search.selected">
                 </div>
             </form>
         </div>
