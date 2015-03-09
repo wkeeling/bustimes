@@ -3,7 +3,7 @@ bustimes.controller('TopBarController', ['$scope', 'StopSearchService', TopBarCo
 function TopBarController($scope, StopSearchService) {
     'use strict';
     
-    $scope.navbar = {
+    $scope.topbar = {
         search: {
             selected: undefined,
             
@@ -16,4 +16,8 @@ function TopBarController($scope, StopSearchService) {
             }
         }
     };
+    
+    StopSearchService.registerSearchListener({stopCleared: function() {
+        $scope.topbar.search.selected = '';
+    }});
 }

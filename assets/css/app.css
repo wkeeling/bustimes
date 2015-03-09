@@ -19,3 +19,7 @@
 .navbar-form, .navbar-default, .navbar-collapse {
     border: 0px;
 }
+
+.main-content {
+    padding: 4px;
+}

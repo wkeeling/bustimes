@@ -1,1 +1,17 @@
-<div>hello</div>
+<div class="panel panel-primary" collapse="!search.selected">
+    <div class="panel-heading" style="padding-left: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    <h3 class="panel-title"><i class="icon ion-android-bus"></i>&#160;&#160;{{search.selected.qualifiedName}}<span class="label label-default" style="margin-left: 20px;">0.4km</span></h3>
+                </div>
+                <div class="col-xs-2" style="text-align: right;">
+                    <span style="padding-right: 10px"><i class="ion ion-ios-heart" ng-click="search.addFavourite()" style="cursor: pointer" tooltip="Add stop to favourites" style="font-size: 1.5em"></i></span>
+                    <i class="ion ion-close-round" ng-click="search.clear()" style="cursor: pointer" tooltip="Clear" style="font-size: 1.5em"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+    </div>
+</div>

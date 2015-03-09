@@ -3,9 +3,17 @@ bustimes.controller('SearchController', ['$scope', 'StopSearchService', SearchCo
 function SearchController($scope, StopSearchService) {
     'use strict';
     
+    $scope.search = {
+        selected: undefined,
+        clear: function() {
+            StopSearchService.onStopCleared(this.selected);
+            this.selected = undefined;
+        }
+    };
+    
     function stopSelected(stop) {
-        console.log(stop.name);
+        $scope.search.selected = stop;
     }
     
-    StopSearchService.registerSearchListener(stopSelected);
+    StopSearchService.registerSearchListener({stopSelected: stopSelected});
 }

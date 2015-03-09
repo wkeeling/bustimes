@@ -31,11 +31,9 @@ function DataService($http, $q) {
                 processed.stopsByService[service].push(stop);
             });
             
-            stop.qualifiedName = function() {
-                return this.name + ' - ' + this['town/village'];
-            }; 
+            stop.qualifiedName = stop.name + ' - ' + stop['town/village'];
             
-            processed.stopsByQualifiedName[stop.qualifiedName()] = stop;
+            processed.stopsByQualifiedName[stop.qualifiedName] = stop;
         });
         
         return processed;
