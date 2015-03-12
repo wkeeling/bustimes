@@ -6,6 +6,21 @@ function StopLocationService($q, DataService) {
     
     var that = this;
     
+    // this.getPosition = function() {
+        // var deferred = $q.defer();
+        // if (navigator.geolocation) {
+            // var options = {
+                // timeout : 5000,
+                // maximumAge : 0
+            // }; 
+        // } else {
+            // console.warn('Browser does not support geolocation');
+            // resolveManually(limit, excluding, deferred);
+        // }
+//         
+        // return deferred.promise;        
+    // }
+    
     this.getStopsNearestMe = function(limit, excluding) {
         var deferred = $q.defer();
         
