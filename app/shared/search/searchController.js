@@ -5,10 +5,12 @@ function SearchController($scope, StopSearchService) {
     
     $scope.search = {
         selected: undefined,
+      
         clear: function() {
             StopSearchService.onStopCleared(this.selected);
             this.selected = undefined;
         }
+        
     };
     
     function stopSelected(stop) {

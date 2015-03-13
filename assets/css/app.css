@@ -11,6 +11,7 @@
     color: #FFFFFF;
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
+    border-radius: 4px;
 }
 
 .bg-oxblue {
@@ -35,4 +36,6 @@
     border: 0px;
 }
 
-
+h3.panel-title {
+    font-weight: bold;
+}
