@@ -1,25 +1,6 @@
-<div class="panel panel-default" collapse="!search.selected">
-    <div class="panel-heading" style="padding-left: 0px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="container">
-                        <h3 class="panel-title"><i class="icon ion-android-bus"></i>&#160;&#160;{{search.selected.name}}</h3>
-                        <span style="padding-left: 20px">{{search.selected['town/village']}}</span>
-                    </div>
-                </div>
-                <div class="col-xs-2">
-                    <div style="margin-top:8px;" class="badge"><strong>0.4km</strong></div>
-                </div>
-                <div class="col-xs-1">
-                    <h4 style="margin-top: 0px; margin-bottom: 0px"><i class="ion ion-ios-heart" ng-click="search.addFavourite()" style="cursor: pointer; margin-top: 8px"></i></h4>
-                </div>
-                <div class="col-xs-1">
-                    <h4 style="margin-top: 0px; margin-bottom: 0px"><i class="ion ion-close-round" ng-click="search.clear()" style="cursor: pointer; margin-top: 8px"></i></h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="panel-body">
-    </div>
+<div collapse="!search.selected">
+    <stop stop="search.selected"
+          onAdd="search.addFavourite()"
+          onClose="search.clear()">
+    </stop>
 </div>

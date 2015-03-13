@@ -1,4 +1,4 @@
-<div ng-if="getNearest()">
+<div collapse="!nearest.stops">
     <div class="separator">Nearest stops</div>
-    
+    <stop ng-repeat="stop in nearest.stops" stop="stop"></stop>
 </div>

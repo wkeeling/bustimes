@@ -1,7 +1,6 @@
+bustimes.service('StopLocationService', ['$rootScope', '$q', 'DataService', StopLocationService]);
 
-bustimes.service('StopLocationService', ['$q', 'DataService', StopLocationService]);
-
-function StopLocationService($q, DataService) {
+function StopLocationService($rootScope, $q, DataService) {
     'use strict';
     
     var LOCATION_UPDATE = 'location_update',
@@ -14,19 +13,18 @@ function StopLocationService($q, DataService) {
                 maximumAge : 0
             };         
             var watchId = navigator.geolocation.watchPosition(function(pos) {
-                navigator.geolocation.clearWatch(watchId);
-                
                 DataService.getStops().then(function(stops) {
                     stops.forEach(function(stop) {
-                        var dist = getDistanceFromLatLonInKm(stop.latitude, stop.longitude, 
+                        var dist = getDistanceFromLatLonInKm(stop.position.latitude, stop.position.longitude, 
                                                              pos.coords.latitude, pos.coords.longitude);
                         stop.distance = dist;
                     });
                     stops.sort(function(stop1, stop2) {
                         return stop1.distance - stop2.distance;
                     });
+                    
+                    $rootScope.$broadcast(LOCATION_UPDATE);
                 });                
-                
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);
             }, options);
@@ -34,7 +32,6 @@ function StopLocationService($q, DataService) {
             console.warn('Browser does not support geolocation');
         }            
     };
-    
     
     // Manually set location, perhaps by bringing up a map
     // Publically exposed as used elsewhere
@@ -61,6 +58,5 @@ function StopLocationService($q, DataService) {
         return deg * (Math.PI / 180);
     }
     
-    this.updateLocation();
 }
 

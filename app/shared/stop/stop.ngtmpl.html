@@ -1,0 +1,25 @@
+<div class="panel panel-warning">
+    <div class="panel-heading" style="padding-left: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="container">
+                        <h3 class="panel-title"><i class="icon ion-android-bus"></i>&#160;&#160;{{stop.name}}</h3>
+                        <span style="padding-left: 20px">{{stop['town/village']}}</span>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <span ng-if="stop.distance" style="margin-top:8px;" class="badge"><strong>{{stop.distance | number:1}} km</strong></span>
+                </div>
+                <div class="col-xs-1">
+                    <h4 ng-if="onAdd" style="margin-top: 0px; margin-bottom: 0px"><i class="ion ion-ios-heart" ng-click="onAdd()" style="cursor: pointer; margin-top: 8px"></i></h4>
+                </div>
+                <div class="col-xs-1">
+                    <h4 ng-if="onClose" style="margin-top: 0px; margin-bottom: 0px"><i class="ion ion-close-round" ng-click="onClose" style="cursor: pointer; margin-top: 8px"></i></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+    </div>
+</div>
