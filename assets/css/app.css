@@ -1,5 +1,21 @@
+@font-face {
+    font-family: BPdots;
+    src: url("/assets/fonts/BPdots.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BPdots;
+    font-weight: bold;
+    src: url("/assets/fonts/BPdotsBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: digitaldream;
+    src: url("/assets/fonts/digitaldream.ttf") format("opentype");
+}
+
 body {
-    padding-top: 65px;
+    padding-top: 48px;
 }
 
 .main-content {
@@ -11,25 +27,33 @@ body {
     padding-bottom: 3px;
     padding-left: 10px;
     font-weight: bold;
-    background-color: #BBBBBB;
     color: #FFFFFF;
-    border-top: 1px solid #CCCCCC;
-    border-bottom: 1px solid #CCCCCC;
+    background-color: #AAAAAA;
+    border-top: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .bg-oxblue {
     color: #FFFFFF;
-    background-color: #002147
-}
-
-.navbar {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #002147),
+        color-stop(1, #00397A)
+    );
+    background-image: -o-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: -moz-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: -webkit-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: -ms-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: linear-gradient(to bottom, #002147 0%, #00397A 100%);
 }
 
 .navbar h3 {
     margin-left: 15px;
-    margin-top: 15px;
+    margin-top: 12px;
     margin-right: 20px;
 }
 
@@ -37,10 +61,28 @@ body {
     margin-bottom: 0px;
 }
 
-.navbar-form, .navbar-default, .navbar-collapse {
-    border: 0px;
-}
-
 h3.panel-title {
     font-weight: bold;
+}
+
+.panel {
+    margin-bottom: 5px;
+}
+
+.panel-body {
+    background-color: #666666;
+    font-family: digitaldream;
+    font-size: 12px;
+    color: #F2F5A9;
+    padding: 10px;
+    border-top: 1px solid #AAAAAA;
+}
+
+.panel-body .label {
+    font-size: 100%;
+    color: #F2F5A9;
+}
+
+.panel-body .table td {
+    border-top: none;
 }

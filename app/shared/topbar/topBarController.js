@@ -5,6 +5,7 @@ function TopBarController($scope, StopSearchService) {
     
     $scope.topbar = {
         search: {
+            collapsed: true,
             selected: undefined,
             
             textEntered: function(text) {
@@ -13,6 +14,8 @@ function TopBarController($scope, StopSearchService) {
             
             onSelect: function($item, $model, $label) {
                 StopSearchService.onStopSelected($item);
+                this.collapsed = true;
+                this.selected = undefined;
             }
         }
     };
