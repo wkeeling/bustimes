@@ -1,6 +1,6 @@
-bustimes.service('StopLocationService', ['$rootScope', '$q', 'DataService', StopLocationService]);
+bustimes.service('StopLocationService', ['$rootScope', '$q', '$timeout', 'DataService', StopLocationService]);
 
-function StopLocationService($rootScope, $q, DataService) {
+function StopLocationService($rootScope, $q, $timeout, DataService) {
     'use strict';
     
     var LOCATION_UPDATE = 'location_update',
@@ -14,16 +14,16 @@ function StopLocationService($rootScope, $q, DataService) {
             };         
             var watchId = navigator.geolocation.watchPosition(function(pos) {
                 DataService.getStops().then(function(stops) {
-                    stops.forEach(function(stop) {
-                        var dist = getDistanceFromLatLonInKm(stop.position.latitude, stop.position.longitude, 
-                                                             pos.coords.latitude, pos.coords.longitude);
-                        stop.distance = dist;
+                    $timeout(function() { // In a $timeout because geolocation is outside of the digest cycle
+                        stops.forEach(function(stop) {
+                            var dist = getDistanceFromLatLonInKm(stop.position.latitude, stop.position.longitude, 
+                                                                 pos.coords.latitude, pos.coords.longitude);
+                            stop.distance = dist;
+                        });
+                        stops.sort(function(stop1, stop2) {
+                            return stop1.distance - stop2.distance;
+                        });
                     });
-                    stops.sort(function(stop1, stop2) {
-                        return stop1.distance - stop2.distance;
-                    });
-                    
-                    $rootScope.$broadcast(LOCATION_UPDATE);
                 });                
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);

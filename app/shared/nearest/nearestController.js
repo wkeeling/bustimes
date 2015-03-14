@@ -5,21 +5,22 @@ function NearestController($scope, DataService) {
     
     var MAX_DISTANCE = 1, // Don't display stops over 1km away
         MAX_STOPS_TO_DISPLAY = 5, // Show a maximum of 5 stops
-        LOCATION_UPDATE = 'location_update';
+        allStops = [],
+        prevNearest = [];
     
     $scope.nearest = {
-        stops: [],
-    };
-    
-    $scope.$on(LOCATION_UPDATE, function() {
-        DataService.getStops().then(function(stops) {
-            var nearest = findNearest(stops);
-            
-            if (nearest.length) {
-                $scope.nearest.stops = nearest;
+        find: function() {
+            var nearest = findNearest(allStops);
+            if (nearest.length === prevNearest.length && nearest.every(function(v,i) { return v === prevNearest[i];})) {
+                // No change in nearest stops
+                return prevNearest;
             }
-        });
-    });
+            
+            prevNearest = nearest;
+            
+            return prevNearest;
+        }
+    };
     
     function findNearest(stops) {
         var nearest = [];
@@ -27,7 +28,7 @@ function NearestController($scope, DataService) {
         for (var i = 0, length = stops.length; i < length; i++) {
             var stop = stops[i];
             
-            if (stop.distance > MAX_DISTANCE || nearest.length > MAX_STOPS_TO_DISPLAY) {
+            if (!stop.distance || stop.distance > MAX_DISTANCE || nearest.length > MAX_STOPS_TO_DISPLAY) {
                 break;
             }
             
@@ -52,5 +53,11 @@ function NearestController($scope, DataService) {
         
         return excluded;
     }
+    
+    (function() {
+        DataService.getStops().then(function(stops) {
+            allStops = stops;
+        });
+    })();
     
 }
