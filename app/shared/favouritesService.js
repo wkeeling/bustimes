@@ -1,12 +1,13 @@
-bustimes.service('FavouriteService', ['$q', 'DataService', FavouriteService]);
+bustimes.service('FavouritesService', ['$q', 'DataService', FavouritesService]);
 
-function FavouriteService($q, DataService) {
+function FavouritesService($q, DataService) {
     'use strict';
     
     var MAX_ALLOWED_FAVOURITES = 3,
-        STORAGE_KEY = 'favouriteStops';
+        STORAGE_KEY = 'favouriteStops',
+        listeners = [];
         
-    function getFavourites() {
+    function get() {
         var favourites = window.localStorage.getItem(STORAGE_KEY);
         if (favourites) {
             favourites = JSON.parse(favourites);
@@ -16,13 +17,24 @@ function FavouriteService($q, DataService) {
         return favourites;
     }
     
-    function setFavourites(favourites) {
+    function set(favourites) {
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(favourites));
+        notifyListeners();
     }
     
+    function notifyListeners() {
+        listeners.forEach(function(listener) {
+            listener(); 
+        });
+    }
+    
+    this.registerFavouritesListener = function(listener) {
+        listeners.push(listener);
+    };
+    
     this.getFavourites = function() {
-        var deferred = $q.defer();
-            favourites = getFavourites(); 
+        var deferred = $q.defer(),
+            favourites = get(); 
         
         DataService.getStopsByQualifiedName().then(function(stops) {
             var favouriteStops = [];
@@ -38,7 +50,7 @@ function FavouriteService($q, DataService) {
     };
     
     this.addFavourite = function(stop) {
-        var favourites = getFavourites();
+        var favourites = get();
 
         if (favourites.indexOf(stop.qualifiedName) === -1) {
             if (favourites.length === MAX_ALLOWED_FAVOURITES) {
@@ -48,26 +60,29 @@ function FavouriteService($q, DataService) {
             favourites.unshift(stop.qualifiedName);
         }        
         
-        setFavourites(favourites);
+        set(favourites);
     };
     
     this.removeFavourite = function(stop) {
-        var favourites = getFavourites();
+        var favourites = get();
         
         if (favourites && favourites.length) {
             if (favourites.indexOf(stop.qualifiedName) > -1) {
                 favourites.splice(favourites.indexOf(stop.qualifiedName), 1);
             }
         }
-        setFavourites(favourites);
+        
+        set(favourites);
     };
     
     this.isFavourite = function(stop) {
         var favourite = false,
-            favourites = getFavourites();
+            favourites = get();
+            
         if (favourites && favourites.length) {
             favourite = favourites.indexOf(stop.qualifiedName) > -1;
         }
+        
         return favourite;
     };
 }

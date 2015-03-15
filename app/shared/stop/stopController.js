@@ -1,19 +1,19 @@
-bustimes.controller('StopController', ['$scope', 'FavouriteService', StopController]);
+bustimes.controller('StopController', ['$scope', 'FavouritesService', StopController]);
 
-function StopController($scope, FavouriteService) {
+function StopController($scope, FavouritesService) {
     'use strict';
     
     $scope.actions = {
         toggleFavourite: function() {
-            if (!FavouriteService.isFavourite($scope.stop)) {
-                FavouriteService.addFavourite($scope.stop);
+            if (!FavouritesService.isFavourite($scope.stop)) {
+                FavouritesService.addFavourite($scope.stop);
             } else {
-                FavouriteService.removeFavourite($scope.stop);
+                FavouritesService.removeFavourite($scope.stop);
             }
         },
         
         isFavourite: function() {
-            return $scope.stop && FavouriteService.isFavourite($scope.stop);
+            return $scope.stop && FavouritesService.isFavourite($scope.stop);
         }
     };
 }
