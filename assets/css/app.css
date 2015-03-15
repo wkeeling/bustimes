@@ -1,21 +1,15 @@
 @font-face {
-    font-family: BPdots;
-    src: url("/assets/fonts/BPdots.otf") format("opentype");
-}
-
-@font-face {
-    font-family: BPdots;
-    font-weight: bold;
-    src: url("/assets/fonts/BPdotsBold.otf") format("opentype");
-}
-
-@font-face {
     font-family: digitaldream;
     src: url("/assets/fonts/digitaldream.ttf") format("opentype");
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     padding-top: 48px;
+    overflow-y: hidden
 }
 
 .main-content {
@@ -57,6 +51,12 @@ body {
     margin-right: 20px;
 }
 
+.navbar h4 {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
 .navbar-form {
     margin-bottom: 0px;
 }
@@ -69,20 +69,45 @@ h3.panel-title {
     margin-bottom: 5px;
 }
 
+.panel-heading {
+    padding-left: 0px;
+}
+
 .panel-body {
-    background-color: #666666;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #4A4A4A),
+        color-stop(1, #757575)
+    );
+    background-image: -o-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: -moz-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: -webkit-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: -ms-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: linear-gradient(to bottom, #4A4A4A 0%, #757575 100%);
     font-family: digitaldream;
-    font-size: 12px;
+    font-size: 14px;
     color: #F2F5A9;
     padding: 10px;
     border-top: 1px solid #AAAAAA;
 }
 
-.panel-body .label {
-    font-size: 100%;
-    color: #F2F5A9;
-}
-
 .panel-body .table td {
     border-top: none;
+}
+
+.stop-actions {
+    float: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.stop-actions td {
+    padding-right: 4px;
+    padding-top: 2px;
+}
+
+.stop-actions td i {
+   font-size: 24px
 }

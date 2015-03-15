@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="bustimes">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Oxford Buses</title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="assets/css/ionicons.min.css"/>
+        <link rel="stylesheet" href="assets/css/font-awesome.css"/>
         <link rel="stylesheet" href="assets/css/app.css"/>
     </head>
     <body>
         <top-bar></top-bar>
-        <div class="container" style="padding-left: 0px; padding-right: 0px">
+        <div class="container" style="padding-left: 0px; padding-right: 0px;">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="container main-content">
@@ -48,6 +50,7 @@
         <script type="text/javascript" src="app/shared/dataService.js"></script>
         <script type="text/javascript" src="app/shared/stopLocationService.js"></script>
         <script type="text/javascript" src="app/shared/stopSearchService.js"></script>
+        <script type="text/javascript" src="app/shared/favouriteService.js"></script>
         <script type="text/javascript" src="app/shared/topbar/topBarDirective.js"></script>
         <script type="text/javascript" src="app/shared/topbar/topBarController.js"></script>
         <script type="text/javascript" src="app/shared/search/searchDirective.js"></script>

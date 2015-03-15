@@ -19,8 +19,9 @@ function DataService($http, $q) {
             stops: data.stops,
             services: data.services,
             operators: data.operators,
+            stopsByShortcode: {},
             stopsByQualifiedName: {},
-            stopsByService: {}
+            stopsByService: {},
         };
         
         data.stops.forEach(function(stop) {
@@ -43,6 +44,15 @@ function DataService($http, $q) {
         var deferred = $q.defer();
         promise = promise.then(function(data) {
             deferred.resolve(data.stops);
+            return data;
+        });
+        return deferred.promise;
+    };
+    
+    this.getStopsByQualifiedName = function() {
+        var deferred = $q.defer();
+        promise = promise.then(function(data) {
+            deferred.resolve(data.stopsByQualifiedName);
             return data;
         });
         return deferred.promise;

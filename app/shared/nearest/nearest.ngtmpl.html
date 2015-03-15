@@ -1,4 +1,7 @@
+<div class="separator bg-oxblue">Stops near me</div>
 <div ng-if="nearest.find().length">
-    <div class="separator">Stops near me</div>
     <stop ng-repeat="stop in nearest.find()" stop="stop"></stop>
+</div>
+<div ng-if="!nearest.find().length" style="text-align: center">
+    <h4 style="padding-top: 20px;"><small><i class="fa fa-spinner fa-spin"></i>&#160;&#160;Waiting for location...</small></h4>
 </div>

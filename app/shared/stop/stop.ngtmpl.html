@@ -1,35 +1,37 @@
 <div class="panel panel-primary">
-    <div class="panel-heading" style="padding-left: 0px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-9">
-                    <h3 class="panel-title pull-left" style="height: 20px; margin-right: 10px"><i class="icon ion-android-bus"></i></h3>
-                    <h3 class="panel-title">{{stop.name}}</h3>
-                    <div style="padding-left: 20px">{{stop['town/village']}}</div>
-                </div>
-                <div class="col-xs-3 text-right" style="padding-right: 30px">
-                    <span ng-if="stop.distance" class="badge"><strong>{{stop.distance | number:1}} km</strong></span>
-                </div>
-                <!-- <div class="col-xs-1">
-                    <h4 ng-if="add" style="margin-top: 0px; margin-bottom: 0px"><i class="ion ion-ios-heart" ng-click="add()" style="cursor: pointer; margin-top: 8px"></i></h4>
-                </div>
-                <div class="col-xs-1">
-                    <h4 ng-if="close" style="margin-top: 0px; margin-bottom: 0px"><i class="ion ion-close-round" ng-click="close()" style="cursor: pointer; margin-top: 8px"></i></h4>
-                </div> -->
-            </div>
-        </div>
+    <table class="stop-actions">
+        <tr ng-if="options.close">
+            <td><i ng-click="options.close()" class="ion ion-ios-close-outline"></i></td>
+        </tr>
+        <tr>
+            <td><i ng-click="actions.toggleFavourite()" class="ion" ng-class="{'ion-ios-star': actions.isFavourite(), 'ion-ios-star-outline': !actions.isFavourite()}"></i></td>
+        </tr>
+    </table>
+    <div class="panel-heading">
+        <table>
+            <tr>
+                <td style="padding-left: 10px; padding-right: 10px;"><h3 class="panel-title"><i class="fa fa-bus"></i></h3></td>
+                <td style="width: 100%"><h3 class="panel-title">{{stop.name}}</h3></td>
+                <td style="padding-right: 8px;"><span ng-if="stop.distance" class="label label-success"><strong>{{stop.distance | number:1}} km</strong></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>{{stop['town/village']}}</td>
+                <td></td>
+            </tr>
+        </table>
     </div>
     <div class="panel-body">
         <table class="table table-condensed">
             <tr>
-                <td>S3</td>
+                <td style="width: 10%">S3</td>
                 <td>Chipping Norton</td>
-                <td style="width: 10%"><span class="label label-danger">DUE</span</td>
+                <td style="text-align: right; width: 100px;">DUE</td>
             </tr>
             <tr>
                 <td>S3</td>
                 <td>Oxford</td>
-                <td><span class="label">8 mins</span</td>
+                <td style="text-align: right">8 mins</td>
             </tr>            
         </table>
     </div>

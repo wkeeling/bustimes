@@ -4,8 +4,7 @@ bustimes.directive('stop', function() {
     return {
         scope: {
             stop: '=',
-            add: '&?',
-            close: '&?'
+            options: '=?'
         },
         restrict: 'E',
         templateUrl: '/app/shared/stop/stop.ngtmpl.html',
