@@ -1,4 +1,6 @@
-<div ng-if="favourite.stops">
+<div ng-if="favourite.stops.length">
     <div class="separator bg-oxblue">My favourite stops</div>
-    <stop ng-repeat="stop in favourite.stops" stop="stop"></stop>
+    <div ng-repeat="stop in favourite.stops" class="animate-stop">
+        <stop stop="stop"></stop>
+    </div>
 </div>

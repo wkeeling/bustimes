@@ -4,7 +4,7 @@
             <td><i ng-click="options.close()" class="ion ion-ios-close-outline"></i></td>
         </tr>
         <tr>
-            <td><i ng-click="actions.toggleFavourite()" class="ion" ng-class="{'ion-ios-star': actions.isFavourite(), 'ion-ios-star-outline': !actions.isFavourite()}"></i></td>
+            <td><i ng-click="actions.toggleFavourite(); options.close()" class="ion" ng-class="{'ion-ios-star': actions.isFavourite(), 'favourite': actions.isFavourite(), 'ion-ios-star-outline': !actions.isFavourite()}"></i></td>
         </tr>
     </table>
     <div class="panel-heading">

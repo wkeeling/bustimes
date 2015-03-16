@@ -45,6 +45,44 @@ body {
     background-image: linear-gradient(to bottom, #002147 0%, #00397A 100%);
 }
 
+/* Animations for stops */
+.animate-stop.ng-enter, .animate-stop.ng-leave {
+    -webkit-transition: 0.3s linear all;
+    -moz-transition: 0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+}
+
+.animate-stop.ng-enter {
+    opacity: 0;
+}
+
+.animate-stop.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.animate-stop.ng-leave {
+    opacity: 1;
+}
+
+.animate-stop.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.animate-stop.ng-move {
+    -webkit-transition: 0.3s linear all;
+    -moz-transition: 0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+    opacity: 0;
+}
+
+.animate-stop.ng-move-active {
+    opacity: 1;
+}
+
 .navbar h3 {
     margin-left: 15px;
     margin-top: 12px;
@@ -110,4 +148,8 @@ h3.panel-title {
 
 .stop-actions td i {
    font-size: 24px
+}
+
+.favourite {
+    color: #FFCC00;
 }

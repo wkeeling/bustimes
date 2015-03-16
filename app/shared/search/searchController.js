@@ -20,7 +20,7 @@ function SearchController($scope, $timeout, StopSearchService) {
             // Using a timeout with a slight delay forces the transition
             // animation to kick in for a better experience.
             $scope.search.selected = stop;
-        }, 500);
+        }, 300);
     }
     
     StopSearchService.registerSearchListener({stopSelected: stopSelected});
