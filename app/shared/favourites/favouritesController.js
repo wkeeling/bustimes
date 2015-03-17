@@ -1,6 +1,6 @@
-bustimes.controller('FavouritesController', ['$scope', 'FavouritesService', FavouritesController]);
+bustimes.controller('FavouritesController', ['$scope', '$timeout', 'FavouritesService', FavouritesController]);
 
-function FavouritesController($scope, FavouritesService) {
+function FavouritesController($scope, $timeout, FavouritesService) {
     'use strict';
     
     $scope.favourite = {
@@ -18,6 +18,8 @@ function FavouritesController($scope, FavouritesService) {
             updateFavourites();
         });
         
-        updateFavourites();
+        $timeout(function() {
+            updateFavourites();
+        });
     })();
 }
