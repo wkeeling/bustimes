@@ -1,37 +1,55 @@
-bustimes.service('EtaUpdateService', ['$http', '$interval', '$q', '$timeout', EtaUpdateService]);
+bustimes.service('EtaUpdateService', ['$http', '$q', '$interval', '$timeout', EtaUpdateService]);
 
-function EtaUpdateService($http, $interval, $q, $timeout, DataService) {
+function EtaUpdateService($http, $q, $interval, $timeout) {
     'use strict';
     
     var pollers = {};
     
     this.getUpdater = function(stop) {
-        var poller = pollers[stop.qualifiedName]
+        var poller = pollers[stop.qualifiedName];
         if (!poller) {
             // No active poller for this stop, so create one
-            console.log('Creating new poller')
             poller = new StopPoller(stop, $q, $interval, $timeout);
             pollers[stop.qualifiedName] = poller;
         }
         
         var updater = {
-            register: function(callback) {
-                this.callback = callback;
+            register: function(successCallback, errorCallback) {
+                this.successCallback = successCallback;
+                this.errorCallback = errorCallback;
                 poller.addUpdater(this);
                 poller.update();
             },
             unregister: function() {
                 poller.removeUpdater(this);
                 if (!poller.hasUpdaters()) {
-                    poller.stop();
                     // If we're unregistering the last updater with the poller,
-                    // then we remove the reference to the poller
-                    delete pollers[stop.qualifiedName]
+                    // then we stop the poller and remove the reference to it.
+                    poller.stop();
+                    delete pollers[stop.qualifiedName];
                 }
             }
         };
         
         return updater;
+    };
+    
+    this.update = function(onUpdateComplete) {
+        var allPromises = [];
+
+        for (var stopName in pollers) {
+            if (pollers.hasOwnProperty(stopName)) {
+                var poller = pollers[stopName];
+                allPromises = allPromises.concat(poller.update());
+            }
+        }
+        
+        $q.all(allPromises).then(function() {
+            onUpdateComplete(); 
+        }, function() {
+            onUpdateComplete();
+        });
+
     };
 }
 
@@ -41,19 +59,19 @@ function StopPoller(stop, $q, $interval, $timeout) {
         return new StopPoller(stop);
     }
         
-    var POLL_INTERVAL = 5000;
+    var POLL_URL = 'http://www.oxontime.com/Naptan.aspx?t=departure&sa=%shortcode%&format=xhtml',
+        POLL_INTERVAL = 30000;
     
-    var stop = stop,
-        updaters = [],
-        canceller;
+    var updaters = [],
+        repeat;
         
     this.update = function() {
-        if (!canceller) {
-            canceller = $interval(function() {
+        if (!repeat) {
+            repeat = $interval(function() {
                 doUpdate();
             }, POLL_INTERVAL);
         }
-        doUpdate();
+        return doUpdate();
     };
     
     function doUpdate() {
@@ -61,12 +79,13 @@ function StopPoller(stop, $q, $interval, $timeout) {
         
         stop.shortcodes.forEach(function(shortcode) {
             // Simulating $http call here
-            // Possibly want to stagger http calls by introducing random delay
-            // or just do that on the $interval to start with - probably best
-            var deferred = $q.defer();
+            // TODO: Possibly want to stagger http calls by introducing random delay
+            // Needs to be done here to cover both manual/repeat calls.
+            var deferred = $q.defer(),
+                url = POLL_URL.replace('%shortcode%', shortcode);
             $timeout(function() {
-                console.log('API call made to shortcode: ' + shortcode);
-                deferred.resolve([{some: 'data'}, {more: 'data'}]); // Need to handle error case
+                console.log('API call made to url: ' + url);
+                deferred.resolve([{service: 'S3', dest: 'Oxford', time: '3 mins'}]); // TODO: Need to handle error case. Need to sort by time
             }, 200);
             promises.push(deferred.promise);
         });
@@ -78,30 +97,34 @@ function StopPoller(stop, $q, $interval, $timeout) {
                 allValues = allValues.concat(vals);
             });
             updaters.forEach(function(updater) {
-                updater.callback(allValues); 
+                updater.successCallback(allValues); 
             });
+        }, function() {
+            updater.errorCallback();
         });
+        
+        return promises;
     }
     
     this.stop = function() {
-        $interval.cancel(canceller);
-        canceller = undefined;        
+        $interval.cancel(repeat);
+        repeat = undefined;        
     };
     
     this.addUpdater = function(updater) {
         if (updaters.indexOf(updater) == -1) {
             updaters.push(updater);
         }
-    }
+    };
     
     this.removeUpdater = function(updater) {
         if (updaters.indexOf(updater) > -1) {
             updaters.splice(updaters.indexOf(updater), 1);
         }
-    }
+    };
     
     this.hasUpdaters = function() {
         return updaters.length > 0;
-    }
+    };
         
 }

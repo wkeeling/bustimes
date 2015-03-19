@@ -2,8 +2,8 @@
     <div class="container">
         <div class="navbar-header">
             <h3 class="pull-left"><i class="fa fa-bus"></i>&#160;&#160;Oxford Buses</h3>
-            <h4 class="pull-right" style="cursor: pointer">
-                <i class="fa fa-repeat"></i>
+            <h4 class="pull-right" ng-click="topbar.refresh.onClick()" style="cursor: pointer">
+                <i class="fa fa-repeat" ng-class="{'fa-spin': topbar.refresh.refreshing, '': !topbar.refresh.refreshing}"></i>
             </h4>
             <h4 class="pull-right" ng-click="topbar.search.collapsed = !topbar.search.collapsed" style="cursor: pointer">
                 <i class="fa fa-search"></i>

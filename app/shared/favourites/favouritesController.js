@@ -20,6 +20,6 @@ function FavouritesController($scope, $timeout, FavouritesService) {
         
         $timeout(function() {
             updateFavourites();
-        });
+        }, 100);
     })();
 }

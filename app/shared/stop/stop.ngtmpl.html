@@ -23,16 +23,11 @@
     </div>
     <div class="panel-body">
         <table class="table table-condensed">
-            <tr>
-                <td style="width: 10%">S3</td>
-                <td>Chipping Norton</td>
-                <td style="text-align: right; width: 100px;">DUE</td>
+            <tr ng-repeat="d in eta.data">
+                <td style="width: 10%">{{::d.service}}</td>
+                <td>{{::d.dest}}</td>
+                <td style="text-align: right; width: 100px;">{{::d.time}}</td>                
             </tr>
-            <tr>
-                <td>S3</td>
-                <td>Oxford</td>
-                <td style="text-align: right">8 mins</td>
-            </tr>            
         </table>
     </div>
 </div>

@@ -1,6 +1,6 @@
-bustimes.controller('TopBarController', ['$scope', 'StopSearchService', TopBarController]);
+bustimes.controller('TopBarController', ['$scope', '$timeout', 'StopSearchService', 'EtaUpdateService', TopBarController]);
 
-function TopBarController($scope, StopSearchService) {
+function TopBarController($scope, $timeout, StopSearchService, EtaUpdateService) {
     'use strict';
     
     $scope.topbar = {
@@ -17,6 +17,18 @@ function TopBarController($scope, StopSearchService) {
                 this.collapsed = true;
                 this.selected = undefined;
             }
+        },
+        refresh: {
+            refreshing: false,
+            onClick: function() {
+                this.refreshing = true;
+                var that = this;
+                $timeout(function() {
+                    EtaUpdateService.update(function() {
+                        that.refreshing = false; 
+                    });
+                }, 1000);
+            },
         }
     };
     
