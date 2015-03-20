@@ -29,5 +29,8 @@
                 <td style="text-align: right; width: 100px;">{{::d.time}}</td>                
             </tr>
         </table>
+        <table class="table table-condensed text-center" ng-if="eta.message">
+            <tr><td>{{eta.message}}</td></tr>
+        </table>        
     </div>
 </div>

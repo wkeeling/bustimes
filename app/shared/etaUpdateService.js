@@ -9,7 +9,7 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
         var poller = pollers[stop.qualifiedName];
         if (!poller) {
             // No active poller for this stop, so create one
-            poller = new StopPoller(stop, $q, $interval, $timeout);
+            poller = new StopPoller(stop, $http, $q, $interval, $timeout);
             pollers[stop.qualifiedName] = poller;
         }
         
@@ -53,7 +53,7 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
     };
 }
 
-function StopPoller(stop, $q, $interval, $timeout) {
+function StopPoller(stop, $http, $q, $interval, $timeout) {
     
     if (!this instanceof StopPoller) {
         return new StopPoller(stop);
@@ -79,14 +79,32 @@ function StopPoller(stop, $q, $interval, $timeout) {
         
         stop.shortcodes.forEach(function(shortcode) {
             // Simulating $http call here
-            // TODO: Possibly want to stagger http calls by introducing random delay
-            // Needs to be done here to cover both manual/repeat calls.
             var deferred = $q.defer(),
                 url = POLL_URL.replace('%shortcode%', shortcode);
+                // url = 'http://192.168.0.2:8000/index.html';
             $timeout(function() {
-                console.log('API call made to url: ' + url);
-                deferred.resolve([{service: 'S3', dest: 'Oxford', time: '3 mins'}]); // TODO: Need to handle error case. Need to sort by time
-            }, 200);
+                try {
+                    // var iFrame = $('<iframe style="display:none"/>').attr('src', url).appendTo($('body')),
+                        // records = parseEtaRecords(iFrame);
+                        
+                    deferred.resolve(records);
+                } catch (e) {
+                     deferred.reject();  
+                }
+                
+                
+                
+                // $http.get(url).success(function(data) {
+                    // try {
+                        // var records = parseEtaRecords(data);
+                        // deferred.resolve(records);
+                    // } catch (e) {
+                        // deferred.reject();                        
+                    // }
+                // }).error(function() {
+                    // deferred.reject();
+                // });
+            }, Math.floor(Math.random() * 1000)); // Helps to prevent all the API calls from being made at exactly the same time
             promises.push(deferred.promise);
         });
         
@@ -127,4 +145,31 @@ function StopPoller(stop, $q, $interval, $timeout) {
         return updaters.length > 0;
     };
         
+    function parseEtaRecords(dom) {
+        var records = [];
+        
+        // Find the data <table> in the document
+        var table = dom.find('table.selectable');
+        
+        table.find('tbody > tr').each(function() {
+            var $this = $(this),
+                cells = $this.find('td');
+            
+            var record = {
+                service: cells[0],
+                dest: cells[1],
+                time: cells[2]
+            };
+            
+            records.push(record);
+        });
+        
+        // Need to sort the records by time (take into account DUE)
+        // records.sort(function(a, b) {
+            // return Integer.parseInt(a.time) 
+        // });
+        
+        return records;
+    }        
 }
+
