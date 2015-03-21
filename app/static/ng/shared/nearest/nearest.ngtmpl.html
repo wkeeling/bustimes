@@ -1,0 +1,7 @@
+<div class="separator bg-oxblue">Stops near me</div>
+<div ng-repeat="stop in nearest.find()" class="animate-stop">
+    <stop stop="stop"></stop>
+</div>
+<div ng-if="!nearest.find().length" style="text-align: center">
+    <h4 style="padding-top: 20px;"><small>You aren't near any stops.<br/>You could try searching for one.</small></h4>
+</div>

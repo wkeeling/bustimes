@@ -1,0 +1,156 @@
+@font-face {
+    font-family: digitaldream;
+    src: url("/static/assets/fonts/digitaldream.ttf") format("opentype");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 48px;
+    overflow-x: hidden
+}
+
+.main-content {
+    padding: 5px;
+}
+
+.separator {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #AAAAAA;
+    border-top: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.bg-oxblue {
+    color: #FFFFFF;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #002147),
+        color-stop(1, #00397A)
+    );
+    background-image: -o-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: -moz-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: -webkit-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: -ms-linear-gradient(bottom, #002147 0%, #00397A 100%);
+    background-image: linear-gradient(to bottom, #002147 0%, #00397A 100%);
+}
+
+/* Animations for stops */
+.animate-stop.ng-enter, .animate-stop.ng-leave {
+    -webkit-transition: 0.3s linear all;
+    -moz-transition: 0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+}
+
+.animate-stop.ng-enter {
+    opacity: 0;
+}
+
+.animate-stop.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.animate-stop.ng-leave {
+    opacity: 1;
+}
+
+.animate-stop.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.animate-stop.ng-move {
+    -webkit-transition: 0.3s linear all;
+    -moz-transition: 0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+    opacity: 0;
+}
+
+.animate-stop.ng-move-active {
+    opacity: 1;
+}
+
+.navbar h3 {
+    margin-left: 15px;
+    margin-top: 12px;
+    margin-right: 20px;
+}
+
+.navbar h4 {
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.navbar-form {
+    margin-bottom: 0px;
+}
+
+h3.panel-title {
+    font-weight: bold;
+}
+
+.panel {
+    margin-bottom: 5px;
+}
+
+.panel-heading {
+    padding-left: 0px;
+}
+
+.panel-body {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #4A4A4A),
+        color-stop(1, #757575)
+    );
+    background-image: -o-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: -moz-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: -webkit-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: -ms-linear-gradient(bottom, #4A4A4A 0%, #757575 100%);
+    background-image: linear-gradient(to bottom, #4A4A4A 0%, #757575 100%);
+    font-family: digitaldream;
+    font-weight: bold;
+    font-size: 12px;
+    color: #F2F5A9;
+    padding: 10px;
+    border-top: 1px solid #AAAAAA;
+}
+
+.panel-body .table td {
+    border-top: none;
+}
+
+.stop-actions {
+    float: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.stop-actions td {
+    padding-right: 4px;
+    padding-top: 2px;
+}
+
+.stop-actions td i {
+   font-size: 24px
+}
+
+.favourite {
+    color: #FFCC00;
+}

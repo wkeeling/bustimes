@@ -1,0 +1,281 @@
+{
+    "stops": [
+        {
+            "id": 1,
+            "name": "Cornish Road",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69325867"],
+            "position": {
+                "latitude": 51.932862,
+                "longitude": -1.555381
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 2,
+            "name": "West Street Stop C",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69328362"],
+            "position": {
+                "latitude": 51.94023,
+                "longitude": -1.546061
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 3,        
+            "name": "West Street Stop B",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69329479"],
+            "position": {
+                "latitude": 51.940368,
+                "longitude": -1.54587
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 4,        
+            "name": "Enstone Green",
+            "town/village": "Enstone",
+            "googleplaceids": [],
+            "shortcodes": ["69345236", "69345237"],
+            "position": {
+                "latitude": 51.915566,
+                "longitude": -1.453924
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 5,        
+            "name": "Kiddington Turn",
+            "town/village": "Over Kiddington",
+            "googleplaceids": [],
+            "shortcodes": ["69327539", "69327538"],
+            "position": {
+                "latitude": 51.896089,
+                "longitude": -1.406465
+            },
+            "services": ["S3"]
+        },        
+        {
+            "id": 6,        
+            "name": "Village Shops",
+            "town/village": "Chadlington",
+            "googleplaceids": [],
+            "shortcodes": ["69345354", "69345367"],
+            "position": {
+                "latitude": 51.895649,
+                "longitude": -1.525265
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 7,        
+            "name": "Spelsbury Green",
+            "town/village": "Spelsbury",
+            "googleplaceids": [],
+            "shortcodes": ["69327938", "69327939"],
+            "position": {
+                "latitude": 51.893901,
+                "longitude": -1.494237
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 8,        
+            "name": "The Bell Hotel",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69326756"],
+            "position": {
+                "latitude": 51.872291,
+                "longitude": -1.483262
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 9,        
+            "name": "Main Street",
+            "town/village": "Fawler",
+            "googleplaceids": [],
+            "shortcodes": ["69342725", "69326275"],
+            "position": {
+                "latitude": 51.850929,
+                "longitude": -1.461631
+            },
+            "services": ["S3"]
+        }, 
+        {
+            "id": 10,        
+            "name": "Wychwood Close",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69345647"],
+            "position": {
+                "latitude": 51.87457,
+                "longitude": -1.476806
+            },
+            "services": ["S3"]
+        }, 
+        {
+            "id": 11,        
+            "name": "Prospect Close",
+            "town/village": "Stonesfield",
+            "googleplaceids": [],
+            "shortcodes": ["69342735", "69327235"],
+            "position": {
+                "latitude": 51.851901,
+                "longitude": -1.428024
+            },
+            "services": ["S3"]
+        },    
+        {
+            "id": 12,        
+            "name": "Akeman Street",
+            "town/village": "Combe",
+            "googleplaceids": [],
+            "shortcodes": ["69342737", "69325879"],
+            "position": {
+                "latitude": 51.843272,
+                "longitude": -1.403461
+            },
+            "services": ["S3"]
+        },   
+        {
+            "id": 13,        
+            "name": "Hill Rise",
+            "town/village": "Old Woodstock",
+            "googleplaceids": [],
+            "shortcodes": ["69329593", "69329592"],
+            "position": {
+                "latitude": 51.855516,
+                "longitude": -1.36179
+            },
+            "services": ["S3"]
+        },   
+        {
+            "id": 14,        
+            "name": "Vermont Drive",
+            "town/village": "Old Woodstock",
+            "googleplaceids": [],
+            "shortcodes": ["69327983"],
+            "position": {
+                "latitude": 51.853538,
+                "longitude": -1.360336
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 15,        
+            "name": "Marlborough Arms",
+            "town/village": "Woodstock",
+            "googleplaceids": [],
+            "shortcodes": ["69343976", "69343982"],
+            "position": {
+                "latitude": 51.847451,
+                "longitude": -1.353845
+            },
+            "services": ["S3"]
+        }, 
+        {
+            "id": 16,        
+            "name": "Blenheim Palace",
+            "town/village": "Woodstock",
+            "googleplaceids": [],
+            "shortcodes": ["69323856", "69323854"],
+            "position": {
+                "latitude": 51.845585,
+                "longitude": -1.350288
+            },
+            "services": ["S3"]
+        },     
+        {
+            "id": 17,        
+            "name": "The Royal Sun PH",
+            "town/village": "Begbroke",
+            "googleplaceids": [],
+            "shortcodes": ["69343725", "69343726"],
+            "position": {
+                "latitude": 51.822026,
+                "longitude": -1.318976
+            },
+            "services": ["S3"]
+        },  
+        {
+            "id": 18,        
+            "name": "The Paddocks",
+            "town/village": "Yarnton",
+            "googleplaceids": [],
+            "shortcodes": ["69345286", "69345267"],
+            "position": {
+                "latitude": 51.805581,
+                "longitude": -1.310232
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 19,        
+            "name": "South Parade West",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "shortcodes": ["69323768", "69323767"],
+            "position": {
+                "latitude": 51.777094,
+                "longitude": -1.26965
+            },
+            "services": ["S3"]
+        },  
+        {
+            "id": 20,        
+            "name": "George Street stop A5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "shortcodes": ["69327525"],
+            "position": {
+                "latitude": 51.753452,
+                "longitude": -1.26253
+            },
+            "services": ["S3"]
+        }, 
+        {
+            "id": 21,        
+            "name": "Gloucester Green Bus Station Bay 8",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "shortcodes": ["69326495"],
+            "position": {
+                "latitude": 51.754042,
+                "longitude": -1.262497
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 22,        
+            "name": "Oxford Rail Stn stop R5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "shortcodes": ["69326562"],
+            "position": {
+                "latitude": 51.753426,
+                "longitude": -1.269511
+            },
+            "services": ["S3"]
+        }        
+    ],
+    "services": [
+        {
+            "name": "S3",
+            "operator": "Stagecoach",
+            "operator_code": "SOX"
+        }
+    ],
+    "operators": [
+        {
+            "operator_code": "SOX",
+            "logo": "stagecoach.png"
+        }
+    ]
+}
