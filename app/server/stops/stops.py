@@ -24,6 +24,7 @@ class StopService(object):
         
     def initialise(self):
         self._stops.update(self._load_stops())
+        print('Loaded {s} stops'.format(s=len(self._stops)))
     
     def _load_stops(self):
         with open(os.path.join(os.path.dirname(__file__), 
