@@ -53,10 +53,8 @@ class StopService(object):
                 matching.append(stop)
         return matching
     
-    def get_stops_nearest(self, position):
-        """Finds the stops nearest the specified position. The position is a
-        dict with the attributes 'latitude' and 'longitude' containing the 
-        latitude and longitude of the position to find the stops nearest. Stops
+    def get_stops_nearest(self, lat, lon):
+        """Finds the stops nearest the specified latitude and longitude. Stops
         will be returned that are within 1km of the specified position up to
         a maximum of 5 stops. The returned list will contain the stops in 
         increasing order of distance from the specified position. Each stop
@@ -65,9 +63,8 @@ class StopService(object):
         """
         nearest = []
         for stop in self._stops.values():
-            dist = self._get_dist_in_km(
-                   position['latitude'], position['longitude'], 
-                   stop['position']['latitude'], stop['position']['longitude'])
+            dist = self._get_dist_in_km(lat, lon, 
+                    stop['position']['latitude'], stop['position']['longitude'])
             if dist <= self._MAX_DISTANCE:
                 stop = copy.deepcopy(stop)
                 stop['distance'] = dist

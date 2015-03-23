@@ -7,6 +7,8 @@ from flask import Flask
 from flask import send_file
 from flask import jsonify
 from flask import request
+from flask import Response
+from flask import json
 from .server.stops import stop_service
 
 
@@ -27,22 +29,26 @@ def stop():
     
     stop = stop_service.get_stop(int(request.args['id']))
     
-    return jsonify(**stop)
+    if stop:
+        return jsonify(**stop)
+    return jsonify({})
 
-@app.route('/api/stop/nearest', methods=['POST'])
+@app.route('/api/stop/nearest', methods=['GET'])
 def nearest_stops():
-    if not 'position' in request.form:
-        raise RuntimeError('No position specified')
+    if not 'lat' in request.args:
+        raise RuntimeError('No latitude specified')
+    if not 'lon' in request.args:
+        raise RuntimeError('No longitude specified')    
     
-    nearest = stop_service.get_stops_nearest(request.form['position'])
+    nearest = stop_service.get_stops_nearest(float(request.args['lat']), float(request.args['lon']))
     
-    return jsonify(**nearest)
+    return Response(json.dumps(nearest),  mimetype='application/json')
 
-@app.route('/api/stop/matching', methods=['POST'])
+@app.route('/api/stop/matching', methods=['GET'])
 def matching_stops():
-    if not 'text' in request.form:
+    if not 'text' in request.args:
         raise RuntimeError('No text specified')
     
-    matching = stop_service.get_matching_stops(request.form['text'])
+    matching = stop_service.get_matching_stops(request.args['text'])
     
-    return jsonify(**matching)
+    return Response(json.dumps(matching),  mimetype='application/json')
