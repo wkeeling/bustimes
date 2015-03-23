@@ -1,6 +1,6 @@
-bustimes.controller('TopBarController', ['$scope', '$timeout', 'StopSearchService', 'EtaUpdateService', TopBarController]);
+bustimes.controller('TopBarController', ['$scope', '$timeout', 'StopService', 'EtaUpdateService', TopBarController]);
 
-function TopBarController($scope, $timeout, StopSearchService, EtaUpdateService) {
+function TopBarController($scope, $timeout, StopService, EtaUpdateService) {
     'use strict';
     
     $scope.topbar = {
@@ -9,11 +9,11 @@ function TopBarController($scope, $timeout, StopSearchService, EtaUpdateService)
             selected: undefined,
             
             textEntered: function(text) {
-                return StopSearchService.getMatchingStops(text);
+                return StopService.getStopsMatching(text);
             },
             
             onSelect: function($item, $model, $label) {
-                StopSearchService.onStopSelected($item);
+                StopService.onStopSelected($item);
                 this.collapsed = true;
                 this.selected = undefined;
             }
@@ -32,7 +32,7 @@ function TopBarController($scope, $timeout, StopSearchService, EtaUpdateService)
         }
     };
     
-    StopSearchService.registerSearchListener({stopCleared: function() {
+    StopService.registerSearchListener({stopCleared: function() {
         $scope.topbar.search.selected = '';
     }});
 }

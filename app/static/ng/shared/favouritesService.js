@@ -1,9 +1,11 @@
-bustimes.service('FavouritesService', ['$q', 'DataService', FavouritesService]);
+bustimes.service('FavouritesService', ['$q', 'StopService', FavouritesService]);
 
-function FavouritesService($q, DataService) {
+function FavouritesService($q, StopService) {
     'use strict';
     
-    var MAX_ALLOWED_FAVOURITES = 3,
+    
+    var DATA_SOURCE = '/api/stop',
+        MAX_ALLOWED_FAVOURITES = 3,
         STORAGE_KEY = 'favouriteStops',
         listeners = [];
         
@@ -34,30 +36,26 @@ function FavouritesService($q, DataService) {
     
     this.getFavourites = function() {
         var deferred = $q.defer(),
-            favourites = get(); 
-        
-        DataService.getStopsByQualifiedName().then(function(stops) {
-            var favouriteStops = [];
-            if (favourites && favourites.length) {
-                favourites.forEach(function(qName) {
-                    favouriteStops.push(stops[qName]); 
-                });
-            }
-            deferred.resolve(favouriteStops);
-        });
-        
+            favourites = get();
+        if (favourites.length) {
+            StopService.getStops(favourites).then(function(stops) {
+                deferred.resolve(stops);
+            });
+        } else {
+            deferred.resolve([]);
+        }
         return deferred.promise;
     };
     
     this.addFavourite = function(stop) {
         var favourites = get();
 
-        if (favourites.indexOf(stop.qualifiedName) === -1) {
+        if (favourites.indexOf(stop.id) === -1) {
             if (favourites.length === MAX_ALLOWED_FAVOURITES) {
                 favourites.pop();
             }
             
-            favourites.unshift(stop.qualifiedName);
+            favourites.unshift(stop.id);
         }        
         
         set(favourites);
@@ -67,8 +65,8 @@ function FavouritesService($q, DataService) {
         var favourites = get();
         
         if (favourites && favourites.length) {
-            if (favourites.indexOf(stop.qualifiedName) > -1) {
-                favourites.splice(favourites.indexOf(stop.qualifiedName), 1);
+            if (favourites.indexOf(stop.id) > -1) {
+                favourites.splice(favourites.indexOf(stop.id), 1);
             }
         }
         
@@ -80,7 +78,7 @@ function FavouritesService($q, DataService) {
             favourites = get();
             
         if (favourites && favourites.length) {
-            favourite = favourites.indexOf(stop.qualifiedName) > -1;
+            favourite = favourites.indexOf(stop.id) > -1;
         }
         
         return favourite;

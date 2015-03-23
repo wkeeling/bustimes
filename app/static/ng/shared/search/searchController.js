@@ -1,6 +1,6 @@
-bustimes.controller('SearchController', ['$scope', '$timeout', 'StopSearchService', SearchController]);
+bustimes.controller('SearchController', ['$scope', '$timeout', 'StopService', SearchController]);
 
-function SearchController($scope, $timeout, StopSearchService) {
+function SearchController($scope, $timeout, StopService) {
     'use strict';
     
     $scope.search = {
@@ -8,7 +8,7 @@ function SearchController($scope, $timeout, StopSearchService) {
         
         options: {
             close: function() {
-                StopSearchService.onStopCleared($scope.search.selected);
+                StopService.onStopCleared($scope.search.selected);
                 $scope.search.selected = undefined;
             }
         }
@@ -23,5 +23,5 @@ function SearchController($scope, $timeout, StopSearchService) {
         }, 300);
     }
     
-    StopSearchService.registerSearchListener({stopSelected: stopSelected});
+    StopService.registerSearchListener({stopSelected: stopSelected});
 }

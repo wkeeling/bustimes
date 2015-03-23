@@ -36,13 +36,16 @@ class StopService(object):
                     raise RuntimeError('Duplicate stop id: ' + stop['id'])
                 ret[stop['id']] = stop
             return ret
-        
-    def get_stop(self, _id):
-        return self._stops.get(_id)
     
-    def get_matching_stops(self, free_text):
+    def get_stops(self, ids):
+        stops = [self._stops[_id] for _id in self._stops.keys() if _id in ids]
+    
+    def get_stops_matching(self, free_text):
         """Searches for the free_text substring in the stop name and 
-        town/village to find out whether the stop matches. 
+        town/village to find out whether the stop matches. Adds the property
+        'matched_name' to the returned stop object which is a concatenation of
+        the stop name followed by a ' - ' followed by the town/village. The 
+        list of matched stops are ordered alphabetically by matched_name
         
         """
         free_text = free_text.lower()
@@ -50,8 +53,11 @@ class StopService(object):
         for stop in self._stops.values():
             if (stop['name'].lower().find(free_text) > -1 or 
                             stop['town/village'].lower().find(free_text) > -1):
+                stop['matched_name'] = '{s} - {t}'.format(s=stop['name'],
+                                                      t=stop['town/village'])
                 matching.append(stop)
-        return matching
+        
+        return sorted(matching, key=lambda s: s['matched_name'])
     
     def get_stops_nearest(self, lat, lon):
         """Finds the stops nearest the specified latitude and longitude. Stops
