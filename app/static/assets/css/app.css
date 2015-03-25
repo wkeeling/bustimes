@@ -99,6 +99,10 @@ body {
     margin-bottom: 0px;
 }
 
+ul.dropdown-menu a {
+    line-height: 25px;
+}
+
 h3.panel-title {
     font-weight: bold;
 }

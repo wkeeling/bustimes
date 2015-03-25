@@ -21,12 +21,12 @@ function FavouritesService($q, StopService) {
     
     function set(favourites) {
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(favourites));
-        notifyListeners();
+        notifyListeners(favourites);
     }
     
-    function notifyListeners() {
+    function notifyListeners(favourites) {
         listeners.forEach(function(listener) {
-            listener(); 
+            listener(favourites); 
         });
     }
     
@@ -82,6 +82,15 @@ function FavouritesService($q, StopService) {
         }
         
         return favourite;
+    };
+    
+    this.refreshFavourites = function(onRefreshComplete) {
+        // This will rebuild the favourites and in turn
+        // trigger an eta update
+        this.getFavourites().then(function(favourites) {
+            notifyListeners(favourites); 
+            onRefreshComplete();
+        });
     };
 }
 

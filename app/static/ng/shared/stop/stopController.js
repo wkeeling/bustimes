@@ -24,7 +24,7 @@ function StopController($scope, $timeout, FavouritesService, EtaUpdateService) {
     };
     
     $scope.eta.updater.register(function(data) {
-        $scope.eta.message = undefined;
+        $scope.eta.message = null;
         $scope.eta.data = data;
     }, function() {
         // This gets called when there's an error getting the data

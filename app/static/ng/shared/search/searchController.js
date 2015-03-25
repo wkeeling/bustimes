@@ -4,18 +4,18 @@ function SearchController($scope, $timeout, StopService) {
     'use strict';
     
     $scope.search = {
-        selected: undefined,
+        selected: null,
         
         options: {
             close: function() {
                 StopService.onStopCleared($scope.search.selected);
-                $scope.search.selected = undefined;
+                $scope.search.selected = null;
             }
         }
     };
     
     function stopSelected(stop) {
-        $scope.search.selected = undefined;
+        $scope.search.selected = null;
         $timeout(function() {
             // Using a timeout with a slight delay forces the transition
             // animation to kick in for a better experience.

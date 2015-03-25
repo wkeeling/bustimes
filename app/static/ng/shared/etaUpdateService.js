@@ -6,11 +6,11 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
     var pollers = {};
     
     this.getUpdater = function(stop) {
-        var poller = pollers[stop.qualifiedName];
+        var poller = pollers[stop.id];
         if (!poller) {
             // No active poller for this stop, so create one
             poller = new StopPoller(stop, $http, $q, $interval, $timeout);
-            pollers[stop.qualifiedName] = poller;
+            pollers[stop.id] = poller;
         }
         
         var updater = {
@@ -26,7 +26,7 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
                     // If we're unregistering the last updater with the poller,
                     // then we stop the poller and remove the reference to it.
                     poller.stop();
-                    delete pollers[stop.qualifiedName];
+                    delete pollers[stop.id];
                 }
             }
         };
@@ -126,7 +126,7 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
     
     this.stop = function() {
         $interval.cancel(repeat);
-        repeat = undefined;        
+        repeat = null;        
     };
     
     this.addUpdater = function(updater) {

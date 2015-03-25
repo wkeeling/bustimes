@@ -4,7 +4,8 @@ function StopService($http, $q) {
     'use strict';
     
     var DATA_SOURCE = '/api/stop',
-        searchListeners = [];
+        searchListeners = [],
+        positionListeners = [];
     
     this.getStop = function(id) {
         var deferred = $q.defer();
@@ -27,28 +28,38 @@ function StopService($http, $q) {
     };
     
     this.listenForNearestStops = function(callback) {
+        positionListeners.push(function(pos) {
+            $http.get(DATA_SOURCE + '/nearest', 
+                {params: {lat: pos.coords.latitude, lon: pos.coords.longitude}}).success(function(stops) {
+                callback(stops); 
+            });
+        });
+    };   
+    
+    (function() {
         if (navigator.geolocation) {
             var options = {
                 timeout : 5000,
                 maximumAge : 0
             };         
             navigator.geolocation.watchPosition(function(pos) {
-                $http.get(DATA_SOURCE + '/nearest', 
-                    {params: {lat: pos.coords.latitude, lon: pos.coords.longitude}}).success(function(stops) {
-                    callback(stops); 
+                positionListeners.forEach(function(listener) {
+                    listener(pos); 
                 });
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);
             }, options);
         } else {
             console.warn('Browser does not support geolocation');
-        }            
-    };   
+        }  
+    })();
     
     this.getStopsMatching = function(text) {
-        return $http.get(DATA_SOURCE + '/matching', {params: {text: text}}).success(function(stops) {
-            return stops;
+        var deferred = $q.defer();
+        $http.get(DATA_SOURCE + '/matching', {params: {text: text}}).success(function(stops) {
+            deferred.resolve(stops);
         });
+        return deferred.promise;
     };
     
     this.registerSearchListener = function(listener) {

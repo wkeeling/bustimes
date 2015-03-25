@@ -6,7 +6,7 @@ function TopBarController($scope, $timeout, StopService, EtaUpdateService) {
     $scope.topbar = {
         search: {
             collapsed: true,
-            selected: undefined,
+            selected: null,
             
             textEntered: function(text) {
                 return StopService.getStopsMatching(text);
@@ -15,7 +15,7 @@ function TopBarController($scope, $timeout, StopService, EtaUpdateService) {
             onSelect: function($item, $model, $label) {
                 StopService.onStopSelected($item);
                 this.collapsed = true;
-                this.selected = undefined;
+                this.selected = null;
             }
         },
         refresh: {
