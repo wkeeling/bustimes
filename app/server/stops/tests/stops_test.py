@@ -47,3 +47,10 @@ class TestStopService(object):
         assert nearest_stops[0]['name'] == 'Vermont Drive'
         assert nearest_stops[1]['name'] == 'Hill Rise'
         assert nearest_stops[2]['name'] == 'Marlborough Arms'
+        
+    def test_should_get_stop_distance(self):
+        latitude = 51.853771 
+        longitude = -1.359258
+        distance = stop_service.get_stop_distance(latitude, longitude, 13)
+        
+        assert distance['distance'] == 0.26055808442875256

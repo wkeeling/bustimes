@@ -50,3 +50,18 @@ def stops_matching():
     matching = stop_service.get_stops_matching(request.args['text'])
     
     return Response(json.dumps(matching),  mimetype='application/json')
+
+@app.route('/api/stop/distance', methods=['GET'])
+def stop_distance():
+    if not 'lat' in request.args:
+        raise RuntimeError('No latitude specified')
+    if not 'lon' in request.args:
+        raise RuntimeError('No longitude specified')   
+    if not 'stop_id' in request.args:
+        raise RuntimeError('No stop_id specified')
+    
+    distance = stop_service.get_stop_distance(float(request.args['lat']), 
+                                              float(request.args['lon']), 
+                                              float(request.args['stop_id']))
+    
+    return Response(json.dumps(distance),  mimetype='application/json')

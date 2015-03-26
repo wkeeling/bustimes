@@ -38,7 +38,7 @@ class StopService(object):
             return ret
     
     def get_stops(self, ids):
-        return [self._stops[_id] for _id in self._stops.keys() if _id in ids]
+        return [self._stops[_id] for _id in ids if _id in self._stops]
     
     def get_stops_matching(self, free_text):
         """Searches for the free_text substring in the stop name and 
@@ -70,7 +70,7 @@ class StopService(object):
         nearest = []
         for stop in self._stops.values():
             dist = self._get_dist_in_km(lat, lon, 
-                    stop['position']['latitude'], stop['position']['longitude'])
+                   stop['position']['latitude'], stop['position']['longitude'])
             if dist <= self._MAX_DISTANCE:
                 stop = copy.deepcopy(stop)
                 stop['distance'] = dist
@@ -78,6 +78,12 @@ class StopService(object):
                 if len(nearest) == self._MAX_NEAREST_STOPS:
                     break
         return sorted(nearest, key=lambda s: s['distance'])
+    
+    def get_stop_distance(self, lat, lon, stop_id):
+        stop = self._stops[stop_id]
+        distance = self._get_dist_in_km(lat, lon, 
+                   stop['position']['latitude'], stop['position']['longitude'])
+        return {'distance': distance}
     
     def _get_dist_in_km(self, lat1, lon1, lat2, lon2):
         radius = 6371 # Radius of the Earth in km
