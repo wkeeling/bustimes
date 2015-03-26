@@ -38,7 +38,7 @@ class StopService(object):
             return ret
     
     def get_stops(self, ids):
-        stops = [self._stops[_id] for _id in self._stops.keys() if _id in ids]
+        return [self._stops[_id] for _id in self._stops.keys() if _id in ids]
     
     def get_stops_matching(self, free_text):
         """Searches for the free_text substring in the stop name and 

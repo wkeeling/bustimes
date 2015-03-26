@@ -8,14 +8,18 @@ function FavouritesController($scope, $timeout, FavouritesService) {
     };
     
     (function() {
-        FavouritesService.registerFavouritesListener(function(favourites) {
-            $scope.favourite.stops = favourites;
+        function updateFavourites() {
+            FavouritesService.getFavourites().then(function(stops) {
+                $scope.favourite.stops = stops; 
+            });
+        }
+        
+        FavouritesService.registerFavouritesListener(function() {
+            updateFavourites();
         });
         
         $timeout(function() {
-            FavouritesService.getFavourites().then(function(favourites) {
-                $scope.favourite.stops = favourites; 
-            });
+            updateFavourites();
         }, 100); // The delay allows the animations to fire
     })();
 }

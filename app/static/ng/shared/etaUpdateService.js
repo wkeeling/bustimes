@@ -118,7 +118,9 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
                 updater.successCallback(allValues); 
             });
         }, function() {
-            updater.errorCallback();
+            updaters.forEach(function(updater) {
+                updater.errorCallback(); 
+            });
         });
         
         return promises;
