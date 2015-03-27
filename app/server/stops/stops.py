@@ -73,11 +73,11 @@ class StopService(object):
                    stop['position']['latitude'], stop['position']['longitude'])
             if dist <= self._MAX_DISTANCE:
                 stop = copy.deepcopy(stop)
-                stop['distance'] = dist
-                nearest.append(stop)
+                nearest.append((stop, dist))
                 if len(nearest) == self._MAX_NEAREST_STOPS:
                     break
-        return sorted(nearest, key=lambda s: s['distance'])
+        nearest = sorted(nearest, key=lambda s: s[1])
+        return [s[0] for s in nearest]
     
     def get_stop_distance(self, lat, lon, stop_id):
         stop = self._stops[stop_id]

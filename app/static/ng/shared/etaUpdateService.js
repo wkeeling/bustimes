@@ -40,7 +40,7 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
         for (var stopName in pollers) {
             if (pollers.hasOwnProperty(stopName)) {
                 var poller = pollers[stopName];
-                allPromises = allPromises.concat(poller.update());
+                allPromises = allPromises.push(poller.update());
             }
         }
         
@@ -59,7 +59,7 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
         return new StopPoller(stop);
     }
         
-    var POLL_URL = 'http://www.oxontime.com/Naptan.aspx?t=departure&sa=%shortcode%&format=xhtml',
+    var POLL_URL = '/api/eta',
         POLL_INTERVAL = 30000;
     
     var updaters = [],
@@ -75,55 +75,23 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
     };
     
     function doUpdate() {
-        var promises = [];
+        var deferred = $q.defer();
         
-        stop.shortcodes.forEach(function(shortcode) {
-            // Simulating $http call here
-            var deferred = $q.defer(),
-                url = POLL_URL.replace('%shortcode%', shortcode);
-                // url = 'http://192.168.0.2:8000/index.html';
-            $timeout(function() {
-                try {
-                    // var iFrame = $('<iframe style="display:none"/>').attr('src', url).appendTo($('body')),
-                        // records = parseEtaRecords(iFrame);
-                        
-                    deferred.resolve(records);
-                } catch (e) {
-                     deferred.reject();  
-                }
-                
-                
-                
-                // $http.get(url).success(function(data) {
-                    // try {
-                        // var records = parseEtaRecords(data);
-                        // deferred.resolve(records);
-                    // } catch (e) {
-                        // deferred.reject();                        
-                    // }
-                // }).error(function() {
-                    // deferred.reject();
-                // });
-            }, Math.floor(Math.random() * 1000)); // Helps to prevent all the API calls from being made at exactly the same time
-            promises.push(deferred.promise);
-        });
+        $timeout(function() {
+            $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
+                updaters.forEach(function(updater) {
+                    updater.successCallback(etas); 
+                    deferred.resolve();
+                });
+            }).error(function() {
+                updaters.forEach(function(updater) {
+                    updater.errorCallback(); 
+                    deferred.reject();
+                });
+            });
+        }, Math.floor(Math.random() * 1000)); // Helps to prevent all the API calls from being made at exactly the same time
         
-        $q.all(promises).then(function(values) {
-            // Values is a list of lists
-            var allValues = [];
-            values.forEach(function(vals) {
-                allValues = allValues.concat(vals);
-            });
-            updaters.forEach(function(updater) {
-                updater.successCallback(allValues); 
-            });
-        }, function() {
-            updaters.forEach(function(updater) {
-                updater.errorCallback(); 
-            });
-        });
-        
-        return promises;
+        return deferred.promise;
     }
     
     this.stop = function() {
@@ -146,32 +114,5 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
     this.hasUpdaters = function() {
         return updaters.length > 0;
     };
-        
-    function parseEtaRecords(dom) {
-        var records = [];
-        
-        // Find the data <table> in the document
-        var table = dom.find('table.selectable');
-        
-        table.find('tbody > tr').each(function() {
-            var $this = $(this),
-                cells = $this.find('td');
-            
-            var record = {
-                service: cells[0],
-                dest: cells[1],
-                time: cells[2]
-            };
-            
-            records.push(record);
-        });
-        
-        // Need to sort the records by time (take into account DUE)
-        // records.sort(function(a, b) {
-            // return Integer.parseInt(a.time) 
-        // });
-        
-        return records;
-    }        
 }
 

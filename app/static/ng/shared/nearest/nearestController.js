@@ -8,7 +8,21 @@ function NearestController($scope, StopService) {
     };
     
     StopService.listenForNearestStops(function(stops) {
-        $scope.nearest.stops = stops;
+        var changed = false;
+        if (stops.length == $scope.nearest.stops.length) {
+            for (var i = 0, length = stops.length; i < length; i++) {
+                if (stops[i].id != $scope.nearest.stops[i].id) {
+                    changed = true;
+                    break;
+                }
+            }
+        } else {
+            changed = true;
+        }
+        
+        if (changed) {
+            $scope.nearest.stops = stops;
+        }
     });  
     
     // Manually set location, perhaps by bringing up a map

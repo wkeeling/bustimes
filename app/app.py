@@ -9,6 +9,7 @@ from flask import request
 from flask import Response
 from flask import json
 from .server.stops import stop_service
+from .server.eta import eta_requestor
 
 
 app = Flask(__name__)
@@ -38,7 +39,8 @@ def stops_nearest():
     if not 'lon' in request.args:
         raise RuntimeError('No longitude specified')    
     
-    nearest = stop_service.get_stops_nearest(float(request.args['lat']), float(request.args['lon']))
+    nearest = stop_service.get_stops_nearest(float(request.args['lat']), 
+                                             float(request.args['lon']))
     
     return Response(json.dumps(nearest),  mimetype='application/json')
 
@@ -65,3 +67,13 @@ def stop_distance():
                                               float(request.args['stop_id']))
     
     return Response(json.dumps(distance),  mimetype='application/json')
+
+@app.route('/api/eta', methods=['GET'])
+def eta():
+    if not 'shortcodes' in request.args:
+        raise RuntimeError('No shortcodes specified')
+    
+    shortcodes = request.args['shortcodes']
+    etas = eta_requestor.get_etas([s for s in shortcodes.split(',')])
+    
+    return Response(json.dumps(etas),  mimetype='application/json')

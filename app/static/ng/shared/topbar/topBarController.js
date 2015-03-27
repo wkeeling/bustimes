@@ -1,6 +1,6 @@
-bustimes.controller('TopBarController', ['$scope', '$timeout', 'StopService', 'EtaUpdateService', TopBarController]);
+bustimes.controller('TopBarController', ['$scope', '$q', '$timeout', 'StopService', 'EtaUpdateService', TopBarController]);
 
-function TopBarController($scope, $timeout, StopService, EtaUpdateService) {
+function TopBarController($scope, $q, $timeout, StopService, EtaUpdateService) {
     'use strict';
     
     $scope.topbar = {
@@ -23,8 +23,24 @@ function TopBarController($scope, $timeout, StopService, EtaUpdateService) {
             onClick: function() {
                 this.refreshing = true;
                 var that = this;
+                    
                 $timeout(function() {
+                    var promises = [],
+                        updateDeferred = $q.defer(),
+                        refreshDeferred = $q.defer();
+                        
+		            promises.push(updateDeferred.promise);
+                    promises.push(refreshDeferred.promise);                    
+                    
                     EtaUpdateService.update(function() {
+                        updateDeferred.resolve();
+                    });
+                    
+                    StopService.refreshPosition(function() {
+                        refreshDeferred.resolve();
+                    });
+                    
+                    $q.all(promises).then(function() {
                         that.refreshing = false; 
                     });
                 }, 1000);
