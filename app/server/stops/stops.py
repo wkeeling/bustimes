@@ -37,15 +37,23 @@ class StopService(object):
                 ret[stop['id']] = stop
             return ret
     
-    def get_stops(self, ids):
-        return [self._stops[_id] for _id in ids if _id in self._stops]
+    def get_stops(self, ids, position=None):
+        stops = [self._stops[_id] for _id in ids if _id in self._stops]
+        if position:
+            for stop in stops:
+                stop['distance'] = self._get_stop_distance(position, stop)
+        return stops
     
-    def get_stops_matching(self, free_text):
+    def get_stops_matching(self, free_text, position=None):
         """Searches for the free_text substring in the stop name and 
         town/village to find out whether the stop matches. Adds the property
         'matched_name' to the returned stop object which is a concatenation of
         the stop name followed by a ' - ' followed by the town/village. The 
-        list of matched stops are ordered alphabetically by matched_name
+        list of matched stops are ordered alphabetically by matched_name.
+        If the position argument is supplied (a two element list containing 
+        the latitude and longitude of the current position) then the distance
+        in km will be added to each returned stop under the attribute 
+        'distance'.
         
         """
         free_text = free_text.lower()
@@ -56,34 +64,39 @@ class StopService(object):
                 stop['matched_name'] = '{s} - {t}'.format(s=stop['name'],
                                                       t=stop['town/village'])
                 matching.append(stop)
+                if position:
+                    stop['distance'] = self._get_stop_distance(position, stop)
         
         return sorted(matching, key=lambda s: s['matched_name'])
     
-    def get_stops_nearest(self, lat, lon):
-        """Finds the stops nearest the specified latitude and longitude. Stops
-        will be returned that are within 1km of the specified position up to
-        a maximum of 5 stops. The returned list will contain the stops in 
-        increasing order of distance from the specified position. Each stop
-        will have an attribute 'distance' specifying its distance in km.
+    def get_stops_nearest(self, position):
+        """Finds the stops nearest the specified position - a two element list
+        holding the latitude and longitude. Stops will be returned that are 
+        within 1km of the specified position up to a maximum of 5 stops. The 
+        returned list will contain the stops in increasing order of distance 
+        from the specified position. Each stop will have an attribute 
+        'distance' specifying its distance in km.
         
         """
         nearest = []
         for stop in self._stops.values():
-            dist = self._get_dist_in_km(lat, lon, 
+            dist = self._get_dist_in_km(position[0], position[1], 
                    stop['position']['latitude'], stop['position']['longitude'])
             if dist <= self._MAX_DISTANCE:
                 stop = copy.deepcopy(stop)
-                nearest.append((stop, dist))
+                stop['distance'] = dist
+                nearest.append(stop)
                 if len(nearest) == self._MAX_NEAREST_STOPS:
                     break
-        nearest = sorted(nearest, key=lambda s: s[1])
-        return [s[0] for s in nearest]
+        return sorted(nearest, key=lambda s: s['distance'])
     
-    def get_stop_distance(self, lat, lon, stop_id):
+    def get_stop_distance(self, position, stop_id):
         stop = self._stops[stop_id]
-        distance = self._get_dist_in_km(lat, lon, 
-                   stop['position']['latitude'], stop['position']['longitude'])
-        return {'distance': distance}
+        return {'distance': self._get_stop_distance(position, stop)}
+    
+    def _get_stop_distance(self, position, stop):
+        return self._get_dist_in_km(position[0], position[1], 
+                   stop['position']['latitude'], stop['position']['longitude'])        
     
     def _get_dist_in_km(self, lat1, lon1, lat2, lon2):
         radius = 6371 # Radius of the Earth in km

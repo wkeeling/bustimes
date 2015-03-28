@@ -25,24 +25,12 @@ function TopBarController($scope, $q, $timeout, StopService, EtaUpdateService) {
                 var that = this;
                     
                 $timeout(function() {
-                    var promises = [],
-                        updateDeferred = $q.defer(),
-                        refreshDeferred = $q.defer();
+                    var updateDeferred = $q.defer();
                         
-		            promises.push(updateDeferred.promise);
-                    promises.push(refreshDeferred.promise);                    
-                    
                     EtaUpdateService.update(function() {
-                        updateDeferred.resolve();
-                    });
-                    
-                    StopService.refreshPosition(function() {
-                        refreshDeferred.resolve();
-                    });
-                    
-                    $q.all(promises).then(function() {
                         that.refreshing = false; 
                     });
+                    
                 }, 1000);
             },
         }

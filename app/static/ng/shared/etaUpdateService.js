@@ -40,7 +40,7 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
         for (var stopName in pollers) {
             if (pollers.hasOwnProperty(stopName)) {
                 var poller = pollers[stopName];
-                allPromises = allPromises.push(poller.update());
+                allPromises.push(poller.update());
             }
         }
         
@@ -78,18 +78,21 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
         var deferred = $q.defer();
         
         $timeout(function() {
-            $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
-                updaters.forEach(function(updater) {
-                    updater.successCallback(etas); 
-                    deferred.resolve();
-                });
-            }).error(function() {
-                updaters.forEach(function(updater) {
-                    updater.errorCallback(); 
-                    deferred.reject();
-                });
-            });
-        }, Math.floor(Math.random() * 1000)); // Helps to prevent all the API calls from being made at exactly the same time
+            console.log('Mock get eta update');
+            deferred.resolve();
+        }, 1000);
+        
+        // $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
+            // updaters.forEach(function(updater) {
+                // updater.successCallback(etas); 
+                // deferred.resolve();
+            // });
+        // }).error(function() {
+            // updaters.forEach(function(updater) {
+                // updater.errorCallback(); 
+                // deferred.reject();
+            // });
+        // });
         
         return deferred.promise;
     }

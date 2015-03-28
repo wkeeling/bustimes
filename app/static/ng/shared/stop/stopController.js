@@ -3,7 +3,8 @@ bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'Fav
 function StopController($scope, $timeout, StopService, FavouritesService, EtaUpdateService) {
     'use strict';
     
-    var NO_DATA_MESSAGE = 'Check timetables';
+    var ERROR_MESSAGE = 'Check timetables',
+        NO_SERVICES_MESSAGE = 'Nothing due';
     
     $scope.actions = {
         toggleFavourite: function() {
@@ -12,7 +13,6 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
             } else {
                 FavouritesService.removeFavourite($scope.stop);
             }
-            StopService.refreshPosition();
         },
         
         isFavourite: function() {
@@ -28,21 +28,26 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
     };
     
     $scope.eta.updater.register(function(data) {
-        $scope.eta.message = null;
+        if (!data || !data.length) {
+            $scope.eta.message = NO_SERVICES_MESSAGE;
+        } else {
+            $scope.eta.message = null;
+        }
         $scope.eta.data = data;
     }, function() {
         // This gets called when there's an error getting the data
-        $scope.eta.message = NO_DATA_MESSAGE;
+        $scope.eta.data = null;
+        $scope.eta.message = ERROR_MESSAGE;
     });
     
     $scope.eta.tracker.track();
     
     $timeout(function() {
         if (!$scope.eta.data.length) {
-            // If no data received within 1 minute of startup, display a message
-            $scope.eta.message = NO_DATA_MESSAGE;
+            // If no data received within 30 seconds of startup, display a message
+            $scope.eta.message = ERROR_MESSAGE;
         }
-    }, 60000);
+    }, 30000);
     
     $scope.$on('$destroy', function() {
         // Make sure we unregister our updater before we're destroyed

@@ -7,11 +7,18 @@ function StopService($http, $q) {
         searchListeners = [],
         positionListeners = [],
         stopTrackers = {},
+        lastPosition = null,
         that = this;
     
     this.getStop = function(id) {
-        var deferred = $q.defer();
-        $http.get(DATA_SOURCE, {params: {id: id}}).success(function(stops) {
+        var deferred = $q.defer(),
+            params = {
+                id: id
+            };
+            if (lastPosition) {
+                params.position = lastPosition.coords.latitude + ',' + lastPosition.coords.longitude;
+            }
+        $http.get(DATA_SOURCE, {params: params}).success(function(stops) {
             if (stops.length) {
                 deferred.resolve(stops[0]);
             } else {
@@ -22,8 +29,14 @@ function StopService($http, $q) {
     };
     
     this.getStops = function(ids) {
-        var deferred = $q.defer();
-        $http.get(DATA_SOURCE, {params: {id: ids.join(',')}}).success(function(stops) {
+        var deferred = $q.defer(),
+            params = {
+                id: ids.join(',')
+            };
+            if (lastPosition) {
+                params.position = lastPosition.coords.latitude + ',' + lastPosition.coords.longitude;
+            }
+        $http.get(DATA_SOURCE, {params: params}).success(function(stops) {
             deferred.resolve(stops);
         });
         return deferred.promise;
@@ -32,15 +45,21 @@ function StopService($http, $q) {
     this.listenForNearestStops = function(callback) {
         positionListeners.push(function(pos) {
             $http.get(DATA_SOURCE + '/nearest', 
-                {params: {lat: pos.coords.latitude, lon: pos.coords.longitude}}).success(function(stops) {
+                {params: {position: pos.coords.latitude + ',' + pos.coords.longitude}}).success(function(stops) {
                 callback(stops); 
             });
         });
     };   
     
     this.getStopsMatching = function(text) {
-        var deferred = $q.defer();
-        $http.get(DATA_SOURCE + '/matching', {params: {text: text}}).success(function(stops) {
+        var deferred = $q.defer(),
+            params = {
+                text: text
+            };
+            if (lastPosition) {
+                params.position = lastPosition.coords.latitude + ',' + lastPosition.coords.longitude;
+            }        
+        $http.get(DATA_SOURCE + '/matching', {params: params}).success(function(stops) {
             deferred.resolve(stops);
         });
         return deferred.promise;
@@ -84,53 +103,47 @@ function StopService($http, $q) {
                 if (trackers && trackers.length) {
                     if (trackers.indexOf(this) > -1) {
                         trackers.splice(trackers.indexOf(this), 1);
+                        if (!trackers.length) {
+                            delete stopTrackers[stop.id];
+                        }
                     }
                 }
             }
         };
     };
     
-    this.refreshPosition = function(onRefreshComplete) {
+    (function() {
+        positionListeners.push(function(pos) {
+            // Add a listener to update the distance to any stops that are being tracked (displayed)
+            for (var id in stopTrackers) {
+                if (stopTrackers.hasOwnProperty(id)) {
+                    $http.get(DATA_SOURCE + '/distance', {params: {position: pos.coords.latitude + ',' + pos.coords.longitude, stop_id: id}}).success(function(_id) {
+                        return function(resp) {
+                            var trackers = stopTrackers[_id];
+                            trackers.forEach(function(tracker) {
+                                tracker.stop.distance = resp.distance;
+                            });
+                        };
+                    }(id));
+                }
+            } 
+        });
+        
         if (navigator.geolocation) {
             var options = {
                 timeout : 5000,
                 maximumAge : 0
             };         
-            navigator.geolocation.getCurrentPosition(function(pos) {
+            navigator.geolocation.watchPosition(function(pos) {
                 positionListeners.forEach(function(listener) {
                     listener(pos); 
                 });
-                if (onRefreshComplete) {
-                    onRefreshComplete();
-                }
+                lastPosition = pos;
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);
             }, options);
         } else {
             console.warn('Browser does not support geolocation');
         }  
-    };
-    
-    function updateDistance(pos) {
-        for (var id in stopTrackers) {
-            if (stopTrackers.hasOwnProperty(id)) {
-                $http.get(DATA_SOURCE + '/distance', {params: {lat: pos.coords.latitude, lon: pos.coords.longitude, stop_id: id}}).success(function(_id) {
-                    return function(resp) {
-                        var trackers = stopTrackers[_id];
-                        trackers.forEach(function(tracker) {
-                            tracker.stop.distance = resp.distance;
-                            console.log('Updating distance: ' + tracker.stop.name); 
-                        });
-                    };
-                }(id));
-            }
-        }
-    }    
-    
-    (function() {
-        positionListeners.push(function(pos) {
-            // Add a listener to update the distance to any stops that are being tracked (displayed)
-            updateDistance(pos);    
-        });
     })();    
 }

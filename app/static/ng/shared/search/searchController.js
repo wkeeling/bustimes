@@ -20,7 +20,6 @@ function SearchController($scope, $timeout, StopService) {
             // Using a timeout with a slight delay forces the transition
             // animation to kick in for a better experience.
             $scope.search.selected = stop;
-            StopService.refreshPosition();
         }, 300);
     }
     
