@@ -42,13 +42,6 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
     
     $scope.eta.tracker.track();
     
-    $timeout(function() {
-        if (!$scope.eta.data.length) {
-            // If no data received within 30 seconds of startup, display a message
-            $scope.eta.message = ERROR_MESSAGE;
-        }
-    }, 30000);
-    
     $scope.$on('$destroy', function() {
         // Make sure we unregister our updater before we're destroyed
         $scope.eta.updater.unregister(); 

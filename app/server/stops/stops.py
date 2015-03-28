@@ -38,7 +38,7 @@ class StopService(object):
             return ret
     
     def get_stops(self, ids, position=None):
-        stops = [self._stops[_id] for _id in ids if _id in self._stops]
+        stops = [copy.deepcopy(self._stops[_id]) for _id in ids if _id in self._stops]
         if position:
             for stop in stops:
                 stop['distance'] = self._get_stop_distance(position, stop)
@@ -61,11 +61,13 @@ class StopService(object):
         for stop in self._stops.values():
             if (stop['name'].lower().find(free_text) > -1 or 
                             stop['town/village'].lower().find(free_text) > -1):
+                stop = copy.deepcopy(stop)
                 stop['matched_name'] = '{s} - {t}'.format(s=stop['name'],
                                                       t=stop['town/village'])
-                matching.append(stop)
                 if position:
                     stop['distance'] = self._get_stop_distance(position, stop)
+                    
+                matching.append(stop)
         
         return sorted(matching, key=lambda s: s['matched_name'])
     

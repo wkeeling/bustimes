@@ -63,43 +63,50 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
         POLL_INTERVAL = 30000;
     
     var updaters = [],
-        repeat;
+        running = false;
         
     this.update = function() {
-        if (!repeat) {
-            repeat = $interval(function() {
-                doUpdate();
-            }, POLL_INTERVAL);
+        if (!running) {
+            running = true;
+            doRepeat();
         }
         return doUpdate();
     };
+    
+    function doRepeat() {
+        $timeout(function() {
+            doUpdate().then(function(etas) {
+                updaters.forEach(function(updater) {
+                    updater.successCallback(etas); 
+                });
+            }, function() {
+                updaters.forEach(function(updater) {
+                    updater.errorCallback(); 
+                });
+            })['finally'](function() {
+                if (running) {
+                    doRepeat();
+                }
+            });
+        }, POLL_INTERVAL);
+    }
     
     function doUpdate() {
         var deferred = $q.defer();
         
         $timeout(function() {
-            console.log('Mock get eta update');
-            deferred.resolve();
-        }, 1000);
-        
-        // $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
-            // updaters.forEach(function(updater) {
-                // updater.successCallback(etas); 
-                // deferred.resolve();
-            // });
-        // }).error(function() {
-            // updaters.forEach(function(updater) {
-                // updater.errorCallback(); 
-                // deferred.reject();
-            // });
-        // });
+            $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
+                deferred.resolve(etas);
+            }).error(function() {
+                deferred.reject();
+            });
+        }, Math.floor(Math.random() * 1000)); // Add some randomness to help space requests
         
         return deferred.promise;
     }
     
     this.stop = function() {
-        $interval.cancel(repeat);
-        repeat = null;        
+        running = false;
     };
     
     this.addUpdater = function(updater) {
