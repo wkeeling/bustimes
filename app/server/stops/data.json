@@ -250,7 +250,7 @@
                 "latitude": 51.754042,
                 "longitude": -1.262497
             },
-            "services": ["S3"]
+            "services": ["S1", "S3"]
         },
         {
             "id": 22,        
@@ -263,7 +263,235 @@
                 "longitude": -1.269511
             },
             "services": ["S3"]
-        }        
+        },
+        {
+            "id": 23,        
+            "name": "Pear Tree P&R Car Park",
+            "town/village": "Pear Tree",
+            "googleplaceids": [],
+            "shortcodes": ["69327697"],
+            "position": {
+                "latitude": 51.793336,
+                "longitude": -1.28202
+            },
+            "services": ["300"]
+        },
+        {
+            "id": 24,        
+            "name": "St Aldates stop H2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "shortcodes": ["69326472"],
+            "position": {
+                "latitude": 51.750733,
+                "longitude": -1.256883
+            },
+            "services": ["300"]
+        },
+        {
+            "id": 25,        
+            "name": "Redbridge P&R Car Park",
+            "town/village": "Redbridge",
+            "googleplaceids": [],
+            "shortcodes": ["69327698"],
+            "position": {
+                "latitude": 51.729853,
+                "longitude": -1.249233
+            },
+            "services": ["300"]
+        },
+        {
+            "id": 26,        
+            "name": "Magdalen Street stop C2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "shortcodes": ["69326486"],
+            "position": {
+                "latitude": 51.754581,
+                "longitude": -1.25918
+            },
+            "services": ["300"]
+        },
+        {
+            "id": 27,        
+            "name": "Water Eaton Park & Ride",
+            "town/village": "Water Eaton",
+            "googleplaceids": [],
+            "shortcodes": ["69345359","69345357"],
+            "position": {
+                "latitude": 51.802819,
+                "longitude": -1.273029
+            },
+            "services": ["2", "2A", "2B", "S5"]
+        }, 
+        {
+            "id": 28,        
+            "name": "Water Eaton Terminal",
+            "town/village": "Water Eaton",
+            "googleplaceids": [],
+            "shortcodes": ["69328763"],
+            "position": {
+                "latitude": 51.802819,
+                "longitude": -1.273029
+            },
+            "services": []
+        },
+        {
+            "id": 29,        
+            "name": "George Street stop A3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "shortcodes": ["69327485"],
+            "position": {
+                "latitude": 51.753452,
+                "longitude": -1.26253
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 30,        
+            "name": "Elms Parade Shops",
+            "town/village": "Botley",
+            "googleplaceids": [],
+            "shortcodes": ["69323497", "69323498"],
+            "position": {
+                "latitude": 51.75165,
+                "longitude": -1.298318
+            },
+            "services": ["S1", "4A", "4"]
+        },
+        {
+            "id": 31,        
+            "name": "Eynsham Church",
+            "town/village": "Eynsham",
+            "googleplaceids": [],
+            "shortcodes": ["69327535", "69328424"],
+            "position": {
+                "latitude": 51.780387,
+                "longitude": -1.372916
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 32,        
+            "name": "Witney Market Square stop A",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "shortcodes": ["69327463"],
+            "position": {
+                "latitude": 51.783924,
+                "longitude": -1.485371
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 33,        
+            "name": "Bartholomew School",
+            "town/village": "Eynsham",
+            "googleplaceids": [],
+            "shortcodes": ["69346597", "69346596"],
+            "position": {
+                "latitude": 51.782252,
+                "longitude": -1.381413
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 34,        
+            "name": "Witney Market Square stop D",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "shortcodes": ["69328497"],
+            "position": {
+                "latitude": 51.784077,
+                "longitude": -1.485601
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 35,        
+            "name": "Bus Garage",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "shortcodes": ["69327347", "69327348"],
+            "position": {
+                "latitude": 51.785,
+                "longitude": -1.494194
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 36,        
+            "name": "Thorney Leys",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "shortcodes": ["69326983", "69326984"],
+            "position": {
+                "latitude": 51.780128,
+                "longitude": -1.509676
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 37,        
+            "name": "Well Lane",
+            "town/village": "Curbridge",
+            "googleplaceids": [],
+            "shortcodes": ["69323956", "69323954"],
+            "position": {
+                "latitude": 51.77736,
+                "longitude": -1.522808
+            },
+            "services": ["S1"]
+        },
+        {
+            "id": 38,        
+            "name": "Crossroads",
+            "town/village": "Carterton",
+            "googleplaceids": [],
+            "shortcodes": ["69326749"],
+            "position": {
+                "latitude": 51.75952,
+                "longitude": -1.593608
+            },
+            "services": ["S1", "S2"]
+        },
+        {
+            "id": 39,        
+            "name": "Bovingdon Road",
+            "town/village": "Carterton",
+            "googleplaceids": [],
+            "shortcodes": ["69327328"],
+            "position": {
+                "latitude": 51.763385,
+                "longitude": -1.587267
+            },
+            "services": ["S1", "S2"]
+        },
+        {
+            "id": 40,        
+            "name": "Broadshires Health Centre",
+            "town/village": "Carterton",
+            "googleplaceids": [],
+            "shortcodes": ["69326923", "69326898"],
+            "position": {
+                "latitude": 51.764633,
+                "longitude": -1.586902
+            },
+            "services": ["S1", "S2"]
+        },
+        {
+            "id": 41,        
+            "name": "Brize Norton Roundabout",
+            "town/village": "Brize Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69347365", "69347364"],
+            "position": {
+                "latitude": 51.764633,
+                "longitude": -1.586902
+            },
+            "services": ["S1", "S2"]
+        }    
     ],
     "services": [
         {
