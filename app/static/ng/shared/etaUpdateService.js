@@ -75,32 +75,28 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
     
     function doRepeat() {
         $timeout(function() {
-            doUpdate().then(function(etas) {
-                updaters.forEach(function(updater) {
-                    updater.successCallback(etas); 
-                });
-            }, function() {
-                updaters.forEach(function(updater) {
-                    updater.errorCallback(); 
-                });
-            })['finally'](function() {
+            doUpdate().then(function() {})['finally'](function() {
                 if (running) {
                     doRepeat();
                 }
             });
-        }, POLL_INTERVAL);
+        }, POLL_INTERVAL + Math.floor(Math.random() * 1000));
     }
     
     function doUpdate() {
         var deferred = $q.defer();
         
-        $timeout(function() {
-            $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
-                deferred.resolve(etas);
-            }).error(function() {
-                deferred.reject();
-            });
-        }, Math.floor(Math.random() * 1000)); // Add some randomness to help space requests
+        $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
+            updaters.forEach(function(updater) {
+                updater.successCallback(etas); 
+            });                
+            deferred.resolve();
+        }).error(function() {
+            updaters.forEach(function(updater) {
+                updater.errorCallback(); 
+            });                
+            deferred.reject();
+        });
         
         return deferred.promise;
     }

@@ -24,7 +24,7 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
         data: [],
         updater: EtaUpdateService.getUpdater($scope.stop),
         tracker: StopService.getStopTracker($scope.stop),
-        message: 'Updating...'
+        message: 'Updating'
     };
     
     $scope.eta.updater.register(function(data) {
