@@ -491,7 +491,79 @@
                 "longitude": -1.586902
             },
             "services": ["S1", "S2"]
-        }    
+        },
+        {
+            "id": 42,        
+            "name": "Edward Stone Rise",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69345839"],
+            "position": {
+                "latitude": 51.936242,
+                "longitude": -1.54889
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 43,        
+            "name": "Churchill House",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69345827"],
+            "position": {
+                "latitude": 51.934211,
+                "longitude": -1.552581
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 44,        
+            "name": "Playing Field",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69347462"],
+            "position": {
+                "latitude": 51.93264,
+                "longitude": -1.552068
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 45,        
+            "name": "Hailey Road",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69346352"],
+            "position": {
+                "latitude": 51.933404,
+                "longitude": -1.549791
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 46,        
+            "name": "Walterbrush Road",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69345852"],
+            "position": {
+                "latitude": 51.934998,
+                "longitude": -1.547195
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 47,        
+            "name": "Police Station",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69329398", "69329397"],
+            "position": {
+                "latitude": 51.943911,
+                "longitude": -1.54168
+            },
+            "services": ["S3"]
+        }             
     ],
     "services": [
         {
