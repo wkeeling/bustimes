@@ -102,14 +102,14 @@ class StopService(object):
     
     def _get_dist_in_km(self, lat1, lon1, lat2, lon2):
         radius = 6371 # Radius of the Earth in km
-        d_lat = self._deg_to_rad(lat2 - lat1);
-        d_lon = self._deg_to_rad(lon2 - lon1);
+        d_lat = self._deg_to_rad(lat2 - lat1)
+        d_lon = self._deg_to_rad(lon2 - lon1)
         a = (math.sin(d_lat / 2) * math.sin(d_lat / 2) + 
                         math.cos(self._deg_to_rad(lat1)) * 
                         math.cos(self._deg_to_rad(lat2)) * 
-                        math.sin(d_lon / 2) * math.sin(d_lon / 2));
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a));
-        distance_in_km = radius * c;   
+                        math.sin(d_lon / 2) * math.sin(d_lon / 2))
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+        distance_in_km = radius * c
         return distance_in_km     
     
     def _deg_to_rad(self, deg):
