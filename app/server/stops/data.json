@@ -170,7 +170,7 @@
         },
         {
             "id": 15,        
-            "name": "Marlborough Arms",
+            "name": "Marlborough Grill",
             "town/village": "Woodstock",
             "googleplaceids": [],
             "shortcodes": ["69343976", "69343982"],
@@ -563,7 +563,55 @@
                 "longitude": -1.54168
             },
             "services": ["S3"]
-        }             
+        },
+        {
+            "id": 48,        
+            "name": "Trinity Road",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69347293", "69347294"],
+            "position": {
+                "latitude": 51.944152,
+                "longitude": -1.535189
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 49,        
+            "name": "Chipping Norton School",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69347896", "69347897"],
+            "position": {
+                "latitude": 51.936424,
+                "longitude": -1.543547
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 50,        
+            "name": "The Beeches",
+            "town/village": "Chipping Norton",
+            "googleplaceids": [],
+            "shortcodes": ["69348465", "69348464"],
+            "position": {
+                "latitude": 51.921462,
+                "longitude": -1.542034
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 51,        
+            "name": "Farm End",
+            "town/village": "Old Woodstock",
+            "googleplaceids": [],
+            "shortcodes": ["69343974", "69343962"],
+            "position": {
+                "latitude": 51.852309,
+                "longitude": -1.361023
+            },
+            "services": ["S3"]
+        }                  
     ],
     "services": [
         {
