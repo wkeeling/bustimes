@@ -8,6 +8,15 @@ function TopBarController($scope, $q, $timeout, StopService, EtaUpdateService) {
             collapsed: true,
             selected: null,
             
+            onClick: function() {
+                this.collapsed = !this.collapsed;
+                if (!this.collapsed) {
+                    $timeout(function() {
+                        $('#search').focus();
+                    });
+                }
+            },
+            
             textEntered: function(text) {
                 return StopService.getStopsMatching(text);
             },
