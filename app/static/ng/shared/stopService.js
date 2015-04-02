@@ -135,10 +135,12 @@ function StopService($http, $q) {
                 maximumAge : 0
             };         
             navigator.geolocation.watchPosition(function(pos) {
-                positionListeners.forEach(function(listener) {
-                    listener(pos); 
-                });
-                lastPosition = pos;
+                if (!lastPosition || pos.coords.latitude != lastPosition.coords.latitude || pos.coords.longitude != lastPosition.coords.longitude) {
+                    positionListeners.forEach(function(listener) {
+                        listener(pos); 
+                    });
+                    lastPosition = pos;
+                }
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);
             }, options);
