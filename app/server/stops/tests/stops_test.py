@@ -34,10 +34,10 @@ class TestStopService(object):
         assert len(stops) == 1
         assert stops[0]['id'] == 1
         
-        stops = stop_service.get_stops_matching('woodSTOCK')
-        assert len(stops) == 4
-        assert stops[0]['matched_name'] == 'Blenheim Palace - Woodstock'
-        assert stops[3]['matched_name'] == 'Vermont Drive - Old Woodstock'
+        stops = stop_service.get_stops_matching('OLD woodSTOCK')
+        assert len(stops) == 3
+        assert stops[0]['matched_name'] == 'Farm End - Old Woodstock'
+        assert stops[2]['matched_name'] == 'Vermont Drive - Old Woodstock'
         
         stops = stop_service.get_stops_matching('foobar')
         assert len(stops) == 0
@@ -56,15 +56,18 @@ class TestStopService(object):
         before = time.time()
         nearest_stops = stop_service.get_stops_nearest([latitude, longitude])
         after = time.time()
-        print('Finding nearest stops took {m} secs'.format(m=(after-before)))
+        print('Finding nearest stops took {m} ms'.format(m=((after-before)*1000)))
         
-        assert len(nearest_stops) == 3
+        assert len(nearest_stops) == 4
         assert nearest_stops[0]['name'] == 'Vermont Drive'
         assert 'distance' in nearest_stops[0]
-        assert nearest_stops[1]['name'] == 'Hill Rise'
+        assert nearest_stops[1]['name'] == 'Farm End'
         assert 'distance' in nearest_stops[1]
-        assert nearest_stops[2]['name'] == 'Marlborough Arms'
-        assert 'distance' in nearest_stops[2]
+        assert nearest_stops[2]['name'] == 'Hill Rise'
+        assert 'distance' in nearest_stops[2]        
+        assert nearest_stops[3]['name'] == 'Marlborough Grill'
+        assert 'distance' in nearest_stops[3]
+        
         
     def test_should_get_stop_distance(self):
         latitude = 51.853771 

@@ -33,7 +33,7 @@ class StopService(object):
             ret = {}
             for stop in data['stops']:
                 if stop['id'] in ret:
-                    raise RuntimeError('Duplicate stop id: ' + stop['id'])
+                    raise RuntimeError('Duplicate stop id: {id}'.format(id=stop['id']))
                 ret[stop['id']] = stop
             return ret
     
