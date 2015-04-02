@@ -51,7 +51,7 @@
         {
             "id": 5,        
             "name": "Kiddington Turn",
-            "town/village": "Over Kiddington",
+            "town/village": "A44",
             "googleplaceids": [],
             "shortcodes": ["69327539", "69327538"],
             "position": {
@@ -206,25 +206,25 @@
         },  
         {
             "id": 18,        
-            "name": "The Paddocks",
-            "town/village": "Yarnton",
+            "name": "Enstone Road",
+            "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69345286", "69345267"],
+            "shortcodes": ["69327364"],
             "position": {
-                "latitude": 51.805581,
-                "longitude": -1.310232
+                "latitude": 51.875574,
+                "longitude": -1.478627
             },
             "services": ["S3"]
         },
         {
             "id": 19,        
-            "name": "South Parade West",
-            "town/village": "Summertown",
+            "name": "Dancers Hill",
+            "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69323768", "69323767"],
+            "shortcodes": ["69347454"],
             "position": {
-                "latitude": 51.777094,
-                "longitude": -1.26965
+                "latitude": 51.870589,
+                "longitude": -1.476556
             },
             "services": ["S3"]
         },  
@@ -909,6 +909,282 @@
             "position": {
                 "latitude": 51.752606,
                 "longitude": -1.268014
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 77,        
+            "name": "Duke of Marlborough",
+            "town/village": "A44",
+            "googleplaceids": [],
+            "shortcodes": ["69345276", "69343964"],
+            "position": {
+                "latitude": 51.869029,
+                "longitude": -1.377824
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 78,        
+            "name": "Stonesfield Road",
+            "town/village": "Combe",
+            "googleplaceids": [],
+            "shortcodes": ["69329595", "69329594"],
+            "position": {
+                "latitude": 51.843308,
+                "longitude": -1.405955
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 79,        
+            "name": "Boot Street",
+            "town/village": "Stonesfield",
+            "googleplaceids": [],
+            "shortcodes": ["69342724", "69342723"],
+            "position": {
+                "latitude": 51.853571,
+                "longitude": -1.43238
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 80,        
+            "name": "Stonesfield Green",
+            "town/village": "Stonesfield",
+            "googleplaceids": [],
+            "shortcodes": ["69342698", "69342784"],
+            "position": {
+                "latitude": 51.854986,
+                "longitude": -1.43069
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 81,        
+            "name": "Combe Road",
+            "town/village": "Stonesfield",
+            "googleplaceids": [],
+            "shortcodes": ["69347383", "69347384"],
+            "position": {
+                "latitude": 51.850473,
+                "longitude": -1.424907
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 82,        
+            "name": "Nine Acres Lane",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69327362", "69327359"],
+            "position": {
+                "latitude": 51.875444,
+                "longitude": -1.483347
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 83,        
+            "name": "Crossroads",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69347458"],
+            "position": {
+                "latitude": 51.875776,
+                "longitude": -1.479024
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 84,        
+            "name": "Sturt Close",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69327363"],
+            "position": {
+                "latitude": 51.867721,
+                "longitude": -1.477522
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 85,        
+            "name": "Fiveways",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69345643"],
+            "position": {
+                "latitude": 51.86682,
+                "longitude": -1.478702
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 86,        
+            "name": "Spendlove Centre",
+            "town/village": "Charlbury",
+            "googleplaceids": [],
+            "shortcodes": ["69345489"],
+            "position": {
+                "latitude": 51.873679,
+                "longitude": -1.481132
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 87,        
+            "name": "Caravan Park",
+            "town/village": "Chadlington",
+            "googleplaceids": [],
+            "shortcodes": ["69348486", "69348467"],
+            "position": {
+                "latitude": 51.917101,
+                "longitude": -1.541787
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 88,        
+            "name": "Chipping Norton Road",
+            "town/village": "Chadlington",
+            "googleplaceids": [],
+            "shortcodes": ["69342728", "69342729"],
+            "position": {
+                "latitude": 51.900568,
+                "longitude": -1.527658
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 89,        
+            "name": "Church Road",
+            "town/village": "Chadlington",
+            "googleplaceids": [],
+            "shortcodes": ["69342726", "69342727"],
+            "position": {
+                "latitude": 51.898866,
+                "longitude": -1.526724
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 90,        
+            "name": "Auburn House",
+            "town/village": "Chadlington",
+            "googleplaceids": [],
+            "shortcodes": ["69323495", "69323536"],
+            "position": {
+                "latitude": 51.895126,
+                "longitude": -1.521649
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 91,        
+            "name": "Spelsbury Church",
+            "town/village": "Spelsbury",
+            "googleplaceids": [],
+            "shortcodes": ["69329596", "69329597"],
+            "position": {
+                "latitude": 51.892517,
+                "longitude": -1.493014
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 92,        
+            "name": "St Nicholas Church",
+            "town/village": "Spelsbury",
+            "googleplaceids": [],
+            "shortcodes": ["69348532", "69348529"],
+            "position": {
+                "latitude": 51.896046,
+                "longitude": -1.516221
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 93,        
+            "name": "Glympton Turn",
+            "town/village": "A44",
+            "googleplaceids": [],
+            "shortcodes": ["69347263", "69347262"],
+            "position": {
+                "latitude": 51.882154,
+                "longitude": -1.388891
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 94,        
+            "name": "Worths Garage",
+            "town/village": "Enstone",
+            "googleplaceids": [],
+            "shortcodes": ["69345646", "69345645"],
+            "position": {
+                "latitude": 51.912145,
+                "longitude": -1.448007
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 95,        
+            "name": "The Harrow",
+            "town/village": "Enstone",
+            "googleplaceids": [],
+            "shortcodes": ["69345234", "69345235"],
+            "position": {
+                "latitude": 51.917571,
+                "longitude": -1.454927
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 96,        
+            "name": "Enstone Green",
+            "town/village": "Enstone",
+            "googleplaceids": [],
+            "shortcodes": ["69345237", "69345236"],
+            "position": {
+                "latitude": 51.915758,
+                "longitude": -1.453875
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 97,        
+            "name": "London Road",
+            "town/village": "A44",
+            "googleplaceids": [],
+            "shortcodes": ["69345437", "69345435"],
+            "position": {
+                "latitude": 51.94236,
+                "longitude": -1.513968
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 98,        
+            "name": "Chalford Oaks",
+            "town/village": "A44",
+            "googleplaceids": [],
+            "shortcodes": ["69347572", "69347569"],
+            "position": {
+                "latitude": 51.93818,
+                "longitude": -1.504548
+            },
+            "services": ["S3"]
+        },
+        {
+            "id": 99,        
+            "name": "Lidstone Turn",
+            "town/village": "A44",
+            "googleplaceids": [],
+            "shortcodes": ["69343989", "69345232"],
+            "position": {
+                "latitude": 51.926041,
+                "longitude": -1.482038
             },
             "services": ["S3"]
         }
