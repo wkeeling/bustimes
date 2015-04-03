@@ -374,7 +374,7 @@
         },
         {
             "id": 32,        
-            "name": "Witney Market Square Stop A",
+            "name": "Market Square Stop A",
             "town/village": "Witney",
             "googleplaceids": [],
             "shortcodes": ["69327463"],
@@ -398,7 +398,7 @@
         },
         {
             "id": 34,        
-            "name": "Witney Market Square Stop D",
+            "name": "Market Square Stop D",
             "town/village": "Witney",
             "googleplaceids": [],
             "shortcodes": ["69328497"],
@@ -1187,6 +1187,174 @@
                 "longitude": -1.482038
             },
             "services": ["S3"]
+        },
+        {
+            "id": 100,        
+            "name": "Market Place Stop B",
+            "town/village": "Wantage",
+            "googleplaceids": [],
+            "shortcodes": ["69326896"],
+            "position": {
+                "latitude": 51.588563,
+                "longitude": -1.427037
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 101,        
+            "name": "Market Place Stop A",
+            "town/village": "Wantage",
+            "googleplaceids": [],
+            "shortcodes": ["69326895"],
+            "position": {
+                "latitude": 51.588486,
+                "longitude": -1.426758
+            },
+            "services": []
+        },
+        {
+            "id": 102,        
+            "name": "Seesen Way",
+            "town/village": "Wantage",
+            "googleplaceids": [],
+            "shortcodes": ["69328372", "69328369"],
+            "position": {
+                "latitude": 51.58922,
+                "longitude": -1.423105
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 103,        
+            "name": "Humber Close",
+            "town/village": "Wantage",
+            "googleplaceids": [],
+            "shortcodes": ["69328373", "69328396"],
+            "position": {
+                "latitude": 51.591379,
+                "longitude": -1.423695
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 104,        
+            "name": "Harcourt Way",
+            "town/village": "Wantage",
+            "googleplaceids": [],
+            "shortcodes": ["69328376", "69328358"],
+            "position": {
+                "latitude": 51.594598,
+                "longitude": -1.422783
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 105,        
+            "name": "Grove Road Rbt",
+            "town/village": "Wantage",
+            "googleplaceids": [],
+            "shortcodes": ["69328379", "69328382"],
+            "position": {
+                "latitude": 51.597848,
+                "longitude": -1.422526
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 106,        
+            "name": "Wolage Drive",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69347867"],
+            "position": {
+                "latitude": 51.599317,
+                "longitude": -1.422805
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 107,        
+            "name": "Mandhill Close",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69345257", "69345269"],
+            "position": {
+                "latitude": 51.603792,
+                "longitude": -1.421989
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 108,        
+            "name": "Bosleys Orchard",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69324386", "69324385"],
+            "position": {
+                "latitude": 51.607214,
+                "longitude": -1.421775
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 109,        
+            "name": "Millbrook Square",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69324383", "69324384"],
+            "position": {
+                "latitude": 51.609849,
+                "longitude": -1.421549
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 110,        
+            "name": "Grove Green",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69325946", "69328383"],
+            "position": {
+                "latitude": 51.611744,
+                "longitude": -1.420691
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 111,        
+            "name": "Mayfield Avenue",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69323828", "69323829"],
+            "position": {
+                "latitude": 51.611831,
+                "longitude": -1.415493
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 112,        
+            "name": "Williams Rbt",
+            "town/village": "Grove",
+            "googleplaceids": [],
+            "shortcodes": ["69347656", "69347386"],
+            "position": {
+                "latitude": 51.617031,
+                "longitude": -1.410397
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 113,        
+            "name": "Ashfields Lane",
+            "town/village": "East Hanney",
+            "googleplaceids": [],
+            "shortcodes": ["69324262", "69324259"],
+            "position": {
+                "latitude": 51.636808,
+                "longitude": -1.392388
+            },
+            "services": ["1", "X30", "31"]
         }
     ],
     "services": [
