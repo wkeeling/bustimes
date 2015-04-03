@@ -75,10 +75,10 @@ def stop_distance():
 
 @app.route('/api/eta', methods=['GET'])
 def eta():
-    if not 'shortcodes' in request.args:
-        raise RuntimeError('No shortcodes specified')
+    if not 'stopcodes' in request.args:
+        raise RuntimeError('No stopcodes specified')
     
-    shortcodes = request.args['shortcodes']
-    etas = eta_requestor.get_etas([s for s in shortcodes.split(',')])
+    stopcodes = request.args['stopcodes']
+    etas = eta_requestor.get_etas([s for s in stopcodes.split(',')])
     
     return Response(json.dumps(etas),  mimetype='application/json')

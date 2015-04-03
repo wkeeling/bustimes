@@ -9,12 +9,12 @@ from bs4 import BeautifulSoup
 
 class OxonTimeEtaRequestor(object):
     
-    _OXON_TIME_URL = 'http://www.oxontime.com/Naptan.aspx?t=departure&sa=%shortcode%&format=xhtml'
+    _OXON_TIME_URL = 'http://www.oxontime.com/Naptan.aspx?t=departure&sa=%stopcode%&format=xhtml'
     
-    def get_etas(self, shortcodes):
+    def get_etas(self, stopcodes):
         etas = []
-        for shortcode in shortcodes:
-            html_resp = requests.get(self._OXON_TIME_URL.replace('%shortcode%', shortcode))
+        for stopcode in stopcodes:
+            html_resp = requests.get(self._OXON_TIME_URL.replace('%stopcode%', stopcode))
             etas += self._parse_out_etas(html_resp.text)
             
         def time_key(eta):

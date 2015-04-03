@@ -12,7 +12,7 @@ from app.server.eta.eta import eta_requestor
 class TestOxonTimeEtaRequestor(object):
     
     @patch('app.server.eta.eta.requests')
-    def test_should_return_etas_for_single_shortcode(self, mock_requests):
+    def test_should_return_etas_for_single_stopcode(self, mock_requests):
         def get_side_effect(url):
             with open(os.path.join(os.path.dirname(__file__), 
                                                 'oxontime_resp_1.xhtml')) as f:  
@@ -22,9 +22,9 @@ class TestOxonTimeEtaRequestor(object):
         
         mock_requests.get.side_effect = get_side_effect
         
-        shortcodes = ['69327525']
+        stopcodes = ['69327525']
         
-        etas = eta_requestor.get_etas(shortcodes)
+        etas = eta_requestor.get_etas(stopcodes)
         
         assert len(etas) == 10
         assert etas[0]['service'] == '300'
@@ -35,7 +35,7 @@ class TestOxonTimeEtaRequestor(object):
         assert etas[9]['time'] == '74 mins'  
     
     @patch('app.server.eta.eta.requests')
-    def test_should_return_etas_for_multiple_shortcodes(self, mock_requests):
+    def test_should_return_etas_for_multiple_stopcodes(self, mock_requests):
         def get_side_effect(url):
             filename = 'oxontime_resp_1.xhtml'
             if url.find('69327527') > -1:
@@ -47,9 +47,9 @@ class TestOxonTimeEtaRequestor(object):
         
         mock_requests.get.side_effect = get_side_effect
         
-        shortcodes = ['69327525', '69327527']
+        stopcodes = ['69327525', '69327527']
         
-        etas = eta_requestor.get_etas(shortcodes)
+        etas = eta_requestor.get_etas(stopcodes)
         
         assert len(etas) == 12        
         assert etas[0]['service'] == 'S3'
@@ -73,8 +73,8 @@ class TestOxonTimeEtaRequestor(object):
         
         mock_requests.get.side_effect = get_side_effect
         
-        shortcodes = ['69327525']
+        stopcodes = ['69327525']
         
-        etas = eta_requestor.get_etas(shortcodes)
+        etas = eta_requestor.get_etas(stopcodes)
         
         assert len(etas) == 0        

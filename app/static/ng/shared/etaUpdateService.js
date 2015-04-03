@@ -86,7 +86,7 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
     function doUpdate() {
         var deferred = $q.defer();
         
-        $http.get(POLL_URL, {params: {shortcodes: stop.shortcodes.join(',')}}).success(function(etas) {
+        $http.get(POLL_URL, {params: {stopcodes: stop.stopcodes.join(',')}}).success(function(etas) {
             updaters.forEach(function(updater) {
                 updater.successCallback(etas); 
             });                

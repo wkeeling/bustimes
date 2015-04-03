@@ -5,7 +5,7 @@
             "name": "Cornish Road",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69325867"],
+            "stopcodes": ["69325867"],
             "position": {
                 "latitude": 51.932862,
                 "longitude": -1.555381
@@ -17,7 +17,7 @@
             "name": "West Street Stop C",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69328362"],
+            "stopcodes": ["69328362"],
             "position": {
                 "latitude": 51.94023,
                 "longitude": -1.546061
@@ -29,7 +29,7 @@
             "name": "West Street Stop B",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69329479"],
+            "stopcodes": ["69329479"],
             "position": {
                 "latitude": 51.940368,
                 "longitude": -1.54587
@@ -41,7 +41,7 @@
             "name": "Enstone Green",
             "town/village": "Enstone",
             "googleplaceids": [],
-            "shortcodes": ["69345236", "69345237"],
+            "stopcodes": ["69345236", "69345237"],
             "position": {
                 "latitude": 51.915566,
                 "longitude": -1.453924
@@ -53,7 +53,7 @@
             "name": "Kiddington Turn",
             "town/village": "A44",
             "googleplaceids": [],
-            "shortcodes": ["69327539", "69327538"],
+            "stopcodes": ["69327539", "69327538"],
             "position": {
                 "latitude": 51.896089,
                 "longitude": -1.406465
@@ -65,7 +65,7 @@
             "name": "Village Shops",
             "town/village": "Chadlington",
             "googleplaceids": [],
-            "shortcodes": ["69345354", "69345367"],
+            "stopcodes": ["69345354", "69345367"],
             "position": {
                 "latitude": 51.895649,
                 "longitude": -1.525265
@@ -77,7 +77,7 @@
             "name": "Spelsbury Green",
             "town/village": "Spelsbury",
             "googleplaceids": [],
-            "shortcodes": ["69327938", "69327939"],
+            "stopcodes": ["69327938", "69327939"],
             "position": {
                 "latitude": 51.893901,
                 "longitude": -1.494237
@@ -89,7 +89,7 @@
             "name": "The Bell Hotel",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69326756"],
+            "stopcodes": ["69326756"],
             "position": {
                 "latitude": 51.872291,
                 "longitude": -1.483262
@@ -101,7 +101,7 @@
             "name": "Main Street",
             "town/village": "Fawler",
             "googleplaceids": [],
-            "shortcodes": ["69342725", "69326275"],
+            "stopcodes": ["69342725", "69326275"],
             "position": {
                 "latitude": 51.850929,
                 "longitude": -1.461631
@@ -113,7 +113,7 @@
             "name": "Wychwood Close",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69345647"],
+            "stopcodes": ["69345647"],
             "position": {
                 "latitude": 51.87457,
                 "longitude": -1.476806
@@ -125,7 +125,7 @@
             "name": "Prospect Close",
             "town/village": "Stonesfield",
             "googleplaceids": [],
-            "shortcodes": ["69342735", "69327235"],
+            "stopcodes": ["69342735", "69327235"],
             "position": {
                 "latitude": 51.851901,
                 "longitude": -1.428024
@@ -137,7 +137,7 @@
             "name": "Akeman Street",
             "town/village": "Combe",
             "googleplaceids": [],
-            "shortcodes": ["69342737", "69325879"],
+            "stopcodes": ["69342737", "69325879"],
             "position": {
                 "latitude": 51.843272,
                 "longitude": -1.403461
@@ -149,7 +149,7 @@
             "name": "Hill Rise",
             "town/village": "Old Woodstock",
             "googleplaceids": [],
-            "shortcodes": ["69329593", "69329592"],
+            "stopcodes": ["69329593", "69329592"],
             "position": {
                 "latitude": 51.855516,
                 "longitude": -1.36179
@@ -161,7 +161,7 @@
             "name": "Vermont Drive",
             "town/village": "Old Woodstock",
             "googleplaceids": [],
-            "shortcodes": ["69327983"],
+            "stopcodes": ["69327983"],
             "position": {
                 "latitude": 51.853538,
                 "longitude": -1.360336
@@ -173,7 +173,7 @@
             "name": "Marlborough Grill",
             "town/village": "Woodstock",
             "googleplaceids": [],
-            "shortcodes": ["69343976", "69343982"],
+            "stopcodes": ["69343976", "69343982"],
             "position": {
                 "latitude": 51.847451,
                 "longitude": -1.353845
@@ -185,7 +185,7 @@
             "name": "Blenheim Palace",
             "town/village": "Woodstock",
             "googleplaceids": [],
-            "shortcodes": ["69323856", "69323854"],
+            "stopcodes": ["69323856", "69323854"],
             "position": {
                 "latitude": 51.845585,
                 "longitude": -1.350288
@@ -197,7 +197,7 @@
             "name": "The Royal Sun",
             "town/village": "Begbroke",
             "googleplaceids": [],
-            "shortcodes": ["69343725", "69343726"],
+            "stopcodes": ["69343725", "69343726"],
             "position": {
                 "latitude": 51.822026,
                 "longitude": -1.318976
@@ -209,7 +209,7 @@
             "name": "Enstone Road",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69327364"],
+            "stopcodes": ["69327364"],
             "position": {
                 "latitude": 51.875574,
                 "longitude": -1.478627
@@ -221,7 +221,7 @@
             "name": "Dancers Hill",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69347454"],
+            "stopcodes": ["69347454"],
             "position": {
                 "latitude": 51.870589,
                 "longitude": -1.476556
@@ -233,7 +233,7 @@
             "name": "George Street Stop A5",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69327525"],
+            "stopcodes": ["69327525"],
             "position": {
                 "latitude": 51.753452,
                 "longitude": -1.26253
@@ -245,7 +245,7 @@
             "name": "Gloucester Green Bus Station Bay 8",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69326495"],
+            "stopcodes": ["69326495"],
             "position": {
                 "latitude": 51.754042,
                 "longitude": -1.262497
@@ -257,7 +257,7 @@
             "name": "Oxford Rail Stn Stop R5",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69326562"],
+            "stopcodes": ["69326562"],
             "position": {
                 "latitude": 51.753426,
                 "longitude": -1.269511
@@ -269,7 +269,7 @@
             "name": "Pear Tree P&R Car Park",
             "town/village": "Pear Tree",
             "googleplaceids": [],
-            "shortcodes": ["69327697"],
+            "stopcodes": ["69327697"],
             "position": {
                 "latitude": 51.793336,
                 "longitude": -1.28202
@@ -281,7 +281,7 @@
             "name": "St Aldates Stop H2",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69326472"],
+            "stopcodes": ["69326472"],
             "position": {
                 "latitude": 51.750733,
                 "longitude": -1.256883
@@ -293,7 +293,7 @@
             "name": "Redbridge P&R Car Park",
             "town/village": "Redbridge",
             "googleplaceids": [],
-            "shortcodes": ["69327698"],
+            "stopcodes": ["69327698"],
             "position": {
                 "latitude": 51.729853,
                 "longitude": -1.249233
@@ -305,7 +305,7 @@
             "name": "Magdalen Street Stop C2",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69326486"],
+            "stopcodes": ["69326486"],
             "position": {
                 "latitude": 51.754581,
                 "longitude": -1.25918
@@ -317,7 +317,7 @@
             "name": "Water Eaton Park & Ride",
             "town/village": "Water Eaton",
             "googleplaceids": [],
-            "shortcodes": ["69345359","69345357"],
+            "stopcodes": ["69345359","69345357"],
             "position": {
                 "latitude": 51.802819,
                 "longitude": -1.273029
@@ -329,7 +329,7 @@
             "name": "Water Eaton Terminal",
             "town/village": "Water Eaton",
             "googleplaceids": [],
-            "shortcodes": ["69328763"],
+            "stopcodes": ["69328763"],
             "position": {
                 "latitude": 51.802819,
                 "longitude": -1.273029
@@ -341,7 +341,7 @@
             "name": "George Street Stop A3",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69327485"],
+            "stopcodes": ["69327485"],
             "position": {
                 "latitude": 51.753452,
                 "longitude": -1.26253
@@ -353,7 +353,7 @@
             "name": "Elms Parade Shops",
             "town/village": "Botley",
             "googleplaceids": [],
-            "shortcodes": ["69323497", "69323498"],
+            "stopcodes": ["69323497", "69323498"],
             "position": {
                 "latitude": 51.75165,
                 "longitude": -1.298318
@@ -365,7 +365,7 @@
             "name": "Eynsham Church",
             "town/village": "Eynsham",
             "googleplaceids": [],
-            "shortcodes": ["69327535", "69328424"],
+            "stopcodes": ["69327535", "69328424"],
             "position": {
                 "latitude": 51.780387,
                 "longitude": -1.372916
@@ -377,7 +377,7 @@
             "name": "Market Square Stop A",
             "town/village": "Witney",
             "googleplaceids": [],
-            "shortcodes": ["69327463"],
+            "stopcodes": ["69327463"],
             "position": {
                 "latitude": 51.783924,
                 "longitude": -1.485371
@@ -389,7 +389,7 @@
             "name": "Bartholomew School",
             "town/village": "Eynsham",
             "googleplaceids": [],
-            "shortcodes": ["69346597", "69346596"],
+            "stopcodes": ["69346597", "69346596"],
             "position": {
                 "latitude": 51.782252,
                 "longitude": -1.381413
@@ -401,7 +401,7 @@
             "name": "Market Square Stop D",
             "town/village": "Witney",
             "googleplaceids": [],
-            "shortcodes": ["69328497"],
+            "stopcodes": ["69328497"],
             "position": {
                 "latitude": 51.784077,
                 "longitude": -1.485601
@@ -413,7 +413,7 @@
             "name": "Bus Garage",
             "town/village": "Witney",
             "googleplaceids": [],
-            "shortcodes": ["69327347", "69327348"],
+            "stopcodes": ["69327347", "69327348"],
             "position": {
                 "latitude": 51.785,
                 "longitude": -1.494194
@@ -425,7 +425,7 @@
             "name": "Thorney Leys",
             "town/village": "Witney",
             "googleplaceids": [],
-            "shortcodes": ["69326983", "69326984"],
+            "stopcodes": ["69326983", "69326984"],
             "position": {
                 "latitude": 51.780128,
                 "longitude": -1.509676
@@ -437,7 +437,7 @@
             "name": "Well Lane",
             "town/village": "Curbridge",
             "googleplaceids": [],
-            "shortcodes": ["69323956", "69323954"],
+            "stopcodes": ["69323956", "69323954"],
             "position": {
                 "latitude": 51.77736,
                 "longitude": -1.522808
@@ -449,7 +449,7 @@
             "name": "Crossroads",
             "town/village": "Carterton",
             "googleplaceids": [],
-            "shortcodes": ["69326749"],
+            "stopcodes": ["69326749"],
             "position": {
                 "latitude": 51.75952,
                 "longitude": -1.593608
@@ -461,7 +461,7 @@
             "name": "Bovingdon Road",
             "town/village": "Carterton",
             "googleplaceids": [],
-            "shortcodes": ["69327328"],
+            "stopcodes": ["69327328"],
             "position": {
                 "latitude": 51.763385,
                 "longitude": -1.587267
@@ -473,7 +473,7 @@
             "name": "Broadshires Health Centre",
             "town/village": "Carterton",
             "googleplaceids": [],
-            "shortcodes": ["69326923", "69326898"],
+            "stopcodes": ["69326923", "69326898"],
             "position": {
                 "latitude": 51.764633,
                 "longitude": -1.586902
@@ -485,7 +485,7 @@
             "name": "Brize Norton Roundabout",
             "town/village": "Brize Norton",
             "googleplaceids": [],
-            "shortcodes": ["69347365", "69347364"],
+            "stopcodes": ["69347365", "69347364"],
             "position": {
                 "latitude": 51.764633,
                 "longitude": -1.586902
@@ -497,7 +497,7 @@
             "name": "Edward Stone Rise",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69345839"],
+            "stopcodes": ["69345839"],
             "position": {
                 "latitude": 51.936242,
                 "longitude": -1.54889
@@ -509,7 +509,7 @@
             "name": "Churchill House",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69345827"],
+            "stopcodes": ["69345827"],
             "position": {
                 "latitude": 51.934211,
                 "longitude": -1.552581
@@ -521,7 +521,7 @@
             "name": "Playing Field",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69347462"],
+            "stopcodes": ["69347462"],
             "position": {
                 "latitude": 51.93264,
                 "longitude": -1.552068
@@ -533,7 +533,7 @@
             "name": "Hailey Road",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69346352"],
+            "stopcodes": ["69346352"],
             "position": {
                 "latitude": 51.933404,
                 "longitude": -1.549791
@@ -545,7 +545,7 @@
             "name": "Walterbrush Road",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69345852"],
+            "stopcodes": ["69345852"],
             "position": {
                 "latitude": 51.934998,
                 "longitude": -1.547195
@@ -557,7 +557,7 @@
             "name": "Police Station",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69329398", "69329397"],
+            "stopcodes": ["69329398", "69329397"],
             "position": {
                 "latitude": 51.943911,
                 "longitude": -1.54168
@@ -569,7 +569,7 @@
             "name": "Trinity Road",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69347293", "69347294"],
+            "stopcodes": ["69347293", "69347294"],
             "position": {
                 "latitude": 51.944152,
                 "longitude": -1.535189
@@ -581,7 +581,7 @@
             "name": "Chipping Norton School",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69347896", "69347897"],
+            "stopcodes": ["69347896", "69347897"],
             "position": {
                 "latitude": 51.936424,
                 "longitude": -1.543547
@@ -593,7 +593,7 @@
             "name": "The Beeches",
             "town/village": "Chipping Norton",
             "googleplaceids": [],
-            "shortcodes": ["69348465", "69348464"],
+            "stopcodes": ["69348465", "69348464"],
             "position": {
                 "latitude": 51.921462,
                 "longitude": -1.542034
@@ -605,7 +605,7 @@
             "name": "Farm End",
             "town/village": "Old Woodstock",
             "googleplaceids": [],
-            "shortcodes": ["69343974", "69343962"],
+            "stopcodes": ["69343974", "69343962"],
             "position": {
                 "latitude": 51.852309,
                 "longitude": -1.361023
@@ -617,7 +617,7 @@
             "name": "Roundabout",
             "town/village": "Bladon",
             "googleplaceids": [],
-            "shortcodes": ["69327393", "69327436"],
+            "stopcodes": ["69327393", "69327436"],
             "position": {
                 "latitude": 51.837203,
                 "longitude": -1.334774
@@ -629,7 +629,7 @@
             "name": "Langford Lane",
             "town/village": "Begbroke",
             "googleplaceids": [],
-            "shortcodes": ["69343984", "69343983"],
+            "stopcodes": ["69343984", "69343983"],
             "position": {
                 "latitude": 51.828193,
                 "longitude": -1.322351
@@ -641,7 +641,7 @@
             "name": "Sandy Lane",
             "town/village": "Yarnton",
             "googleplaceids": [],
-            "shortcodes": ["69329589", "69329587"],
+            "stopcodes": ["69329589", "69329587"],
             "position": {
                 "latitude": 51.814505,
                 "longitude": -1.314068
@@ -653,7 +653,7 @@
             "name": "Aysgarth Road",
             "town/village": "Yarnton",
             "googleplaceids": [],
-            "shortcodes": ["69343724", "69343723"],
+            "stopcodes": ["69343724", "69343723"],
             "position": {
                 "latitude": 51.811016,
                 "longitude": -1.312732
@@ -665,7 +665,7 @@
             "name": "The Garth",
             "town/village": "Yarnton",
             "googleplaceids": [],
-            "shortcodes": ["69347292"],
+            "stopcodes": ["69347292"],
             "position": {
                 "latitude": 51.809285,
                 "longitude": -1.312357
@@ -677,7 +677,7 @@
             "name": "William Fletcher School",
             "town/village": "Yarnton",
             "googleplaceids": [],
-            "shortcodes": ["69343698", "69343697"],
+            "stopcodes": ["69343698", "69343697"],
             "position": {
                 "latitude": 51.807623,
                 "longitude": -1.312019
@@ -689,7 +689,7 @@
             "name": "The Paddocks",
             "town/village": "Yarnton",
             "googleplaceids": [],
-            "shortcodes": ["69345286", "69345267"],
+            "stopcodes": ["69345286", "69345267"],
             "position": {
                 "latitude": 51.805593,
                 "longitude": -1.310243
@@ -701,7 +701,7 @@
             "name": "Great Close Road",
             "town/village": "Yarnton",
             "googleplaceids": [],
-            "shortcodes": ["69345293", "69345287"],
+            "stopcodes": ["69345293", "69345287"],
             "position": {
                 "latitude": 51.805902,
                 "longitude": -1.30166
@@ -713,7 +713,7 @@
             "name": "A44",
             "town/village": "Pear Tree",
             "googleplaceids": [],
-            "shortcodes": ["69329585", "69329567"],
+            "stopcodes": ["69329585", "69329567"],
             "position": {
                 "latitude": 51.792174,
                 "longitude": -1.283791
@@ -725,7 +725,7 @@
             "name": "Wolvercote Roundabout",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323935"],
+            "stopcodes": ["69323935"],
             "position": {
                 "latitude": 51.787369,
                 "longitude": -1.279703
@@ -737,7 +737,7 @@
             "name": "First Turn",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323789", "69323787"],
+            "stopcodes": ["69323789", "69323787"],
             "position": {
                 "latitude": 51.785713,
                 "longitude": -1.278282
@@ -749,7 +749,7 @@
             "name": "Woodstock Close",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323786", "69323785"],
+            "stopcodes": ["69323786", "69323785"],
             "position": {
                 "latitude": 51.783862,
                 "longitude": -1.275761
@@ -761,7 +761,7 @@
             "name": "Squitchey Lane",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323783", "69323754"],
+            "stopcodes": ["69323783", "69323754"],
             "position": {
                 "latitude": 51.781774,
                 "longitude": -1.272864
@@ -773,7 +773,7 @@
             "name": "Osberton Road",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323769", "69323823"],
+            "stopcodes": ["69323769", "69323823"],
             "position": {
                 "latitude": 51.778668,
                 "longitude": -1.271281
@@ -785,7 +785,7 @@
             "name": "South Parade",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323768", "69323767"],
+            "stopcodes": ["69323768", "69323767"],
             "position": {
                 "latitude": 51.777071,
                 "longitude": -1.269833
@@ -797,7 +797,7 @@
             "name": "Beechcroft Road",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323765", "69323764"],
+            "stopcodes": ["69323765", "69323764"],
             "position": {
                 "latitude": 51.774373,
                 "longitude": -1.267714
@@ -809,7 +809,7 @@
             "name": "Lathbury Road",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323763", "69323762"],
+            "stopcodes": ["69323763", "69323762"],
             "position": {
                 "latitude": 51.771302,
                 "longitude": -1.266791
@@ -821,7 +821,7 @@
             "name": "St Margaret's Road",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323759", "69323758"],
+            "stopcodes": ["69323759", "69323758"],
             "position": {
                 "latitude": 51.767847,
                 "longitude": -1.265633
@@ -833,7 +833,7 @@
             "name": "Canterbury Road",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323757", "69323756"],
+            "stopcodes": ["69323757", "69323756"],
             "position": {
                 "latitude": 51.765473,
                 "longitude": -1.264967
@@ -845,7 +845,7 @@
             "name": "Plantation Road",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323843", "69323839"],
+            "stopcodes": ["69323843", "69323839"],
             "position": {
                 "latitude": 51.763305,
                 "longitude": -1.263787
@@ -857,7 +857,7 @@
             "name": "Radcliffe Infirmary",
             "town/village": "Woodstock Road",
             "googleplaceids": [],
-            "shortcodes": ["69323784", "69323858"],
+            "stopcodes": ["69323784", "69323858"],
             "position": {
                 "latitude": 51.760486,
                 "longitude": -1.261716
@@ -869,7 +869,7 @@
             "name": "George Street Stop A1",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69327528"],
+            "stopcodes": ["69327528"],
             "position": {
                 "latitude": 51.753792,
                 "longitude": -1.259549
@@ -881,7 +881,7 @@
             "name": "George Street Stop B2",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69327523"],
+            "stopcodes": ["69327523"],
             "position": {
                 "latitude": 51.753941,
                 "longitude": -1.259292
@@ -893,7 +893,7 @@
             "name": "Park End St Stop E7",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69327497"],
+            "stopcodes": ["69327497"],
             "position": {
                 "latitude": 51.752732,
                 "longitude": -1.265107
@@ -905,7 +905,7 @@
             "name": "Frideswide Sq Stop R9",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "shortcodes": ["69328967"],
+            "stopcodes": ["69328967"],
             "position": {
                 "latitude": 51.752606,
                 "longitude": -1.268014
@@ -917,7 +917,7 @@
             "name": "Duke of Marlborough",
             "town/village": "A44",
             "googleplaceids": [],
-            "shortcodes": ["69345276", "69343964"],
+            "stopcodes": ["69345276", "69343964"],
             "position": {
                 "latitude": 51.869029,
                 "longitude": -1.377824
@@ -929,7 +929,7 @@
             "name": "Stonesfield Road",
             "town/village": "Combe",
             "googleplaceids": [],
-            "shortcodes": ["69329595", "69329594"],
+            "stopcodes": ["69329595", "69329594"],
             "position": {
                 "latitude": 51.843308,
                 "longitude": -1.405955
@@ -941,7 +941,7 @@
             "name": "Boot Street",
             "town/village": "Stonesfield",
             "googleplaceids": [],
-            "shortcodes": ["69342724", "69342723"],
+            "stopcodes": ["69342724", "69342723"],
             "position": {
                 "latitude": 51.853571,
                 "longitude": -1.43238
@@ -953,7 +953,7 @@
             "name": "Stonesfield Green",
             "town/village": "Stonesfield",
             "googleplaceids": [],
-            "shortcodes": ["69342698", "69342784"],
+            "stopcodes": ["69342698", "69342784"],
             "position": {
                 "latitude": 51.854986,
                 "longitude": -1.43069
@@ -965,7 +965,7 @@
             "name": "Combe Road",
             "town/village": "Stonesfield",
             "googleplaceids": [],
-            "shortcodes": ["69347383", "69347384"],
+            "stopcodes": ["69347383", "69347384"],
             "position": {
                 "latitude": 51.850473,
                 "longitude": -1.424907
@@ -977,7 +977,7 @@
             "name": "Nine Acres Lane",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69327362", "69327359"],
+            "stopcodes": ["69327362", "69327359"],
             "position": {
                 "latitude": 51.875444,
                 "longitude": -1.483347
@@ -989,7 +989,7 @@
             "name": "Crossroads",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69347458"],
+            "stopcodes": ["69347458"],
             "position": {
                 "latitude": 51.875776,
                 "longitude": -1.479024
@@ -1001,7 +1001,7 @@
             "name": "Sturt Close",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69327363"],
+            "stopcodes": ["69327363"],
             "position": {
                 "latitude": 51.867721,
                 "longitude": -1.477522
@@ -1013,7 +1013,7 @@
             "name": "Fiveways",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69345643"],
+            "stopcodes": ["69345643"],
             "position": {
                 "latitude": 51.86682,
                 "longitude": -1.478702
@@ -1025,7 +1025,7 @@
             "name": "Spendlove Centre",
             "town/village": "Charlbury",
             "googleplaceids": [],
-            "shortcodes": ["69345489"],
+            "stopcodes": ["69345489"],
             "position": {
                 "latitude": 51.873679,
                 "longitude": -1.481132
@@ -1037,7 +1037,7 @@
             "name": "Caravan Park",
             "town/village": "Chadlington",
             "googleplaceids": [],
-            "shortcodes": ["69348486", "69348467"],
+            "stopcodes": ["69348486", "69348467"],
             "position": {
                 "latitude": 51.917101,
                 "longitude": -1.541787
@@ -1049,7 +1049,7 @@
             "name": "Chipping Norton Road",
             "town/village": "Chadlington",
             "googleplaceids": [],
-            "shortcodes": ["69342728", "69342729"],
+            "stopcodes": ["69342728", "69342729"],
             "position": {
                 "latitude": 51.900568,
                 "longitude": -1.527658
@@ -1061,7 +1061,7 @@
             "name": "Church Road",
             "town/village": "Chadlington",
             "googleplaceids": [],
-            "shortcodes": ["69342726", "69342727"],
+            "stopcodes": ["69342726", "69342727"],
             "position": {
                 "latitude": 51.898866,
                 "longitude": -1.526724
@@ -1073,7 +1073,7 @@
             "name": "Auburn House",
             "town/village": "Chadlington",
             "googleplaceids": [],
-            "shortcodes": ["69323495", "69323536"],
+            "stopcodes": ["69323495", "69323536"],
             "position": {
                 "latitude": 51.895126,
                 "longitude": -1.521649
@@ -1085,7 +1085,7 @@
             "name": "Spelsbury Church",
             "town/village": "Spelsbury",
             "googleplaceids": [],
-            "shortcodes": ["69329596", "69329597"],
+            "stopcodes": ["69329596", "69329597"],
             "position": {
                 "latitude": 51.892517,
                 "longitude": -1.493014
@@ -1097,7 +1097,7 @@
             "name": "St Nicholas Church",
             "town/village": "Spelsbury",
             "googleplaceids": [],
-            "shortcodes": ["69348532", "69348529"],
+            "stopcodes": ["69348532", "69348529"],
             "position": {
                 "latitude": 51.896046,
                 "longitude": -1.516221
@@ -1109,7 +1109,7 @@
             "name": "Glympton Turn",
             "town/village": "A44",
             "googleplaceids": [],
-            "shortcodes": ["69347263", "69347262"],
+            "stopcodes": ["69347263", "69347262"],
             "position": {
                 "latitude": 51.882154,
                 "longitude": -1.388891
@@ -1121,7 +1121,7 @@
             "name": "Worths Garage",
             "town/village": "Enstone",
             "googleplaceids": [],
-            "shortcodes": ["69345646", "69345645"],
+            "stopcodes": ["69345646", "69345645"],
             "position": {
                 "latitude": 51.912145,
                 "longitude": -1.448007
@@ -1133,7 +1133,7 @@
             "name": "The Harrow",
             "town/village": "Enstone",
             "googleplaceids": [],
-            "shortcodes": ["69345234", "69345235"],
+            "stopcodes": ["69345234", "69345235"],
             "position": {
                 "latitude": 51.917571,
                 "longitude": -1.454927
@@ -1145,7 +1145,7 @@
             "name": "Enstone Green",
             "town/village": "Enstone",
             "googleplaceids": [],
-            "shortcodes": ["69345237", "69345236"],
+            "stopcodes": ["69345237", "69345236"],
             "position": {
                 "latitude": 51.915758,
                 "longitude": -1.453875
@@ -1157,7 +1157,7 @@
             "name": "London Road",
             "town/village": "A44",
             "googleplaceids": [],
-            "shortcodes": ["69345437", "69345435"],
+            "stopcodes": ["69345437", "69345435"],
             "position": {
                 "latitude": 51.94236,
                 "longitude": -1.513968
@@ -1169,7 +1169,7 @@
             "name": "Chalford Oaks",
             "town/village": "A44",
             "googleplaceids": [],
-            "shortcodes": ["69347572", "69347569"],
+            "stopcodes": ["69347572", "69347569"],
             "position": {
                 "latitude": 51.93818,
                 "longitude": -1.504548
@@ -1181,7 +1181,7 @@
             "name": "Lidstone Turn",
             "town/village": "A44",
             "googleplaceids": [],
-            "shortcodes": ["69343989", "69345232"],
+            "stopcodes": ["69343989", "69345232"],
             "position": {
                 "latitude": 51.926041,
                 "longitude": -1.482038
@@ -1193,7 +1193,7 @@
             "name": "Market Place Stop B",
             "town/village": "Wantage",
             "googleplaceids": [],
-            "shortcodes": ["69326896"],
+            "stopcodes": ["69326896"],
             "position": {
                 "latitude": 51.588563,
                 "longitude": -1.427037
@@ -1205,7 +1205,7 @@
             "name": "Market Place Stop A",
             "town/village": "Wantage",
             "googleplaceids": [],
-            "shortcodes": ["69326895"],
+            "stopcodes": ["69326895"],
             "position": {
                 "latitude": 51.588486,
                 "longitude": -1.426758
@@ -1217,7 +1217,7 @@
             "name": "Seesen Way",
             "town/village": "Wantage",
             "googleplaceids": [],
-            "shortcodes": ["69328372", "69328369"],
+            "stopcodes": ["69328372", "69328369"],
             "position": {
                 "latitude": 51.58922,
                 "longitude": -1.423105
@@ -1229,7 +1229,7 @@
             "name": "Humber Close",
             "town/village": "Wantage",
             "googleplaceids": [],
-            "shortcodes": ["69328373", "69328396"],
+            "stopcodes": ["69328373", "69328396"],
             "position": {
                 "latitude": 51.591379,
                 "longitude": -1.423695
@@ -1241,7 +1241,7 @@
             "name": "Harcourt Way",
             "town/village": "Wantage",
             "googleplaceids": [],
-            "shortcodes": ["69328376", "69328358"],
+            "stopcodes": ["69328376", "69328358"],
             "position": {
                 "latitude": 51.594598,
                 "longitude": -1.422783
@@ -1253,7 +1253,7 @@
             "name": "Grove Road Rbt",
             "town/village": "Wantage",
             "googleplaceids": [],
-            "shortcodes": ["69328379", "69328382"],
+            "stopcodes": ["69328379", "69328382"],
             "position": {
                 "latitude": 51.597848,
                 "longitude": -1.422526
@@ -1265,7 +1265,7 @@
             "name": "Wolage Drive",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69347867"],
+            "stopcodes": ["69347867"],
             "position": {
                 "latitude": 51.599317,
                 "longitude": -1.422805
@@ -1277,7 +1277,7 @@
             "name": "Mandhill Close",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69345257", "69345269"],
+            "stopcodes": ["69345257", "69345269"],
             "position": {
                 "latitude": 51.603792,
                 "longitude": -1.421989
@@ -1289,7 +1289,7 @@
             "name": "Bosleys Orchard",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69324386", "69324385"],
+            "stopcodes": ["69324386", "69324385"],
             "position": {
                 "latitude": 51.607214,
                 "longitude": -1.421775
@@ -1301,7 +1301,7 @@
             "name": "Millbrook Square",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69324383", "69324384"],
+            "stopcodes": ["69324383", "69324384"],
             "position": {
                 "latitude": 51.609849,
                 "longitude": -1.421549
@@ -1313,7 +1313,7 @@
             "name": "Grove Green",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69325946", "69328383"],
+            "stopcodes": ["69325946", "69328383"],
             "position": {
                 "latitude": 51.611744,
                 "longitude": -1.420691
@@ -1325,7 +1325,7 @@
             "name": "Mayfield Avenue",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69323828", "69323829"],
+            "stopcodes": ["69323828", "69323829"],
             "position": {
                 "latitude": 51.611831,
                 "longitude": -1.415493
@@ -1337,7 +1337,7 @@
             "name": "Williams Rbt",
             "town/village": "Grove",
             "googleplaceids": [],
-            "shortcodes": ["69347656", "69347386"],
+            "stopcodes": ["69347656", "69347386"],
             "position": {
                 "latitude": 51.617031,
                 "longitude": -1.410397
@@ -1349,7 +1349,7 @@
             "name": "Ashfields Lane",
             "town/village": "East Hanney",
             "googleplaceids": [],
-            "shortcodes": ["69324262", "69324259"],
+            "stopcodes": ["69324262", "69324259"],
             "position": {
                 "latitude": 51.636808,
                 "longitude": -1.392388
