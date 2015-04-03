@@ -8,6 +8,7 @@ from flask import send_file
 from flask import request
 from flask import Response
 from flask import json
+from flask import send_from_directory
 
 from .server.stops import stop_service
 from .server.eta import eta_requestor
@@ -82,3 +83,11 @@ def eta():
     etas = eta_requestor.get_etas([s for s in stopcodes.split(',')])
     
     return Response(json.dumps(etas),  mimetype='application/json')
+
+@app.route('/bus-icon-144x144.png')
+@app.route('/bus-icon-114x114.png')
+@app.route('/bus-icon-72x72.png')
+@app.route('/bus-icon-57x57.png')
+@app.route('/bus-icon-32x32.png')
+def static_from_root():
+    return send_from_directory(app.static_folder, 'assets/img/' + request.path[1:])
