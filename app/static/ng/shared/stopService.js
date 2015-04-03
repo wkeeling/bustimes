@@ -132,7 +132,7 @@ function StopService($http, $q) {
         if (navigator.geolocation) {
             var options = {
                 timeout : 5000,
-                maximumAge : 0
+                maximumAge : 5000
             };         
             navigator.geolocation.watchPosition(function(pos) {
                 if (!lastPosition || pos.coords.latitude != lastPosition.coords.latitude || pos.coords.longitude != lastPosition.coords.longitude) {
