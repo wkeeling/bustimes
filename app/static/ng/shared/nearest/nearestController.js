@@ -1,10 +1,15 @@
-bustimes.controller('NearestController', ['$scope', 'StopService', NearestController]);
+bustimes.controller('NearestController', ['$scope', 'StopService', 'PreferencesService', NearestController]);
 
-function NearestController($scope, StopService) {
+function NearestController($scope, StopService, PreferencesService) {
     'use strict';
     
     $scope.nearest = {
-        stops: []
+        stops: [],
+        hide: PreferencesService.getPreference('hideNearest') || false,
+        toggle: function() {
+            this.hide = !this.hide;
+            PreferencesService.setPreference('hideNearest', this.hide);
+        }
     };
     
     StopService.listenForNearestStops(function(stops) {

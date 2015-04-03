@@ -25,6 +25,13 @@ body {
     margin-bottom: 5px;
 }
 
+.separator .action {
+    float: right;
+    padding-right: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
 .bg-oxblue {
     color: #FFFFFF;
     background-image: -webkit-gradient(
