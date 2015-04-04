@@ -161,3 +161,7 @@ h3.panel-title {
 .favourite {
     color: #FFCC00;
 }
+
+.navbar.footer {
+    min-height: 30px;
+}
