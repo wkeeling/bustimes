@@ -1355,6 +1355,42 @@
                 "longitude": -1.392388
             },
             "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 114,        
+            "name": "The Mulberries",
+            "town/village": "East Hanney",
+            "googleplaceids": [],
+            "stopcodes": ["69347256", "69347257"],
+            "position": {
+                "latitude": 51.631308,
+                "longitude": -1.401889
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 115,        
+            "name": "Black Horse",
+            "town/village": "East Hanney",
+            "googleplaceids": [],
+            "stopcodes": ["69325785", "69328368"],
+            "position": {
+                "latitude": 51.632636,
+                "longitude": -1.399646
+            },
+            "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 116,        
+            "name": "St James View",
+            "town/village": "East Hanney",
+            "googleplaceids": [],
+            "stopcodes": ["69329683", "69325754"],
+            "position": {
+                "latitude": 51.634328,
+                "longitude": -1.396374
+            },
+            "services": ["1", "X30", "31"]
         }
     ],
     "services": [

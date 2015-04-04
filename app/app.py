@@ -89,5 +89,6 @@ def eta():
 @app.route('/bus-icon-72x72.png')
 @app.route('/bus-icon-57x57.png')
 @app.route('/bus-icon-32x32.png')
+@app.route('/favicon.ico')
 def static_from_root():
     return send_from_directory(app.static_folder, 'assets/img/' + request.path[1:])
