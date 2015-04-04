@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="bustimes">
     <head>
-        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Oxford Buses</title>
         <link rel="apple-touch-icon" sizes="57x57" href="/bus-icon-57x57.png" />
@@ -11,7 +12,10 @@
         <link rel="stylesheet" type="text/css" href="/static/assets/css/addtohomescreen.css">
         <script src="/static/assets/js/addtohomescreen/addtohomescreen.js"></script>
         <script>
-            addToHomescreen();
+            addToHomescreen({
+                startDelay: 2,
+                maxDisplayCount: 1
+            });
         </script>
         <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="/static/assets/css/ionicons.min.css"/>
