@@ -895,22 +895,22 @@
             "googleplaceids": [],
             "stopcodes": ["69327497"],
             "position": {
-                "latitude": 51.752732,
-                "longitude": -1.265107
+                "latitude": 51.752726,
+                "longitude": -1.265096
             },
             "services": ["S3"]
         },
         {
             "id": 76,        
-            "name": "Frideswide Sq Stop R9",
+            "name": "Frideswide Square Stop R8",
             "town/village": "Oxford City Centre",
             "googleplaceids": [],
-            "stopcodes": ["69328967"],
+            "stopcodes": ["69328968"],
             "position": {
-                "latitude": 51.752606,
-                "longitude": -1.268014
+                "latitude": 51.752766,
+                "longitude": -1.267875
             },
-            "services": ["S3"]
+            "services": ["S1", "280", "U1"]
         },
         {
             "id": 77,        
@@ -1391,6 +1391,126 @@
                 "longitude": -1.396374
             },
             "services": ["1", "X30", "31"]
+        },
+        {
+            "id": 117,        
+            "name": "Hinksey Hill Top",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323685", "69323958"],
+            "position": {
+                "latitude": 51.722339,
+                "longitude": -1.268073
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 118,        
+            "name": "Hinksey Hill Bottom",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323683", "69323682"],
+            "position": {
+                "latitude": 51.726553,
+                "longitude": -1.26184
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 119,        
+            "name": "Redbridge Bertie Place",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69324637"],
+            "position": {
+                "latitude": 51.731427,
+                "longitude": -1.250086
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 120,        
+            "name": "Canning Crescent",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69324972", "69325265"],
+            "position": {
+                "latitude": 51.73275,
+                "longitude": -1.249174
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 121,        
+            "name": "Chatham Road",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323792", "69323793"],
+            "position": {
+                "latitude": 51.735062,
+                "longitude": -1.250612
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 122,        
+            "name": "Lincoln Road",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323795", "69323794"],
+            "position": {
+                "latitude": 51.737045,
+                "longitude": -1.251765
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 123,        
+            "name": "Lake Street",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323797", "69323796"],
+            "position": {
+                "latitude": 51.740155,
+                "longitude": -1.253879
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 124,        
+            "name": "Newton Road",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323782", "69323879"],
+            "position": {
+                "latitude": 51.742098,
+                "longitude": -1.255118
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 125,        
+            "name": "Whitehouse Road",
+            "town/village": "Abingdon Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323859", "69323934"],
+            "position": {
+                "latitude": 51.744084,
+                "longitude": -1.255982
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 126,        
+            "name": "New Road Stop D3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69327494"],
+            "position": {
+                "latitude": 51.75236,
+                "longitude": -1.262344
+            },
+            "services": ["X30", "31"]
         }
     ],
     "services": [
