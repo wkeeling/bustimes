@@ -1,6 +1,6 @@
-bustimes.service('StopService', ['$http', '$q', StopService]);
+bustimes.service('StopService', ['$http', '$q', '$timeout', StopService]);
 
-function StopService($http, $q) {
+function StopService($http, $q, $timeout) {
     'use strict';
     
     var DATA_SOURCE = '/api/stop',
@@ -43,11 +43,22 @@ function StopService($http, $q) {
     };
     
     this.listenForNearestStops = function(callback) {
-        positionListeners.push(function(pos) {
-            $http.get(DATA_SOURCE + '/nearest', 
-                {params: {position: pos.coords.latitude + ',' + pos.coords.longitude}}).success(function(stops) {
-                callback(stops); 
-            });
+        positionListeners.push({
+            success: function(pos) {
+                $http.get(DATA_SOURCE + '/nearest', 
+                    {params: {position: pos.coords.latitude + ',' + pos.coords.longitude}}).success(function(stops) {
+                    callback({
+                        stops: stops
+                    }); 
+                });
+            },
+            error: function() {
+                $timeout(function() {
+                    callback({
+                        error: true 
+                    });
+                });
+            }
         });
     };   
     
@@ -113,20 +124,22 @@ function StopService($http, $q) {
     };
     
     (function() {
-        positionListeners.push(function(pos) {
-            // Add a listener to update the distance to any stops that are being tracked (displayed)
-            for (var id in stopTrackers) {
-                if (stopTrackers.hasOwnProperty(id)) {
-                    $http.get(DATA_SOURCE + '/distance', {params: {position: pos.coords.latitude + ',' + pos.coords.longitude, stop_id: id}}).success(function(_id) {
-                        return function(resp) {
-                            var trackers = stopTrackers[_id];
-                            trackers.forEach(function(tracker) {
-                                tracker.stop.distance = resp.distance;
-                            });
-                        };
-                    }(id));
-                }
-            } 
+        positionListeners.push({
+            success: function(pos) {
+                // Add a listener to update the distance to any stops that are being tracked (displayed)
+                for (var id in stopTrackers) {
+                    if (stopTrackers.hasOwnProperty(id)) {
+                        $http.get(DATA_SOURCE + '/distance', {params: {position: pos.coords.latitude + ',' + pos.coords.longitude, stop_id: id}}).success(function(_id) {
+                            return function(resp) {
+                                var trackers = stopTrackers[_id];
+                                trackers.forEach(function(tracker) {
+                                    tracker.stop.distance = resp.distance;
+                                });
+                            };
+                        }(id));
+                    }
+                } 
+            }
         });
         
         if (navigator.geolocation) {
@@ -137,15 +150,25 @@ function StopService($http, $q) {
             navigator.geolocation.watchPosition(function(pos) {
                 if (!lastPosition || pos.coords.latitude != lastPosition.coords.latitude || pos.coords.longitude != lastPosition.coords.longitude) {
                     positionListeners.forEach(function(listener) {
-                        listener(pos); 
+                        listener.success(pos); 
                     });
                     lastPosition = pos;
                 }
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);
+                positionError();               
             }, options);
         } else {
             console.warn('Browser does not support geolocation');
-        }  
+            positionError();            
+        }
+        
+        function positionError() {
+            positionListeners.forEach(function(listener) {
+                if (listener.error) {
+                    listener.error(); 
+                }
+            });   
+        }        
     })();    
 }
