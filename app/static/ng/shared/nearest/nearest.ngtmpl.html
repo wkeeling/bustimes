@@ -1,16 +1,16 @@
 <div class="separator bg-oxblue">Stops near me<div class="action" ng-click="nearest.toggle()">
-    <span ng-if="nearest.hide">Show&#160;&#160;<i class="ion ion-chevron-right"></i></span>
-    <span ng-if="!nearest.hide"><i class="ion ion-chevron-left"></i>&#160;&#160;Hide</span>
+    <span ng-if="nearest.hide && nearest.stops.length"><i class="fa fa-plus-square-o"></i>&#160;&#160;Show</span>
+    <span ng-if="!nearest.hide && nearest.stops.length"><i class="fa fa-minus-square-o"></i>&#160;&#160;Hide</span>
 </div></div>
 <div collapse="nearest.hide" ng-repeat="stop in nearest.stops" class="animate-stop">
     <stop stop="stop"></stop>
 </div>
-<div ng-if="!nearest.stops && !nearest.hide && !nearest.error" style="text-align: center">
+<div ng-if="!nearest.stops  && !nearest.error" style="text-align: center">
     <h4 style="padding-top: 20px;"><small>Finding nearest stops...</small></h4>
 </div>
-<div ng-if="nearest.stops && !nearest.stops.length && !nearest.hide && !nearest.error" style="text-align: center">
+<div ng-if="nearest.stops && !nearest.stops.length && !nearest.error" style="text-align: center">
     <h4 style="padding-top: 20px;"><small>You aren't near any stops.<br/>You could try searching for one.</small></h4>
 </div>
-<div ng-if="nearest.error && !nearest.hide" style="text-align: center">
+<div ng-if="nearest.error" style="text-align: center">
     <h4 style="padding-top: 20px;"><small>Unable to determine your location.<br/>Have you enabled location sharing?</small></h4>
 </div>
