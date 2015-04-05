@@ -84,11 +84,11 @@ def eta():
     
     return Response(json.dumps(etas),  mimetype='application/json')
 
-@app.route('/bus-icon-144x144.png')
-@app.route('/bus-icon-114x114.png')
-@app.route('/bus-icon-72x72.png')
-@app.route('/bus-icon-57x57.png')
-@app.route('/bus-icon-32x32.png')
+@app.route('/touch-icon-152x152.png')
+@app.route('/touch-icon-120x120.png')
+@app.route('/touch-icon-76x76.png')
+@app.route('/touch-icon-60x60.png')
+@app.route('/startup.png')
 @app.route('/favicon.ico')
 def static_from_root():
     return send_from_directory(app.static_folder, 'assets/img/' + request.path[1:])
