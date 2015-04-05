@@ -278,13 +278,13 @@
         },
         {
             "id": 24,        
-            "name": "St Aldates Stop H2",
-            "town/village": "Oxford City Centre",
+            "name": "Sawmill",
+            "town/village": "Bagley Wood",
             "googleplaceids": [],
-            "stopcodes": ["69326472"],
+            "stopcodes": ["69324725", "69324724"],
             "position": {
-                "latitude": 51.750733,
-                "longitude": -1.256883
+                "latitude": 51.714031,
+                "longitude": -1.265799
             },
             "services": ["300"]
         },
@@ -1511,6 +1511,294 @@
                 "longitude": -1.262344
             },
             "services": ["X30", "31"]
+        },
+        {
+            "id": 127,        
+            "name": "Elms Parade",
+            "town/village": "Botley Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323497", "69323498"],
+            "position": {
+                "latitude": 51.751693,
+                "longitude": -1.298565
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 128,        
+            "name": "Minns Ind. Est",
+            "town/village": "Botley Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323465", "69323467"],
+            "position": {
+                "latitude": 51.753304,
+                "longitude": -1.29202
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 129,        
+            "name": "Seacourt P&R Entry",
+            "town/village": "Botley Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323453", "69323454"],
+            "position": {
+                "latitude": 51.753091,
+                "longitude": -1.28864
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 130,        
+            "name": "Lamarsh Road",
+            "town/village": "Botley Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323463", "69323464"],
+            "position": {
+                "latitude": 51.752749,
+                "longitude": -1.284124
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 131,        
+            "name": "Binsey Lane",
+            "town/village": "Botley Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323428", "69323457"],
+            "position": {
+                "latitude": 51.75246,
+                "longitude": -1.280159
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 132,        
+            "name": "Osney Island",
+            "town/village": "Botley Road",
+            "googleplaceids": [],
+            "stopcodes": ["69323459", "69323462"],
+            "position": {
+                "latitude": 51.752477,
+                "longitude": -1.274146
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 133,        
+            "name": "Police Station Stop P1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345726"],
+            "position": {
+                "latitude": 51.74811,
+                "longitude": -1.256363
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 134,        
+            "name": "Police Station Stop P2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345652"],
+            "position": {
+                "latitude": 51.747884,
+                "longitude": -1.256604
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 135,        
+            "name": "Castle Street Stop E1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326548"],
+            "position": {
+                "latitude": 51.751115,
+                "longitude": -1.261534
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 136,        
+            "name": "Castle Street Stop E2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326547"],
+            "position": {
+                "latitude": 51.751387,
+                "longitude": -1.261191
+            },
+            "services": ["X30", "31"]
+        },
+        {
+            "id": 137,        
+            "name": "Castle Street Stop E3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326526"],
+            "position": {
+                "latitude": 51.751587,
+                "longitude": -1.26096
+            },
+            "services": ["8"]
+        },
+        {
+            "id": 138,        
+            "name": "Castle Street Stop M1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326545"],
+            "position": {
+                "latitude": 51.751104,
+                "longitude": -1.261242
+            },
+            "services": ["4A", "5", "13", "4"]
+        },
+        {
+            "id": 139,        
+            "name": "Castle Street Stop M2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69347482"],
+            "position": {
+                "latitude": 51.750883,
+                "longitude": -1.261539
+            },
+            "services": []
+        },
+        {
+            "id": 140,        
+            "name": "St Aldates Stop G1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326479"],
+            "position": {
+                "latitude": 51.750373,
+                "longitude": -1.256966
+            },
+            "services": ["4", "4A"]
+        },
+        {
+            "id": 141,        
+            "name": "St Aldates Stop G2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326478"],
+            "position": {
+                "latitude": 51.750823,
+                "longitude": -1.257135
+            },
+            "services": ["13", "X13"]
+        },
+        {
+            "id": 142,        
+            "name": "St Aldates Stop G3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326476"],
+            "position": {
+                "latitude": 51.751162,
+                "longitude": -1.257334
+            },
+            "services": ["10", "12C", "U5"]
+        },
+        {
+            "id": 143,        
+            "name": "St Aldates Stop G4",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326475"],
+            "position": {
+                "latitude": 51.751457,
+                "longitude": -1.257489
+            },
+            "services": ["1", "5"]
+        },
+        {
+            "id": 144,        
+            "name": "St Aldates Stop G5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326474"],
+            "position": {
+                "latitude": 51.75165,
+                "longitude": -1.25757
+            },
+            "services": []
+        },
+        {
+            "id": 145,        
+            "name": "St Aldates Stop H1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326473"],
+            "position": {
+                "latitude": 51.750874,
+                "longitude": -1.257001
+            },
+            "services": ["X13", "X3"]
+        },
+        {
+            "id": 146,        
+            "name": "St Aldates Stop H2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326472"],
+            "position": {
+                "latitude": 51.750748,
+                "longitude": -1.256923
+            },
+            "services": ["300"]
+        },
+        {
+            "id": 147,        
+            "name": "St Aldates Stop H3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326469"],
+            "position": {
+                "latitude": 51.750602,
+                "longitude": -1.25688
+            },
+            "services": ["35"]
+        },
+        {
+            "id": 148,        
+            "name": "St Aldates Stop H4",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326468"],
+            "position": {
+                "latitude": 51.750477,
+                "longitude": -1.256838
+            },
+            "services": ["35"]
+        },
+        {
+            "id": 149,        
+            "name": "St Aldates Stop H5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326543"],
+            "position": {
+                "latitude": 51.75028,
+                "longitude": -1.256768
+            },
+            "services": ["OXF", "X90", "TUBE", "X2"]
+        },
+        {
+            "id": 150,        
+            "name": "Sugworth Lane",
+            "town/village": "Bagley Wood",
+            "googleplaceids": [],
+            "stopcodes": ["69323957", "69342356"],
+            "position": {
+                "latitude": 51.703138,
+                "longitude": -1.266421
+            },
+            "services": ["OXF", "X90", "TUBE", "X2"]
         }
     ],
     "services": [
