@@ -68,6 +68,13 @@ class TestStopService(object):
         assert nearest_stops[3]['name'] == 'Marlborough Grill'
         assert 'distance' in nearest_stops[3]
         
+    def test_should_get_stops_nearest_radcliffe_infirmary(self):
+        latitude = 51.760725 
+        longitude = -1.262044
+        nearest_stops = stop_service.get_stops_nearest([latitude, longitude])
+        
+        assert nearest_stops[0]['name'] == 'Radcliffe Infirmary'
+        
         
     def test_should_get_stop_distance(self):
         latitude = 51.853771 

@@ -33,12 +33,14 @@ class StopService(object):
             ret = {}
             for stop in data['stops']:
                 if stop['id'] in ret:
-                    raise RuntimeError('Duplicate stop id: {id}'.format(id=stop['id']))
+                    raise RuntimeError('Duplicate stop id: {id}'
+                                                        .format(id=stop['id']))
                 ret[stop['id']] = stop
             return ret
     
     def get_stops(self, ids, position=None):
-        stops = [copy.deepcopy(self._stops[_id]) for _id in ids if _id in self._stops]
+        stops = [copy.deepcopy(self._stops[_id]) 
+                                          for _id in ids if _id in self._stops]
         if position:
             for stop in stops:
                 stop['distance'] = self._get_stop_distance(position, stop)
@@ -88,9 +90,8 @@ class StopService(object):
                 stop = copy.deepcopy(stop)
                 stop['distance'] = dist
                 nearest.append(stop)
-                if len(nearest) == self._MAX_NEAREST_STOPS:
-                    break
-        return sorted(nearest, key=lambda s: s['distance'])
+        nearest = sorted(nearest, key=lambda s: s['distance'])
+        return nearest[:self._MAX_NEAREST_STOPS]
     
     def get_stop_distance(self, position, stop_id):
         stop = self._stops[stop_id]
