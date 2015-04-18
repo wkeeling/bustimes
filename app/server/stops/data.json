@@ -1798,7 +1798,463 @@
                 "latitude": 51.703138,
                 "longitude": -1.266421
             },
-            "services": ["OXF", "X90", "TUBE", "X2"]
+            "services": ["31"]
+        },
+        {
+            "id": 151,        
+            "name": "Post Office",
+            "town/village": "Marcham",
+            "googleplaceids": [],
+            "stopcodes": ["69328384", "69328385"],
+            "position": {
+                "latitude": 51.667442,
+                "longitude": -1.344146
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 152,        
+            "name": "Duffield Place",
+            "town/village": "Marcham",
+            "googleplaceids": [],
+            "stopcodes": ["69328386", "69328387"],
+            "position": {
+                "latitude": 51.670389,
+                "longitude": -1.344135
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 153,        
+            "name": "Longfields",
+            "town/village": "Marcham",
+            "googleplaceids": [],
+            "stopcodes": ["69328389", "69328392"],
+            "position": {
+                "latitude": 51.670662,
+                "longitude": -1.340611
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 154,        
+            "name": "Morland Road",
+            "town/village": "Marcham",
+            "googleplaceids": [],
+            "stopcodes": ["69328393", "69324258"],
+            "position": {
+                "latitude": 51.667435,
+                "longitude": -1.337473
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 155,        
+            "name": "War Memorial",
+            "town/village": "Marcham",
+            "googleplaceids": [],
+            "stopcodes": ["69329329", "69328943"],
+            "position": {
+                "latitude": 51.666414,
+                "longitude": -1.344849
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 156,        
+            "name": "Fairacres",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69328394", "69328329"],
+            "position": {
+                "latitude": 51.668546,
+                "longitude": -1.307834
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 157,        
+            "name": "Community Hospital",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69326385", "69329326"],
+            "position": {
+                "latitude": 51.669378,
+                "longitude": -1.300544
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 158,        
+            "name": "Victoria Road",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69328259", "69328262"],
+            "position": {
+                "latitude": 51.669275,
+                "longitude": -1.292991
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 159,        
+            "name": "Conduit Road",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69328263", "69328264"],
+            "position": {
+                "latitude": 51.669588,
+                "longitude": -1.288565
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 160,        
+            "name": "Coxeters",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69328435"],
+            "position": {
+                "latitude": 51.670043,
+                "longitude": -1.286023
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 161,        
+            "name": "Stratton Way Stop A1",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69326784"],
+            "position": {
+                "latitude": 51.671404,
+                "longitude": -1.28488
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 162,        
+            "name": "Stratton Way Stop A2",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69346289"],
+            "position": {
+                "latitude": 51.671224,
+                "longitude": -1.285089
+            },
+            "services": ["X2", "X3", "X13"]
+        },
+        {
+            "id": 163,        
+            "name": "Stratton Way Stop A3",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69346292"],
+            "position": {
+                "latitude": 51.671005,
+                "longitude": -1.285272
+            },
+            "services": ["4", "35"]
+        },
+        {
+            "id": 164,        
+            "name": "Stratton Way Stop A4",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69346293"],
+            "position": {
+                "latitude": 51.671038,
+                "longitude": -1.284955
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 165,        
+            "name": "Vineyard",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69345469", "69345473"],
+            "position": {
+                "latitude": 51.673374,
+                "longitude": -1.279778
+            },
+            "services": ["31", "X1", "X2", "X3", "X13"]
+        },
+        {
+            "id": 166,        
+            "name": "Our Lady's Oxford Road",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69323936", "69323938"],
+            "position": {
+                "latitude": 51.675077,
+                "longitude": -1.277799
+            },
+            "services": ["31", "X1", "X2", "X3", "X13"]
+        },
+        {
+            "id": 167,        
+            "name": "Our Lady's Radley Road",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69323549", "69323548"],
+            "position": {
+                "latitude": 51.674468,
+                "longitude": -1.277279
+            },
+            "services": ["35"]
+        },
+        {
+            "id": 168,        
+            "name": "The Ox",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69323939", "69323937"],
+            "position": {
+                "latitude": 51.677598,
+                "longitude": -1.2756
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 169,        
+            "name": "Boundary House",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69324684", "69324683"],
+            "position": {
+                "latitude": 51.682734,
+                "longitude": -1.273604
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 170,        
+            "name": "South Avenue",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69324636", "69324635"],
+            "position": {
+                "latitude": 51.685568,
+                "longitude": -1.272655
+            },
+            "services": ["31"]
+        },
+        {
+            "id": 171,        
+            "name": "Peachcroft Roundabout",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69325752", "69325749"],
+            "position": {
+                "latitude": 51.689133,
+                "longitude": -1.270997
+            },
+            "services": ["X1", "X2", "X3", "X13", "31"]
+        },
+        {
+            "id": 172,        
+            "name": "Lodge Hill",
+            "town/village": "Abingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69324257", "69324256"],
+            "position": {
+                "latitude": 51.695753,
+                "longitude": -1.26839
+            },
+            "services": ["X1", "X2", "X3", "X13", "31"]
+        },
+        {
+            "id": 173,        
+            "name": "George Street Stop A2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69327527"],
+            "position": {
+                "latitude": 51.753708,
+                "longitude": -1.260078
+            },
+            "services": ["300"]
+        },
+        {
+            "id": 174,        
+            "name": "George Street Stop B1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69327545"],
+            "position": {
+                "latitude": 51.753521,
+                "longitude": -1.26221
+            },
+            "services": ["300", "S1", "14"]
+        },
+        {
+            "id": 175,        
+            "name": "Magdalen Street Stop C1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326546"],
+            "position": {
+                "latitude": 51.75433,
+                "longitude": -1.259066
+            },
+            "services": []
+        },
+        {
+            "id": 176,        
+            "name": "Magdalen Street Stop C3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326572"],
+            "position": {
+                "latitude": 51.754807,
+                "longitude": -1.259234
+            },
+            "services": []
+        },
+        {
+            "id": 177,        
+            "name": "St Giles",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69327498"],
+            "position": {
+                "latitude": 51.755754,
+                "longitude": -1.259592
+            },
+            "services": []
+        },
+        {
+            "id": 178,        
+            "name": "Carfax Stop i1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326483"],
+            "position": {
+                "latitude": 51.752188,
+                "longitude": -1.25559
+            },
+            "services": ["4A", "4B", "U1", "U5", "400"]
+        },
+        {
+            "id": 179,        
+            "name": "Carfax Stop i2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326482"],
+            "position": {
+                "latitude": 51.752088,
+                "longitude": -1.256497
+            },
+            "services": ["3", "5", "13", "280", "X13"]
+        },
+        {
+            "id": 180,        
+            "name": "Turl Street Stop L1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69342763"],
+            "position": {
+                "latitude": 51.752347,
+                "longitude": -1.255344
+            },
+            "services": ["U1", "280"]
+        },
+        {
+            "id": 181,        
+            "name": "Queens Lane Stop J1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345693"],
+            "position": {
+                "latitude": 51.752593,
+                "longitude": -1.2508
+            },
+            "services": ["8", "9", "X90", "TUBE"]
+        },
+        {
+            "id": 182,        
+            "name": "Queens Lane Stop J2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345729"],
+            "position": {
+                "latitude": 51.752643,
+                "longitude": -1.251315
+            },
+            "services": ["1", "10", "12"]
+        },
+        {
+            "id": 183,        
+            "name": "Queens Lane Stop J3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345658"],
+            "position": {
+                "latitude": 51.752663,
+                "longitude": -1.251503
+            },
+            "services": ["3", "4A", "5", "280", "U1", "X13", "400"]
+        },
+        {
+            "id": 184,        
+            "name": "Queens Lane Stop K1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345686"],
+            "position": {
+                "latitude": 51.752779,
+                "longitude": -1.251492
+            },
+            "services": ["1", "5", "10"]
+        },
+        {
+            "id": 185,        
+            "name": "Queens Lane Stop K2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345687"],
+            "position": {
+                "latitude": 51.752772,
+                "longitude": -1.251299
+            },
+            "services": ["3", "12", "T1"]
+        },
+        {
+            "id": 186,        
+            "name": "Queens Lane Stop K3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69343965"],
+            "position": {
+                "latitude": 51.752752,
+                "longitude": -1.251165
+            },
+            "services": ["4", "4A", "4B", "400", "X13", "13"]
+        },
+        {
+            "id": 187,        
+            "name": "Queens Lane Stop K4",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345692"],
+            "position": {
+                "latitude": 51.752749,
+                "longitude": -1.250864
+            },
+            "services": ["8", "U1", "U5", "TUBE"]
+        },
+        {
+            "id": 188,        
+            "name": "Queens Lane Stop K5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345728"],
+            "position": {
+                "latitude": 51.752716,
+                "longitude": -1.250639
+            },
+            "services": ["280", "LHR", "LGW", "X90"]
         }
     ],
     "services": [
