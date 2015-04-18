@@ -21,6 +21,10 @@ stop_service.initialise()
 
 
 @app.route('/')
+@app.route('/buses')
+@app.route('/share')
+@app.route('/feedback')
+@app.route('/about')
 def index():
     return send_file('templates/index.html')
 

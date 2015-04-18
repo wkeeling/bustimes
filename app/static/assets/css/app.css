@@ -12,6 +12,10 @@ body {
     overflow-x: hidden
 }
 
+a, a:hover, a:focus {
+    color: #FFFFFF;
+}
+
 .main-content {
     padding: 5px;
 }
@@ -96,10 +100,23 @@ body {
     margin-left: 10px;
     margin-top: 15px;
     margin-right: 20px;
+    font-size: 22px;
+}
+
+.navbar-header h4 {
+    margin-top: 12px;   
+    cursor: pointer; 
 }
 
 .navbar-form {
     margin-bottom: 0px;
+}
+
+.navbar .btn-group {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    color: #6E6E6E;
 }
 
 ul.dropdown-menu a {
@@ -164,4 +181,18 @@ h3.panel-title {
 
 .navbar.footer {
     min-height: 30px;
+}
+
+.share {
+    text-align: center;
+}
+
+.share button {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.share button h4 {
+    font-size: 32px;
 }

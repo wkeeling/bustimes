@@ -123,6 +123,41 @@ function StopService($http, $q, $timeout) {
         };
     };
     
+    this.updatePosition = function() {
+        if (navigator.geolocation) {
+            var options = {
+                timeout : 5000,
+                maximumAge : 5000
+            };         
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                doUpdatePosition(pos);
+            }, function(err) {
+                console.warn('Unable to get current position: ' + err.message);
+                positionError();               
+            }, options);
+        } else {
+            console.warn('Browser does not support geolocation');
+            positionError();            
+        }
+    };
+    
+    function doUpdatePosition(pos) {
+        if (!lastPosition || pos.coords.latitude != lastPosition.coords.latitude || pos.coords.longitude != lastPosition.coords.longitude) {
+            positionListeners.forEach(function(listener) {
+                listener.success(pos); 
+            });
+            lastPosition = pos;
+        }        
+    }
+    
+    function positionError() {
+        positionListeners.forEach(function(listener) {
+            if (listener.error) {
+                listener.error(); 
+            }
+        });   
+    }     
+    
     (function() {
         positionListeners.push({
             success: function(pos) {
@@ -148,12 +183,7 @@ function StopService($http, $q, $timeout) {
                 maximumAge : 5000
             };         
             navigator.geolocation.watchPosition(function(pos) {
-                if (!lastPosition || pos.coords.latitude != lastPosition.coords.latitude || pos.coords.longitude != lastPosition.coords.longitude) {
-                    positionListeners.forEach(function(listener) {
-                        listener.success(pos); 
-                    });
-                    lastPosition = pos;
-                }
+                doUpdatePosition(pos);
             }, function(err) {
                 console.warn('Unable to get current position: ' + err.message);
                 positionError();               
@@ -162,13 +192,5 @@ function StopService($http, $q, $timeout) {
             console.warn('Browser does not support geolocation');
             positionError();            
         }
-        
-        function positionError() {
-            positionListeners.forEach(function(listener) {
-                if (listener.error) {
-                    listener.error(); 
-                }
-            });   
-        }        
     })();    
 }

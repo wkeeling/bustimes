@@ -1,12 +1,11 @@
-bustimes.controller('TopBarController', ['$scope', '$q', '$timeout', 'StopService', 'EtaUpdateService', TopBarController]);
+bustimes.controller('TopBarController', ['$scope', '$q', '$timeout', '$location', 'StopService', 'EtaUpdateService', TopBarController]);
 
-function TopBarController($scope, $q, $timeout, StopService, EtaUpdateService) {
+function TopBarController($scope, $q, $timeout, $location, StopService, EtaUpdateService) {
     'use strict';
     
     $scope.topbar = {
-        search: {
+        menu: {
             collapsed: true,
-            selected: null,
             
             onClick: function() {
                 this.collapsed = !this.collapsed;
@@ -17,14 +16,25 @@ function TopBarController($scope, $q, $timeout, StopService, EtaUpdateService) {
                 }
             },
             
-            textEntered: function(text) {
-                return StopService.getStopsMatching(text);
+            search: {
+                selected: null,
+                
+                textEntered: function(text) {
+                    return StopService.getStopsMatching(text);
+                },
+                
+                onSelect: function($item, $model, $label) {
+                    StopService.onStopSelected($item);
+                    $scope.topbar.collapsed = true;
+                    this.selected = null;
+                }
             },
             
-            onSelect: function($item, $model, $label) {
-                StopService.onStopSelected($item);
-                this.collapsed = true;
-                this.selected = null;
+            button: {
+                onClick: function(name) {
+                    $scope.topbar.menu.collapsed = true;
+                    $location.path('/' + name);
+                }
             }
         },
         refresh: {
@@ -39,7 +49,13 @@ function TopBarController($scope, $q, $timeout, StopService, EtaUpdateService) {
                     });
                 }, 1000);
             },
-        }
+        },
+        
+        home: function() {
+            $scope.topbar.menu.collapsed = true;
+            $location.path('/buses');
+            StopService.updatePosition();
+        }        
     };
     
     StopService.registerSearchListener({stopCleared: function() {
