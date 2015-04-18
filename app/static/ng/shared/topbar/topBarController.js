@@ -25,7 +25,7 @@ function TopBarController($scope, $q, $timeout, $location, StopService, EtaUpdat
                 
                 onSelect: function($item, $model, $label) {
                     StopService.onStopSelected($item);
-                    $scope.topbar.collapsed = true;
+                    $scope.topbar.menu.collapsed = true;
                     this.selected = null;
                 }
             },
