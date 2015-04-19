@@ -97,10 +97,13 @@ a, a:hover, a:focus {
 }
 
 .navbar h4 {
+    font-size: 22px;
+}
+
+.navbar-header h4 {
     margin-left: 10px;
     margin-top: 15px;
     margin-right: 20px;
-    font-size: 22px;
 }
 
 .navbar-header h4 {
@@ -188,9 +191,11 @@ h3.panel-title {
 }
 
 .share button {
-    width: 100%;
+    width: 80%;
     display: block;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .share button h4 {

@@ -54,11 +54,13 @@ function TopBarController($scope, $q, $timeout, $location, StopService, EtaUpdat
         home: function() {
             $scope.topbar.menu.collapsed = true;
             $location.path('/buses');
-            StopService.updatePosition();
+            $timeout(function() {
+                StopService.updateLastPosition();
+            });
         }        
     };
     
     StopService.registerSearchListener({stopCleared: function() {
-        $scope.topbar.search.selected = '';
+        $scope.topbar.menu.search.selected = '';
     }});
 }

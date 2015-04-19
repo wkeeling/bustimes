@@ -10,23 +10,21 @@
             </h4>
         </div>
     </div>
-    <div collapse="topbar.menu.collapsed">
-        <div class="container">
-            <form role="search">
-                <div class="form-group" style="display:inline">
-                    <div class="input-group" style="display:table">
-                        <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
-                        <input id="search" type="text" class="form-control" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 4px; border-bottom-right-radius: 4px" 
-                                placeholder="Search for stop" typeahead="stop.matched_name for stop in topbar.menu.search.textEntered($viewValue)" 
-                                typeahead-on-select="topbar.menu.search.onSelect($item, $model, $label)" ng-model="topbar.menu.search.selected" ui-reset>
-                    </div>
+    <div ng-if="!topbar.menu.collapsed" class="container">
+        <form role="search">
+            <div class="form-group" style="display:inline">
+                <div class="input-group" style="display:table">
+                    <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
+                    <input id="search" type="text" class="form-control" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 4px; border-bottom-right-radius: 4px" 
+                            placeholder="Search for stop" typeahead="stop.matched_name for stop in topbar.menu.search.textEntered($viewValue)" 
+                            typeahead-on-select="topbar.menu.search.onSelect($item, $model, $label)" ng-model="topbar.menu.search.selected" ui-reset>
                 </div>
-            </form>
-            <div class="btn-group">
-                <button ng-click="topbar.menu.button.onClick('share')" class="btn btn-primary btn-xs" style="width: 33%"><h4><i class="fa fa-share"></i></h4></button>
-                <button ng-click="topbar.menu.button.onClick('feedback')" class="btn btn-primary btn-xs" style="width: 33%"><h4><i class="fa fa-bullhorn"></i></h4></button>
-                <button ng-click="topbar.menu.button.onClick('about')" class="btn btn-primary btn-xs" style="width: 34%"><h4><i class="fa fa-info"></i></h4></button>
             </div>
+        </form>
+        <div class="btn-group">
+            <a ng-click="topbar.menu.button.onClick('share')" class="btn btn-xs" style="width: 33%"><h4><i class="fa fa-share"></i></h4></a>
+            <a ng-click="topbar.menu.button.onClick('feedback')" class="btn btn-xs" style="width: 33%"><h4><i class="fa fa-bullhorn"></i></h4></a>
+            <a ng-click="topbar.menu.button.onClick('about')" class="btn btn-xs" style="width: 34%"><h4><i class="fa fa-info"></i></h4></a>
         </div>
     </div>
 </nav>
