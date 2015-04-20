@@ -80,6 +80,7 @@ def stop_distance():
 
 @app.route('/api/eta', methods=['GET'])
 def eta():
+#     print('Getting data (no cache)')
     if not 'stopcodes' in request.args:
         raise RuntimeError('No stopcodes specified')
     

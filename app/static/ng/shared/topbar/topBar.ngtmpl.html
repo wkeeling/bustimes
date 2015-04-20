@@ -2,10 +2,10 @@
     <div class="container">
         <div class="navbar-header">
             <a href="" ng-click="topbar.home()"><h3 class="pull-left"><i class="fa fa-bus"></i>&#160;&#160;Oxford Buses</h3></a>
-            <h4 class="pull-right" ng-click="topbar.menu.onClick()">
+            <h4 class="pull-right" ng-click="topbar.menu.onClick()" title="More">
                 <i class="fa fa-bars"></i>
             </h4>            
-            <h4 class="pull-right" ng-click="topbar.refresh.onClick()">
+            <h4 class="pull-right" ng-click="topbar.refresh.onClick()" title="Refresh">
                 <i class="fa fa-refresh" ng-class="{'fa-spin': topbar.refresh.refreshing, '': !topbar.refresh.refreshing}"></i>
             </h4>
         </div>
@@ -22,10 +22,10 @@
             </div>
         </form>
         <div class="btn-group">
-            <a ng-click="topbar.home()" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-bus"></i></h4></a>
-            <a ng-click="topbar.menu.button.onClick('share')" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-share"></i></h4></a>
-            <a ng-click="topbar.menu.button.onClick('feedback')" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-bullhorn"></i></h4></a>
-            <a ng-click="topbar.menu.button.onClick('about')" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-info"></i></h4></a>
+            <a ng-click="topbar.home()" title="Home" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-bus"></i></h4></a>
+            <a ng-click="topbar.menu.button.onClick('share')" title="Share" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-share"></i></h4></a>
+            <a ng-click="topbar.menu.button.onClick('feedback')" title="Feedback" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-bullhorn"></i></h4></a>
+            <a ng-click="topbar.menu.button.onClick('about')" title="About" class="btn btn-xs" style="width: 25%"><h4><i class="fa fa-info"></i></h4></a>
         </div>
     </div>
 </nav>

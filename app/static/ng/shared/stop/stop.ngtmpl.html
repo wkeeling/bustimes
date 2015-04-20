@@ -11,11 +11,23 @@
         <table>
             <tr>
                 <td style="padding-left: 10px; padding-right: 10px;"><h3 class="panel-title"><i class="fa fa-bus"></i></h3></td>
-                <td style="width: 100%"><h3 class="panel-title">{{stop.name}}</h3></td>
+                <td style="width: 100%">
+                    <span class="dropdown" dropdown>
+                        <h3 class="panel-title dropdown-toggle" dropdown-toggle>{{stop.name}} <i class="ion ion-chevron-right"></i></h3>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://maps.google.com/?q={{stop.position.latitude}},{{stop.position.longitude}}" target="_blank"><i class="ion ion-ios-location" style="font-size: 16px"></i>&#160;&#160;Show on map</a></li>
+                            <li class="divider" ng-if="eta.data.length"></li>
+                            <li class="disabled" ng-if="eta.data.length"><a href style="cursor: default">Only show:</a></li>
+                            <li ng-repeat="name in eta.serviceList()">
+                                <a href ng-click="eta.onServiceFilterClick(name)"><input type="checkbox" style="margin-right:10px" ng-checked="eta.filters.length && eta.shouldDisplay(name)"/>{{name}}</a>
+                            </li>
+                        </ul>
+                    </span>
+                </td>
                 <td style="padding-right: 8px;"><span ng-if="stop.distance" class="label label-success"><strong>{{stop.distance | number:1}} km</strong></span></td>
             </tr>
             <tr>
-                <td></td>
+                <td style="text-align: center"></td>
                 <td>{{stop['town/village']}}</td>
                 <td></td>
             </tr>
@@ -23,10 +35,10 @@
     </div>
     <div class="panel-body">
         <table class="table table-condensed">
-            <tr ng-repeat="d in eta.data">
-                <td style="width: 10%">{{::d.service}}</td>
-                <td>{{::d.dest}}</td>
-                <td style="text-align: right; width: 100px;">{{::d.time}}</td>                
+            <tr ng-repeat="e in eta.data" ng-if="eta.shouldDisplay(e)">
+                <td style="width: 10%">{{::e.service}}</td>
+                <td>{{::e.dest}}</td>
+                <td style="text-align: right; width: 100px;">{{::e.time}}</td>                
             </tr>
         </table>
         <table class="table table-condensed text-center" ng-if="eta.message">

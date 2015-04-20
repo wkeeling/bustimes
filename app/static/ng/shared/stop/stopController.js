@@ -1,6 +1,6 @@
-bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'FavouritesService', 'EtaUpdateService', StopController]);
+bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'FavouritesService', 'PreferencesService', 'EtaUpdateService', StopController]);
 
-function StopController($scope, $timeout, StopService, FavouritesService, EtaUpdateService) {
+function StopController($scope, $timeout, StopService, FavouritesService, PreferencesService, EtaUpdateService) {
     'use strict';
     
     var ERROR_MESSAGE = 'Check timetables',
@@ -17,14 +17,43 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
         
         isFavourite: function() {
             return $scope.stop && FavouritesService.isFavourite($scope.stop);
-        }
+        },
     };
     
     $scope.eta = {
         data: [],
+        filters: [],
         updater: EtaUpdateService.getUpdater($scope.stop),
         tracker: StopService.getStopTracker($scope.stop),
-        message: 'Updating...'
+        message: 'Updating...',
+        
+        serviceList: function() {
+            var list = [];
+            if (this.data && this.data.length) {
+                this.data.forEach(function(eta) {
+                    var displayName = eta.service + ' ' + eta.dest;
+                    if (list.indexOf(displayName) === -1) {
+                        list.push(displayName);
+                    } 
+                });
+            }
+            return list;
+        },
+        
+        onServiceFilterClick: function(name, event) {
+            if (this.filters.indexOf(name) === -1) {
+                this.filters.push(name);
+            } else if (this.filters.indexOf(name) > -1) {
+                this.filters.splice(this.filters.indexOf(name), 1);
+            }
+        },
+        
+        shouldDisplay: function(name) {
+            if (typeof name === 'object') {
+                name = name.service + ' ' + name.dest;
+            }
+            return !this.filters.length || this.filters.indexOf(name) > -1;
+        }
     };
     
     $scope.eta.updater.register(function(data) {
