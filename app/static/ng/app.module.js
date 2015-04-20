@@ -26,5 +26,9 @@ var bustimes = angular.module('bustimes', ['ngRoute', 'ngAnimate', 'ui.bootstrap
         enabled: true,
         requireBase: false
     });
+})
+
+.run(function($rootScope, $location) {
+    $rootScope.location = $location;
 });
 
