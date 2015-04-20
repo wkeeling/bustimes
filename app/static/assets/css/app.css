@@ -5,6 +5,7 @@
 
 html {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
@@ -129,10 +130,6 @@ ul.dropdown-menu a {
 h3.panel-title {
     font-weight: bold;
     cursor: pointer;
-}
-
-h3.panel-title:hover {
-    text-decoration: underline;
 }
 
 .panel {

@@ -36,6 +36,7 @@ function StopController($scope, $timeout, StopService, FavouritesService, Prefer
                         list.push(displayName);
                     } 
                 });
+                list.sort();
             }
             return list;
         },
