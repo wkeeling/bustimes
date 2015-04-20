@@ -1,6 +1,6 @@
-bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'FavouritesService', 'PreferencesService', 'EtaUpdateService', StopController]);
+bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'FavouritesService', 'EtaUpdateService', StopController]);
 
-function StopController($scope, $timeout, StopService, FavouritesService, PreferencesService, EtaUpdateService) {
+function StopController($scope, $timeout, StopService, FavouritesService, EtaUpdateService) {
     'use strict';
     
     var ERROR_MESSAGE = 'Check timetables',

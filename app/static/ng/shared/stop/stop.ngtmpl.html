@@ -10,16 +10,16 @@
     <div class="panel-heading">
         <table>
             <tr>
-                <td style="padding-left: 10px; padding-right: 10px;"><h3 class="panel-title"><i class="fa fa-bus"></i></h3></td>
+                <td style="padding-left: 10px; padding-right: 10px;"><h3 class="panel-title" ng-class="{'filter-applied': eta.filters.length > 0}"><i class="fa fa-bus"></i></h3></td>
                 <td style="width: 100%">
                     <span class="dropdown" dropdown>
-                        <h3 class="panel-title dropdown-toggle" dropdown-toggle>{{stop.name}} <i class="ion ion-chevron-right"></i></h3>
+                        <h3 class="panel-title dropdown-toggle" ng-class="{'filter-applied': eta.filters.length > 0}" dropdown-toggle>{{stop.name}} <i class="ion ion-chevron-right"></i></h3>
                         <ul class="dropdown-menu">
                             <li><a href="http://maps.google.com/?q={{stop.position.latitude}},{{stop.position.longitude}}" target="_blank"><i class="ion ion-ios-location" style="font-size: 16px; margin-right: 10px"></i>Show on map</a></li>
                             <li class="divider" ng-if="eta.data.length"></li>
                             <li class="disabled" ng-if="eta.data.length"><a href style="cursor: default">Only show:</a></li>
                             <li ng-repeat="name in eta.serviceList()">
-                                <a href ng-click="eta.onServiceFilterClick(name)"><i class="fa" ng-class="{'fa-check-square-o': eta.filters.length && eta.shouldDisplay(name), 'fa-square-o': !eta.filters.length || !eta.shouldDisplay(name)}" style="margin-right: 10px"></i>{{name}}</a>
+                                <a href ng-click="eta.onServiceFilterClick(name)"><i class="fa" ng-class="{'fa-check-square-o': eta.filters.length && eta.shouldDisplay(name), 'fa-square-o': !eta.filters.length || !eta.shouldDisplay(name)}" style="margin-right: 10px; font-size: 16px"></i>{{name}}</a>
                             </li>
                         </ul>
                     </span>
@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td style="text-align: center"></td>
-                <td>{{stop['town/village']}}</td>
+                <td><span ng-class="{'filter-applied': eta.filters.length > 0}">{{stop['town/village']}}</span></td>
                 <td></td>
             </tr>
         </table>

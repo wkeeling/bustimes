@@ -10,7 +10,8 @@ html {
 
 body {
     padding-top: 48px;
-    overflow-x: hidden
+    overflow-x: hidden;
+    height: 100%;
 }
 
 a, a:hover, a:focus {
@@ -204,4 +205,8 @@ h3.panel-title {
 
 .share a h4 {
     font-size: 32px;
+}
+
+.filter-applied {
+    color: #F5BCA9;
 }
