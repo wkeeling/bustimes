@@ -48,7 +48,11 @@ function StopController($scope, $timeout, StopService, FavouritesService, Prefer
             } else if (this.filters.indexOf(name) > -1) {
                 this.filters.splice(this.filters.indexOf(name), 1);
             }
-            PreferencesService.setPreference(PREF_NAME, this.filters);
+            if (this.filters.length) {
+                PreferencesService.setPreference(PREF_NAME, this.filters);
+            } else {
+                PreferencesService.removePreference(PREF_NAME);
+            }
         },
         
         shouldDisplay: function(name) {
