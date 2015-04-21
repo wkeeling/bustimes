@@ -13,6 +13,8 @@ function TopBarController($scope, $q, $timeout, $location, StopService, EtaUpdat
                     $timeout(function() {
                         $('#search').focus();
                     });
+                } else {
+                    this.search.selected = null;
                 }
             },
             
