@@ -2726,15 +2726,15 @@
         },
         {
             "id": 228,        
-            "name": "Gladstone Road",
-            "town/village": "Headington",
+            "name": "The Oxford Arms",
+            "town/village": "Kirtlington",
             "googleplaceids": [],
-            "stopcodes": ["69325627", "69325675"],
+            "stopcodes": ["69327657", "69327656"],
             "position": {
-                "latitude": 51.762126,
-                "longitude": -1.202241
+                "latitude": 51.872195,
+                "longitude": -1.276946
             },
-            "services": ["TUBE"]
+            "services": []
         },
         {
             "id": 229,        
