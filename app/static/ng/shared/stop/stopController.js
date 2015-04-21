@@ -1,10 +1,11 @@
-bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'FavouritesService', 'EtaUpdateService', StopController]);
+bustimes.controller('StopController', ['$scope', '$timeout', 'StopService', 'FavouritesService', 'PreferencesService', 'EtaUpdateService', StopController]);
 
-function StopController($scope, $timeout, StopService, FavouritesService, EtaUpdateService) {
+function StopController($scope, $timeout, StopService, FavouritesService, PreferencesService, EtaUpdateService) {
     'use strict';
     
     var ERROR_MESSAGE = 'Check timetables',
-        NO_SERVICES_MESSAGE = 'Nothing due';
+        NO_SERVICES_MESSAGE = 'Nothing due',
+        PREF_NAME = 'stopFilters' + $scope.stop.id;
     
     $scope.actions = {
         toggleFavourite: function() {
@@ -22,7 +23,7 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
     
     $scope.eta = {
         data: [],
-        filters: [],
+        filters: initialiseStopFilters(),
         updater: EtaUpdateService.getUpdater($scope.stop),
         tracker: StopService.getStopTracker($scope.stop),
         message: 'Updating...',
@@ -47,6 +48,7 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
             } else if (this.filters.indexOf(name) > -1) {
                 this.filters.splice(this.filters.indexOf(name), 1);
             }
+            PreferencesService.setPreference(PREF_NAME, this.filters);
         },
         
         shouldDisplay: function(name) {
@@ -79,4 +81,14 @@ function StopController($scope, $timeout, StopService, FavouritesService, EtaUpd
         $scope.eta.tracker.untrack();
     });
     
+    function initialiseStopFilters() {
+        var stopFilters = PreferencesService.getPreference(PREF_NAME);
+        
+        if (!stopFilters) {
+            stopFilters = [];
+            PreferencesService.setPreference(PREF_NAME, stopFilters);
+        }
+        
+        return stopFilters;
+    }
 }
