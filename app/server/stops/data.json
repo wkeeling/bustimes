@@ -2255,6 +2255,534 @@
                 "longitude": -1.250639
             },
             "services": ["280", "LHR", "LGW", "X90"]
+        },
+        {
+            "id": 189,        
+            "name": "Gloucester Green Bus Station Bay 3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326524"],
+            "position": {
+                "latitude": 51.753829,
+                "longitude": -1.26249
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 190,        
+            "name": "Gloucester Green Bus Station Bay 5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326498"],
+            "position": {
+                "latitude": 51.754042,
+                "longitude": -1.262497
+            },
+            "services": ["X90"]
+        },
+        {
+            "id": 191,        
+            "name": "Gloucester Green Bus Station Bay 6",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326497"],
+            "position": {
+                "latitude": 51.754042,
+                "longitude": -1.262497
+            },
+            "services": []
+        },
+        {
+            "id": 192,        
+            "name": "Gloucester Green Bus Station Bay 7",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326496"],
+            "position": {
+                "latitude": 51.754042,
+                "longitude": -1.262497
+            },
+            "services": []
+        },
+        {
+            "id": 193,        
+            "name": "Gloucester Green Bus Station Bay 11",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326492"],
+            "position": {
+                "latitude": 51.754149,
+                "longitude": -1.262455
+            },
+            "services": ["X5"]
+        },
+        {
+            "id": 194,        
+            "name": "Speedwell Street Stop S2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345627"],
+            "position": {
+                "latitude": 51.748452,
+                "longitude": -1.258149
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 195,        
+            "name": "Speedwell Street Stop S1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345486"],
+            "position": {
+                "latitude": 51.748448,
+                "longitude": -1.257342
+            },
+            "services": ["3", "5", "8", "13", "4B", "400", "U1"]
+        },
+        {
+            "id": 196,        
+            "name": "St Clements Street Stop A",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69323265"],
+            "position": {
+                "latitude": 51.750477,
+                "longitude": -1.240806
+            },
+            "services": ["8", "U1", "400", "280", "X90", "TUBE"]
+        },
+        {
+            "id": 197,        
+            "name": "St Clements Street Stop C",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69323289"],
+            "position": {
+                "latitude": 51.750159,
+                "longitude": -1.242072
+            },
+            "services": ["13", "X13", "400", "X90", "U1", "8", "TUBE", "U1", "4", "4A", "OXF", "280"]
+        },
+        {
+            "id": 198,        
+            "name": "St Clements Street Stop B",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69325658"],
+            "position": {
+                "latitude": 51.750159,
+                "longitude": -1.242072
+            },
+            "services": ["X13", "4A", "LGW", "13", "S5", "4A", "4B", "4"]
+        },
+        {
+            "id": 199,        
+            "name": "Brookes University Stop B3",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69347427"],
+            "position": {
+                "latitude": 51.756023,
+                "longitude": -1.224761
+            },
+            "services": ["TUBE", "X90", "LGW"]
+        },
+        {
+            "id": 200,        
+            "name": "Headington Shops Stop HS5",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69347625"],
+            "position": {
+                "latitude": 51.760539,
+                "longitude": -1.209816
+            },
+            "services": ["TUBE", "X90", "LGW"]
+        },
+        {
+            "id": 201,        
+            "name": "Brookes University Stop B2",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325678"],
+            "position": {
+                "latitude": 51.755881,
+                "longitude": -1.225217
+            },
+            "services": ["8", "U1", "280"]
+        },
+        {
+            "id": 202,        
+            "name": "Brookes University Stop B4",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69347426"],
+            "position": {
+                "latitude": 51.755359,
+                "longitude": -1.226799
+            },
+            "services": ["X90", "TUBE", "OXF"]
+        },
+        {
+            "id": 203,        
+            "name": "Brookes University Stop B5",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325679"],
+            "position": {
+                "latitude": 51.755469,
+                "longitude": -1.226215
+            },
+            "services": ["8", "X13", "U1", "U5"]
+        },
+        {
+            "id": 204,        
+            "name": "Headington Shops Stop HS1",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69342583"],
+            "position": {
+                "latitude": 51.759583,
+                "longitude": -1.213163
+            },
+            "services": ["400", "10"]
+        },
+        {
+            "id": 205,        
+            "name": "Headington Shops Stop HS2",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325689"],
+            "position": {
+                "latitude": 51.759905,
+                "longitude": -1.211661
+            },
+            "services": ["U1", "400", "700", "8", "10"]
+        },
+        {
+            "id": 206,        
+            "name": "Headington Shops Stop HS3",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325452"],
+            "position": {
+                "latitude": 51.759261,
+                "longitude": -1.210266
+            },
+            "services": ["900", "10"]
+        },
+        {
+            "id": 207,        
+            "name": "Headington Shops Stop HS4",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325452"],
+            "position": {
+                "latitude": 51.760267,
+                "longitude": -1.210304
+            },
+            "services": ["X90", "OXF", "TUBE"]
+        },
+        {
+            "id": 208,        
+            "name": "Headington Shops Stop HS6",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325692"],
+            "position": {
+                "latitude": 51.760459,
+                "longitude": -1.2101
+            },
+            "services": ["900", "8", "U1", "280", "800"]
+        },
+        {
+            "id": 209,        
+            "name": "Green Road Roundabout",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325687", "69325686"],
+            "position": {
+                "latitude": 51.762485,
+                "longitude": -1.199731
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 210,        
+            "name": "Thornhill P&R Bay A",
+            "town/village": "Thornhill",
+            "googleplaceids": [],
+            "stopcodes": ["69326542"],
+            "position": {
+                "latitude": 51.76181,
+                "longitude": -1.18105
+            },
+            "services": ["TUBE", "X90"]
+        },
+        {
+            "id": 211,        
+            "name": "Thornhill P&R Bay B",
+            "town/village": "Thornhill",
+            "googleplaceids": [],
+            "stopcodes": ["69347252"],
+            "position": {
+                "latitude": 51.76181,
+                "longitude": -1.18105
+            },
+            "services": ["400"]
+        },
+        {
+            "id": 212,        
+            "name": "Thornhill P&R Bay C",
+            "town/village": "Thornhill",
+            "googleplaceids": [],
+            "stopcodes": ["69347253"],
+            "position": {
+                "latitude": 51.76181,
+                "longitude": -1.18105
+            },
+            "services": ["X90", "OXF", "TUBE"]
+        },
+        {
+            "id": 213,        
+            "name": "Thornhill P&R Bay D",
+            "town/village": "Thornhill",
+            "googleplaceids": [],
+            "stopcodes": ["69347254"],
+            "position": {
+                "latitude": 51.76181,
+                "longitude": -1.18105
+            },
+            "services": ["LHR"]
+        },
+        {
+            "id": 214,        
+            "name": "Lewknor Turn Stop B",
+            "town/village": "Lewknor",
+            "googleplaceids": [],
+            "stopcodes": ["69345498"],
+            "position": {
+                "latitude": 51.673279,
+                "longitude": -0.958721
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 215,        
+            "name": "Hillingdon",
+            "town/village": "North Hillingdon",
+            "googleplaceids": [],
+            "stopcodes": ["27248282"],
+            "position": {
+                "latitude": 51.553577,
+                "longitude": -0.448326
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 216,        
+            "name": "Royal Crescent Stop HJ",
+            "town/village": "Notting Hill",
+            "googleplaceids": [],
+            "stopcodes": ["27245467"],
+            "position": {
+                "latitude": 51.505257,
+                "longitude": -0.214101
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 217,        
+            "name": "Palace Gardens Terrace",
+            "town/village": "Kensington",
+            "googleplaceids": [],
+            "stopcodes": ["27245354"],
+            "position": {
+                "latitude": 51.509707,
+                "longitude": -0.193366
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 218,        
+            "name": "Marble Arch Stop S",
+            "town/village": "Mayfair",
+            "googleplaceids": [],
+            "stopcodes": ["27245357"],
+            "position": {
+                "latitude": 51.512089,
+                "longitude": -0.157512
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 219,        
+            "name": "Bressenden Place",
+            "town/village": "Belgravia",
+            "googleplaceids": [],
+            "stopcodes": ["27245423"],
+            "position": {
+                "latitude": 51.497743,
+                "longitude": -0.143901
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 220,        
+            "name": "Green Line Coach Station",
+            "town/village": "Victoria",
+            "googleplaceids": [],
+            "stopcodes": ["27245469"],
+            "position": {
+                "latitude": 51.492824,
+                "longitude": -0.147521
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 221,        
+            "name": "Victoria Stop 10A",
+            "town/village": "Victoria",
+            "googleplaceids": [],
+            "stopcodes": ["27245473"],
+            "position": {
+                "latitude": 51.49675,
+                "longitude": -0.146172
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 222,        
+            "name": "Marble Arch Stop 14",
+            "town/village": "Mayfair",
+            "googleplaceids": [],
+            "stopcodes": ["27247584"],
+            "position": {
+                "latitude": 51.51189,
+                "longitude": -0.158515
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 223,        
+            "name": "Notting Hill Gate Stop N",
+            "town/village": "Notting Hill",
+            "googleplaceids": [],
+            "stopcodes": ["27245367"],
+            "position": {
+                "latitude": 51.509602,
+                "longitude": -0.192963
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 224,        
+            "name": "Royal Crescent Stop HD",
+            "town/village": "Notting Hill",
+            "googleplaceids": [],
+            "stopcodes": ["27245482"],
+            "position": {
+                "latitude": 51.505104,
+                "longitude": -0.214165
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 225,        
+            "name": "Hillingdon Circus",
+            "town/village": "North Hillingdon",
+            "googleplaceids": [],
+            "stopcodes": ["27245426"],
+            "position": {
+                "latitude": 51.551696,
+                "longitude": -0.447564
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 226,        
+            "name": "Lewknor Turn Stop A",
+            "town/village": "Lewknor",
+            "googleplaceids": [],
+            "stopcodes": ["69345497"],
+            "position": {
+                "latitude": 51.671494,
+                "longitude": -0.963462
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 227,        
+            "name": "Gladstone Road",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325627", "69325675"],
+            "position": {
+                "latitude": 51.762126,
+                "longitude": -1.202241
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 228,        
+            "name": "Gladstone Road",
+            "town/village": "Headington",
+            "googleplaceids": [],
+            "stopcodes": ["69325627", "69325675"],
+            "position": {
+                "latitude": 51.762126,
+                "longitude": -1.202241
+            },
+            "services": ["TUBE"]
+        },
+        {
+            "id": 229,        
+            "name": "Chesterton Turn North",
+            "town/village": "A41",
+            "googleplaceids": [],
+            "stopcodes": ["69329494"],
+            "position": {
+                "latitude": 51.887566,
+                "longitude": -1.168115
+            },
+            "services": ["S5"]
+        },
+        {
+            "id": 230,        
+            "name": "Chesterton Turn South",
+            "town/village": "A41",
+            "googleplaceids": [],
+            "stopcodes": ["69329493"],
+            "position": {
+                "latitude": 51.883686,
+                "longitude": -1.172473
+            },
+            "services": ["S5"]
+        },
+        {
+            "id": 231,        
+            "name": "Red Lion",
+            "town/village": "Wendlebury",
+            "googleplaceids": [],
+            "stopcodes": ["69326974", "69326973"],
+            "position": {
+                "latitude": 51.873083,
+                "longitude": -1.185697
+            },
+            "services": ["S5"]
+        },
+        {
+            "id": 232,        
+            "name": "Wendlebury Turn",
+            "town/village": "A41",
+            "googleplaceids": [],
+            "stopcodes": ["69329489", "69329492"],
+            "position": {
+                "latitude": 51.873404,
+                "longitude": -1.190815
+            },
+            "services": ["S5"]
         }
     ],
     "services": [
