@@ -86,7 +86,6 @@ function StopController($scope, $timeout, StopService, FavouritesService, Prefer
         
         if (!stopFilters) {
             stopFilters = [];
-            PreferencesService.setPreference(PREF_NAME, stopFilters);
         }
         
         return stopFilters;
