@@ -40,7 +40,7 @@ function EtaUpdateService($http, $q, $interval, $timeout) {
         for (var stopName in pollers) {
             if (pollers.hasOwnProperty(stopName)) {
                 var poller = pollers[stopName];
-                allPromises.push(poller.update());
+                allPromises.push(poller.update(true));
             }
         }
         
@@ -66,12 +66,12 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
         updaters = [],
         running = false;
         
-    this.update = function() {
+    this.update = function(noCache) {
         if (!running) {
             running = true;
             doRepeat();
         }
-        return doUpdate();
+        return doUpdate(noCache);
     };
     
     function doRepeat() {
@@ -84,10 +84,17 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
         }, POLL_INTERVAL + Math.floor(Math.random() * 1000));
     }
     
-    function doUpdate() {
-        var deferred = $q.defer();
+    function doUpdate(noCache) {
+        var deferred = $q.defer(),
+            params = {
+                stopcodes: stopcodes
+            };
+            
+        if (noCache) {
+            params.no_cache = true;
+        }
         
-        $http.get(POLL_URL, {params: {stopcodes: stopcodes}}).success(function(etas) {
+        $http.get(POLL_URL, {params: params}).success(function(etas) {
             updaters.forEach(function(updater) {
                 updater.successCallback(etas); 
             });                

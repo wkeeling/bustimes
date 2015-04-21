@@ -10,12 +10,16 @@ from flask import Response
 from flask import json
 from flask import send_from_directory
 
+from flask.ext.cache import Cache
+
 from .server.stops import stop_service
 from .server.eta import eta_requestor
 
 
 app = Flask(__name__)
 app.debug = True
+cache = Cache(app,config={'CACHE_TYPE': 'simple',
+                          'CACHE_THRESHOLD': 1000})
 
 stop_service.initialise()
 
@@ -79,8 +83,11 @@ def stop_distance():
     return Response(json.dumps(distance),  mimetype='application/json')
 
 @app.route('/api/eta', methods=['GET'])
+@cache.cached(timeout=30, 
+              key_prefix=lambda: request.args.get('stopcodes', ''),
+              unless=lambda: request.args.get('no_cache') is not None)
 def eta():
-#     print('Getting data (no cache)')
+    print('Getting data (no cache)')
     if not 'stopcodes' in request.args:
         raise RuntimeError('No stopcodes specified')
     

@@ -4,3 +4,4 @@ requests==2.6.0
 beautifulsoup4==4.3.2
 pytest==2.6.4
 mock==1.0.1
+Flask-Cache==0.13.1
