@@ -5,13 +5,11 @@
 
 html {
     overflow-x: hidden;
-    height: 100%;
 }
 
 body {
     padding-top: 48px;
     overflow-x: hidden;
-    height: 100%;
 }
 
 a, a:hover, a:focus {
