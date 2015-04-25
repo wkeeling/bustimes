@@ -87,7 +87,6 @@ def stop_distance():
               key_prefix=lambda: request.args.get('stopcodes', ''),
               unless=lambda: request.args.get('no_cache') is not None)
 def eta():
-    print('Getting data (no cache)')
     if not 'stopcodes' in request.args:
         raise RuntimeError('No stopcodes specified')
     
