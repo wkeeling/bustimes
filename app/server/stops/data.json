@@ -3239,6 +3239,150 @@
                 "longitude": -1.279902
             },
             "services": ["2A", "2"]
+        },
+        {
+            "id": 271,        
+            "name": "Main Entrance Stop J1",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69326574"],
+            "position": {
+                "latitude": 51.762973,
+                "longitude": -1.219139
+            },
+            "services": ["13", "X13"]
+        },
+        {
+            "id": 272,        
+            "name": "Main Entrance Stop J12",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69347248"],
+            "position": {
+                "latitude": 51.762362,
+                "longitude": -1.219386
+            },
+            "services": ["10"]
+        },
+        {
+            "id": 273,        
+            "name": "Main Entrance Stop J2",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346945"],
+            "position": {
+                "latitude": 51.76276,
+                "longitude": -1.219134
+            },
+            "services": []
+        },
+        {
+            "id": 274,        
+            "name": "Main Entrance Stop J3",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346946"],
+            "position": {
+                "latitude": 51.762661,
+                "longitude": -1.219284
+            },
+            "services": []
+        },
+        {
+            "id": 275,        
+            "name": "Main Entrance Stop J4",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346947"],
+            "position": {
+                "latitude": 51.762372,
+                "longitude": -1.219182
+            },
+            "services": []
+        },
+        {
+            "id": 276,        
+            "name": "Manor Surgery Stop J5",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346297"],
+            "position": {
+                "latitude": 51.761588,
+                "longitude": -1.214375
+            },
+            "services": ["10"]
+        },
+        {
+            "id": 277,        
+            "name": "Manor Surgery Stop J6",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346298"],
+            "position": {
+                "latitude": 51.762153,
+                "longitude": -1.21511
+            },
+            "services": ["10"]
+        },
+        {
+            "id": 278,        
+            "name": "Saxon Way Link Stop J10",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346326"],
+            "position": {
+                "latitude": 51.766658,
+                "longitude": -1.222025
+            },
+            "services": ["13", "X13"]
+        },
+        {
+            "id": 279,        
+            "name": "Saxon Way Link Stop J11",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346327"],
+            "position": {
+                "latitude": 51.766665,
+                "longitude": -1.221794
+            },
+            "services": ["13", "X13"]
+        },
+        {
+            "id": 280,        
+            "name": "West Wing Stop J7",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346323"],
+            "position": {
+                "latitude": 51.764573,
+                "longitude": -1.222765
+            },
+            "services": ["10", "13", "X13"]
+        },
+        {
+            "id": 281,        
+            "name": "West Wing Stop J8",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346324"],
+            "position": {
+                "latitude": 51.764238,
+                "longitude": -1.222079
+            },
+            "services": ["13", "X13"]
+        },
+        {
+            "id": 282,        
+            "name": "West Wing Stop J9",
+            "town/village": "John Radcliffe Hospital",
+            "googleplaceids": [],
+            "stopcodes": ["69346325"],
+            "position": {
+                "latitude": 51.765035,
+                "longitude": -1.223007
+            },
+            "services": ["13", "X13"]
         }
 
     ],
