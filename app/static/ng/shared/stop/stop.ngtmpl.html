@@ -17,7 +17,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="http://maps.google.com/?q={{stop.position.latitude}},{{stop.position.longitude}}" target="_blank"><i class="ion ion-ios-location" style="font-size: 16px; margin-right: 10px"></i>Show on map</a></li>
                             <li class="divider" ng-if="eta.data.length"></li>
-                            <li class="disabled" ng-if="eta.data.length"><a href style="cursor: default">Only show:</a></li>
+                            <li class="disabled" ng-if="eta.data.length"><a href style="cursor: default">Just show:</a></li>
                             <li ng-repeat="name in eta.serviceList()">
                                 <a href ng-click="eta.onServiceFilterClick(name)"><i class="fa" ng-class="{'fa-check-square-o': eta.filters.length && eta.shouldDisplay(name), 'fa-square-o': !eta.filters.length || !eta.shouldDisplay(name)}" style="margin-right: 10px; font-size: 16px"></i>{{name}}</a>
                             </li>
