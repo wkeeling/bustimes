@@ -2783,7 +2783,464 @@
                 "longitude": -1.190815
             },
             "services": ["S5"]
+        },
+        {
+            "id": 233,        
+            "name": "Gossway Fields",
+            "town/village": "Kirtlington",
+            "googleplaceids": [],
+            "stopcodes": ["69345653", "69345695"],
+            "position": {
+                "latitude": 51.867992,
+                "longitude": -1.274226
+            },
+            "services": ["25A"]
+        },
+        {
+            "id": 234,        
+            "name": "Kirtlington CE School",
+            "town/village": "Kirtlington",
+            "googleplaceids": [],
+            "stopcodes": ["69346838", "69346839"],
+            "position": {
+                "latitude": 51.874524,
+                "longitude": -1.275117
+            },
+            "services": ["25A"]
+        },
+        {
+            "id": 235,        
+            "name": "Kirtlington Park",
+            "town/village": "Kirtlington",
+            "googleplaceids": [],
+            "stopcodes": ["69345735", "69345679"],
+            "position": {
+                "latitude": 51.877269,
+                "longitude": -1.274698
+            },
+            "services": ["25A"]
+        },
+        {
+            "id": 236,        
+            "name": "The Mount",
+            "town/village": "Kirtlington",
+            "googleplaceids": [],
+            "stopcodes": ["69345697", "69345696"],
+            "position": {
+                "latitude": 51.870433,
+                "longitude": -1.275702
+            },
+            "services": ["25A"]
+        },
+        {
+            "id": 237,        
+            "name": "Andersons Close",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69324672", "69324659"],
+            "position": {
+                "latitude": 51.821943,
+                "longitude": -1.296344
+            },
+            "services": ["2", "2B"]
+        },
+        {
+            "id": 238,        
+            "name": "Briar Close",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69347689"],
+            "position": {
+                "latitude": 51.830049,
+                "longitude": -1.298066
+            },
+            "services": []
+        },
+        {
+            "id": 239,        
+            "name": "Broad Close",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325465", "69325485"],
+            "position": {
+                "latitude": 51.818146,
+                "longitude": -1.289864
+            },
+            "services": ["2A", "2B"]
+        },
+        {
+            "id": 240,        
+            "name": "Chamberlain Place",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325397", "69328675"],
+            "position": {
+                "latitude": 51.824015,
+                "longitude": -1.297604
+            },
+            "services": ["2B"]
+        },
+        {
+            "id": 241,        
+            "name": "Cherwell Court",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69346956", "69346954"],
+            "position": {
+                "latitude": 51.824957,
+                "longitude": -1.293141
+            },
+            "services": ["S4", "2B"]
+        },
+        {
+            "id": 242,        
+            "name": "Chorefields",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325393", "69325394"],
+            "position": {
+                "latitude": 51.822775,
+                "longitude": -1.292632
+            },
+            "services": ["2A"]
+        },
+        {
+            "id": 243,        
+            "name": "Churchill Road",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325482", "69325479"],
+            "position": {
+                "latitude": 51.818262,
+                "longitude": -1.283442
+            },
+            "services": ["2A", "2B"]
+        },
+        {
+            "id": 244,        
+            "name": "Cots Green",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325389", "69325392"],
+            "position": {
+                "latitude": 51.826346,
+                "longitude": -1.294692
+            },
+            "services": []
+        },
+        {
+            "id": 245,        
+            "name": "Evans Court",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69323873", "69323872"],
+            "position": {
+                "latitude": 51.818166,
+                "longitude": -1.27965
+            },
+            "services": ["2"]
+        },
+        {
+            "id": 246,        
+            "name": "Evans Lane",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69328674", "69324937"],
+            "position": {
+                "latitude": 51.817509,
+                "longitude": -1.279296
+            },
+            "services": []
+        },
+        {
+            "id": 247,        
+            "name": "Exeter Hall",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325386", "69325387"],
+            "position": {
+                "latitude": 51.821061,
+                "longitude": -1.287659
+            },
+            "services": []
+        },
+        {
+            "id": 248,        
+            "name": "Fairfax Road",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69346943"],
+            "position": {
+                "latitude": 51.811842,
+                "longitude": -1.2801
+            },
+            "services": ["2", "2A", "2B"]
+        },
+        {
+            "id": 249,        
+            "name": "Fernhill Close",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325475", "69325474"],
+            "position": {
+                "latitude": 51.819987,
+                "longitude": -1.29555
+            },
+            "services": ["2A", "2B"]
+        },
+        {
+            "id": 250,        
+            "name": "Flatford Place",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69323867", "69323865"],
+            "position": {
+                "latitude": 51.827324,
+                "longitude": -1.297143
+            },
+            "services": ["2A", "2B"]
+        },
+        {
+            "id": 251,        
+            "name": "Foxdown Close",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69326393", "69326392"],
+            "position": {
+                "latitude": 51.825368,
+                "longitude": -1.283705
+            },
+            "services": ["2"]
+        },
+        {
+            "id": 252,        
+            "name": "Glebe House",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325385", "69325384"],
+            "position": {
+                "latitude": 51.825534,
+                "longitude": -1.282015
+            },
+            "services": ["2"]
+        },
+        {
+            "id": 253,        
+            "name": "Gosford Hill",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325459", "69325458"],
+            "position": {
+                "latitude": 51.814455,
+                "longitude": -1.28113
+            },
+            "services": ["2", "2A", "2B"]
+        },
+        {
+            "id": 254,        
+            "name": "Helwys Place",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69347675"],
+            "position": {
+                "latitude": 51.828789,
+                "longitude": -1.291355
+            },
+            "services": []
+        },
+        {
+            "id": 255,        
+            "name": "Langford Lane",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69346967", "69346965"],
+            "position": {
+                "latitude": 51.832788,
+                "longitude": -1.302406
+            },
+            "services": []
+        },
+        {
+            "id": 256,        
+            "name": "Langford Locks",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69323869", "69323868"],
+            "position": {
+                "latitude": 51.831233,
+                "longitude": -1.304685
+            },
+            "services": []
+        },
+        {
+            "id": 257,        
+            "name": "Lovelace Drive",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69328672", "69328673"],
+            "position": {
+                "latitude": 51.817516,
+                "longitude": -1.276195
+            },
+            "services": []
+        },
+        {
+            "id": 258,        
+            "name": "Lyne Road Turn",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325483"],
+            "position": {
+                "latitude": 51.828322,
+                "longitude": -1.297127
+            },
+            "services": []
+        },
+        {
+            "id": 259,        
+            "name": "Marlborough Avenue",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69347673"],
+            "position": {
+                "latitude": 51.829645,
+                "longitude": -1.293833
+            },
+            "services": []
+        },
+        {
+            "id": 260,        
+            "name": "Mill End",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325478", "69325476"],
+            "position": {
+                "latitude": 51.822573,
+                "longitude": -1.276088
+            },
+            "services": ["2"]
+        },
+        {
+            "id": 261,        
+            "name": "Osborne Close",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325472", "69325473"],
+            "position": {
+                "latitude": 51.81802,
+                "longitude": -1.293163
+            },
+            "services": ["2A", "2B"]
+        },
+        {
+            "id": 262,        
+            "name": "Oxford Airport",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325469"],
+            "position": {
+                "latitude": 51.831392,
+                "longitude": -1.309744
+            },
+            "services": []
+        },
+        {
+            "id": 263,        
+            "name": "Oxford Motor Park",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325464"],
+            "position": {
+                "latitude": 51.830812,
+                "longitude": -1.307384
+            },
+            "services": []
+        },
+        {
+            "id": 264,        
+            "name": "Springfield Road",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325463", "69325462"],
+            "position": {
+                "latitude": 51.820142,
+                "longitude": -1.277837
+            },
+            "services": ["2", "2A"]
+        },
+        {
+            "id": 265,        
+            "name": "Tesco",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325456", "69325457"],
+            "position": {
+                "latitude": 51.823763,
+                "longitude": -1.287358
+            },
+            "services": ["2", "2A"]
+        },
+        {
+            "id": 266,        
+            "name": "The Black Horse",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325396", "69325378"],
+            "position": {
+                "latitude": 51.823717,
+                "longitude": -1.291666
+            },
+            "services": ["2B"]
+        },
+        {
+            "id": 267,        
+            "name": "The Moors",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69328747"],
+            "position": {
+                "latitude": 51.827682,
+                "longitude": -1.287466
+            },
+            "services": []
+        },
+        {
+            "id": 268,        
+            "name": "The Moors Turn",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69328298", "69325436"],
+            "position": {
+                "latitude": 51.829333,
+                "longitude": -1.298398
+            },
+            "services": []
+        },
+        {
+            "id": 269,        
+            "name": "Treeground Place",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325437", "69325468"],
+            "position": {
+                "latitude": 51.819967,
+                "longitude": -1.287648
+            },
+            "services": ["2A", "2B"]
+        },
+        {
+            "id": 270,        
+            "name": "Vicarage Road",
+            "town/village": "Kidlington",
+            "googleplaceids": [],
+            "stopcodes": ["69325383", "69325382"],
+            "position": {
+                "latitude": 51.82442,
+                "longitude": -1.279902
+            },
+            "services": ["2A", "2"]
         }
+
     ],
     "services": [
         {
