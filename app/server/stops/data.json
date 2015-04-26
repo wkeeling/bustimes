@@ -3383,6 +3383,512 @@
                 "longitude": -1.223007
             },
             "services": ["13", "X13"]
+        },
+        {
+            "id": 283,        
+            "name": "Banbury Road Roundabout",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69329874", "69329873"],
+            "position": {
+                "latitude": 51.914924,
+                "longitude": -1.155678
+            }
+        },
+        {
+            "id": 284,        
+            "name": "Barberry Place Shops",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69329875", "69329876"],
+            "position": {
+                "latitude": 51.910976,
+                "longitude": -1.155125
+            }
+        },
+        {
+            "id": 285,        
+            "name": "Bicester North Railway Station",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69326846"],
+            "position": {
+                "latitude": 51.903593,
+                "longitude": -1.150743
+            }
+        },
+        {
+            "id": 286,        
+            "name": "Bicester North Station",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69343579", "69347249"],
+            "position": {
+                "latitude": 51.902994,
+                "longitude": -1.153468
+            }
+        },
+        {
+            "id": 287,        
+            "name": "Bicester Town Station (Main Entrance)",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69346249"],
+            "position": {
+                "latitude": 51.892961,
+                "longitude": -1.149289
+            }
+        },
+        {
+            "id": 288,        
+            "name": "Bicester Town Station",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69343469", "69343439"],
+            "position": {
+                "latitude": 51.894388,
+                "longitude": -1.148109
+            }
+        },
+        {
+            "id": 290,        
+            "name": "Inside Bicester Village",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69329536"],
+            "position": {
+                "latitude": 51.892878,
+                "longitude": -1.156429
+            }
+        },
+        {
+            "id": 291,        
+            "name": "Bicester Village",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69347349", "69347348"],
+            "position": {
+                "latitude": 51.89501,
+                "longitude": -1.160211
+            }
+        },
+        {
+            "id": 292,        
+            "name": "Blake Road",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69329879", "69329878"],
+            "position": {
+                "latitude": 51.90821,
+                "longitude": -1.154755
+            }
+        },
+        {
+            "id": 293,        
+            "name": "Buckingham Crescent",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69343578", "69343576"],
+            "position": {
+                "latitude": 51.906443,
+                "longitude": -1.150603
+            }
+        },
+        {
+            "id": 294,        
+            "name": "Granville Way",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69348479", "69348482"],
+            "position": {
+                "latitude": 51.901405,
+                "longitude": -1.139392
+            }
+        },
+        {
+            "id": 295,        
+            "name": "Launton Road Retail Park",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69348484", "69348483"],
+            "position": {
+                "latitude": 51.903586,
+                "longitude": -1.134864
+            }
+        },
+        {
+            "id": 296,        
+            "name": "Manorsfield Road Stand 2",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69326785"],
+            "position": {
+                "latitude": 51.89841,
+                "longitude": -1.153833
+            }
+        },
+        {
+            "id": 297,        
+            "name": "Manorsfield Road Stand 3",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69326859"],
+            "position": {
+                "latitude": 51.898267,
+                "longitude": -1.153656
+            }
+        },
+        {
+            "id": 298,        
+            "name": "Manorsfield Road Stand 4",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69326863"],
+            "position": {
+                "latitude": 51.897979,
+                "longitude": -1.153361
+            }
+        },
+        {
+            "id": 299,        
+            "name": "Manorsfield Road Stand 5",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69329396"],
+            "position": {
+                "latitude": 51.89783,
+                "longitude": -1.153141
+            }
+        },
+        {
+            "id": 300,        
+            "name": "Manorsfield Road Stand 6",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69348474"],
+            "position": {
+                "latitude": 51.897691,
+                "longitude": -1.152937
+            }
+        },
+        {
+            "id": 301,        
+            "name": "Manorsfield Road Stand 7",
+            "town/village": "Bicester",
+            "googleplaceids": [],
+            "stopcodes": ["69348475"],
+            "position": {
+                "latitude": 51.897565,
+                "longitude": -1.152701
+            }
+        },
+        {
+            "id": 302,        
+            "name": "Bevington Road",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69323979", "69323982"],
+            "position": {
+                "latitude": 51.762601,
+                "longitude": -1.260568
+            }
+        },
+        {
+            "id": 303,        
+            "name": "Bunkers Hill Turn",
+            "town/village": "Bunkers Hill",
+            "googleplaceids": [],
+            "stopcodes": ["69343438", "69343298"],
+            "position": {
+                "latitude": 51.853902,
+                "longitude": -1.317008
+            }
+        },
+        {
+            "id": 304,        
+            "name": "Bunkers Hill",
+            "town/village": "Bunkers Hill",
+            "googleplaceids": [],
+            "stopcodes": ["69347589", "69347587"],
+            "position": {
+                "latitude": 51.856517,
+                "longitude": -1.313515
+            }
+        },
+        {
+            "id": 305,        
+            "name": "Five Mile Drive",
+            "town/village": "Cutteslowe",
+            "googleplaceids": [],
+            "stopcodes": ["69324362", "69324359"],
+            "position": {
+                "latitude": 51.791175,
+                "longitude": -1.271823
+            }
+        },
+        {
+            "id": 306,        
+            "name": "Harbord Road",
+            "town/village": "Cutteslowe",
+            "googleplaceids": [],
+            "stopcodes": ["69324269"],
+            "position": {
+                "latitude": 51.791122,
+                "longitude": -1.271056
+            }
+        },
+        {
+            "id": 307,        
+            "name": "Hamilton Road",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324242", "69324239"],
+            "position": {
+                "latitude": 51.780928,
+                "longitude": -1.266426
+            }
+        },
+        {
+            "id": 308,        
+            "name": "Harefields",
+            "town/village": "Cutteslowe",
+            "googleplaceids": [],
+            "stopcodes": ["69324286", "69323987"],
+            "position": {
+                "latitude": 51.789904,
+                "longitude": -1.271179
+            }
+        },
+        {
+            "id": 309,        
+            "name": "Jordan Hill",
+            "town/village": "Cutteslowe",
+            "googleplaceids": [],
+            "stopcodes": ["69324363", "69324364"],
+            "position": {
+                "latitude": 51.794662,
+                "longitude": -1.271431
+            }
+        },
+        {
+            "id": 310,        
+            "name": "Keble Road",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69323978", "69323976"],
+            "position": {
+                "latitude": 51.759075,
+                "longitude": -1.259978
+            }
+        },
+        {
+            "id": 311,        
+            "name": "Lathbury Road East",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69324234", "69323972"],
+            "position": {
+                "latitude": 51.772892,
+                "longitude": -1.26316
+            }
+        },
+        {
+            "id": 312,        
+            "name": "Linton Road",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69323989", "69324248"],
+            "position": {
+                "latitude": 51.770479,
+                "longitude": -1.262408
+            }
+        },
+        {
+            "id": 313,        
+            "name": "Park Town",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69323984", "69323983"],
+            "position": {
+                "latitude": 51.765705,
+                "longitude": -1.2611
+            }
+        },
+        {
+            "id": 314,        
+            "name": "Rowan Road",
+            "town/village": "Highfield",
+            "googleplaceids": [],
+            "stopcodes": ["69329892", "69329893"],
+            "position": {
+                "latitude": 51.9045,
+                "longitude": -1.154471
+            }
+        },
+        {
+            "id": 315,        
+            "name": "Shipton on Cherwell Turn",
+            "town/village": "Shipton-on-Cherwell",
+            "googleplaceids": [],
+            "stopcodes": ["69342482", "69342479"],
+            "position": {
+                "latitude": 51.846443,
+                "longitude": -1.310924
+            }
+        },
+        {
+            "id": 316,        
+            "name": "South Parade East",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324238"],
+            "position": {
+                "latitude": 51.779365,
+                "longitude": -1.265681
+            }
+        },
+        {
+            "id": 317,        
+            "name": "Squitchey Lane East",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324245", "69324243"],
+            "position": {
+                "latitude": 51.783443,
+                "longitude": -1.268068
+            }
+        },
+        {
+            "id": 318,        
+            "name": "St Margarets Road East",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69323985", "69323986"],
+            "position": {
+                "latitude": 51.768401,
+                "longitude": -1.261813
+            }
+        },
+        {
+            "id": 319,        
+            "name": "Sturdys Castle",
+            "town/village": "Tackley",
+            "googleplaceids": [],
+            "stopcodes": ["69347643"],
+            "position": {
+                "latitude": 51.870006,
+                "longitude": -1.328723
+            }
+        },
+        {
+            "id": 320,        
+            "name": "Sturdys Castle (Church Rd)",
+            "town/village": "Tackley",
+            "googleplaceids": [],
+            "stopcodes": ["69347645"],
+            "position": {
+                "latitude": 51.871056,
+                "longitude": -1.327801
+            }
+        },
+        {
+            "id": 321,        
+            "name": "Summertown Shops Stop A",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69347379"],
+            "position": {
+                "latitude": 51.776554,
+                "longitude": -1.26469
+            }
+        },
+        {
+            "id": 322,        
+            "name": "Summertown Shops Stop B",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324236"],
+            "position": {
+                "latitude": 51.776737,
+                "longitude": -1.264745
+            }
+        },
+        {
+            "id": 323,        
+            "name": "Summertown Shops Stop C",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324237"],
+            "position": {
+                "latitude": 51.77779,
+                "longitude": -1.264946
+            }
+        },
+        {
+            "id": 324,        
+            "name": "The Rise",
+            "town/village": "Adderbury",
+            "googleplaceids": [],
+            "stopcodes": ["69343437", "69343264"],
+            "position": {
+                "latitude": 52.020161,
+                "longitude": -1.310967
+            }
+        },
+        {
+            "id": 325,        
+            "name": "Thorncliffe Road",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324235"],
+            "position": {
+                "latitude": 51.775372,
+                "longitude": -1.264007
+            }
+        },
+        {
+            "id": 326,        
+            "name": "Thrupp Turn",
+            "town/village": "Thrupp",
+            "googleplaceids": [],
+            "stopcodes": ["69343295", "69343296"],
+            "position": {
+                "latitude": 51.836835,
+                "longitude": -1.30652
+            }
+        },
+        {
+            "id": 327,        
+            "name": "Twyford Gardens",
+            "town/village": "Twyford",
+            "googleplaceids": [],
+            "stopcodes": ["69343524", "69343465"],
+            "position": {
+                "latitude": 52.023224,
+                "longitude": -1.311756
+            }
+        },
+        {
+            "id": 328,        
+            "name": "Twyford Grove",
+            "town/village": "Twyford",
+            "googleplaceids": [],
+            "stopcodes": ["69343453", "69343454"],
+            "position": {
+                "latitude": 52.025713,
+                "longitude": -1.312206
+            }
+        },
+        {
+            "id": 329,        
+            "name": "Upland Park Road",
+            "town/village": "Summertown",
+            "googleplaceids": [],
+            "stopcodes": ["69324327", "69324246"],
+            "position": {
+                "latitude": 51.786082,
+                "longitude": -1.269795
+            }
         }
 
     ],
