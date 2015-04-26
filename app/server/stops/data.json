@@ -3889,6 +3889,171 @@
                 "latitude": 51.786082,
                 "longitude": -1.269795
             }
+        },
+        {
+            "id": 330,        
+            "name": "Bonn Square Stop D4",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345274"],
+            "position": {
+                "latitude": 51.75161,
+                "longitude": -1.260172
+            }
+        },
+        {
+            "id": 331,        
+            "name": "Broad Street",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69348452", "69348439"],
+            "position": {
+                "latitude": 51.754333,
+                "longitude": -1.256674
+            }
+        },
+        {
+            "id": 332,        
+            "name": "County Hall Stop E4",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69345648"],
+            "position": {
+                "latitude": 51.751934,
+                "longitude": -1.261468
+            }
+        },
+        {
+            "id": 333,        
+            "name": "County Hall Stop E5",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69327496"],
+            "position": {
+                "latitude": 51.752071,
+                "longitude": -1.261799
+            }
+        },
+        {
+            "id": 334,        
+            "name": "County Hall Stop E6",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69347578"],
+            "position": {
+                "latitude": 51.752182,
+                "longitude": -1.262116
+            }
+        },
+        {
+            "id": 335,        
+            "name": "New Road Stop D1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69327495"],
+            "position": {
+                "latitude": 51.752606,
+                "longitude": -1.263074
+            }
+        },
+        {
+            "id": 336,        
+            "name": "Oxford Rail Stn Stop R1",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326567"],
+            "position": {
+                "latitude": 51.753134,
+                "longitude": -1.269345
+            }
+        },
+        {
+            "id": 337,        
+            "name": "Oxford Rail Stn Stop R2",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326565"],
+            "position": {
+                "latitude": 51.75333,
+                "longitude": -1.269624
+            }
+        },
+        {
+            "id": 338,        
+            "name": "Oxford Rail Stn Stop R3",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326564"],
+            "position": {
+                "latitude": 51.753593,
+                "longitude": -1.269699
+            }
+        },
+        {
+            "id": 339,        
+            "name": "Oxford Rail Stn Stop R4",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326563"],
+            "position": {
+                "latitude": 51.753725,
+                "longitude": -1.26972
+            }
+        },
+        {
+            "id": 340,        
+            "name": "Park End St Stop R7",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69328969"],
+            "position": {
+                "latitude": 51.752776,
+                "longitude": -1.266577
+            }
+        },
+        {
+            "id": 341,        
+            "name": "Oxford Rail Stn Stop R6",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69326549"],
+            "position": {
+                "latitude": 51.753619,
+                "longitude": -1.269516
+            }
+        },
+        {
+            "id": 342,        
+            "name": "Parks Road",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69348547", "69348497"],
+            "position": {
+                "latitude": 51.760187,
+                "longitude": -1.258396
+            }
+        },
+        {
+            "id": 343,        
+            "name": "South Parks Road",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69348564", "69348563"],
+            "position": {
+                "latitude": 51.758421,
+                "longitude": -1.253289
+            }
+        },
+        {
+            "id": 344,        
+            "name": "St Cross Road",
+            "town/village": "Oxford City Centre",
+            "googleplaceids": [],
+            "stopcodes": ["69348567", "69348565"],
+            "position": {
+                "latitude": 51.758046,
+                "longitude": -1.249571
+            }
         }
 
     ],
