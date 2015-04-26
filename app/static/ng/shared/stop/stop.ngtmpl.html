@@ -21,6 +21,10 @@
                             <li ng-repeat="name in eta.serviceList()">
                                 <a href ng-click="eta.onServiceFilterClick(name)"><i class="fa" ng-class="{'fa-check-square-o': eta.filters.length && eta.shouldDisplay(name), 'fa-square-o': !eta.filters.length || !eta.shouldDisplay(name)}" style="margin-right: 10px; font-size: 16px"></i>{{name}}</a>
                             </li>
+                            <li class="divider" ng-if="eta.filters.length"></li>
+                            <li>
+                                <a href ng-click="eta.clearFilters()" ng-if="eta.filters.length"><i class="fa fa-times" style="margin-right: 10px; font-size: 16px"></i>Clear filters</a>
+                            </li>
                         </ul>
                     </span>
                 </td>

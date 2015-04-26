@@ -60,6 +60,11 @@ function StopController($scope, $timeout, StopService, FavouritesService, Prefer
                 name = name.service + ' ' + name.dest;
             }
             return !this.filters.length || this.filters.indexOf(name) > -1;
+        },
+        
+        clearFilters: function() {
+            this.filters.length = 0;
+            PreferencesService.removePreference(PREF_NAME);
         }
     };
     
