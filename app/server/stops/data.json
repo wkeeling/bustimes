@@ -4054,6 +4054,160 @@
                 "latitude": 51.758046,
                 "longitude": -1.249571
             }
+        },
+        {
+            "id": 345,        
+            "name": "Blacks Head Inn",
+            "town/village": "Bletchingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69326864", "69326865"],
+            "position": {
+                "latitude": 51.855311,
+                "longitude": -1.272542
+            }
+        },
+        {
+            "id": 346,        
+            "name": "Lenthal",
+            "town/village": "Bletchingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69345723", "69345698"],
+            "position": {
+                "latitude": 51.85369,
+                "longitude": -1.272596
+            }
+        },
+        {
+            "id": 347,        
+            "name": "Sands Close",
+            "town/village": "Bletchingdon",
+            "googleplaceids": [],
+            "stopcodes": ["69347586", "69347585"],
+            "position": {
+                "latitude": 51.855887,
+                "longitude": -1.274457
+            }
+        },
+        {
+            "id": 348,        
+            "name": "Hampton Gay Turn",
+            "town/village": "Hampton Poyle",
+            "googleplaceids": [],
+            "stopcodes": ["69348424", "69348423"],
+            "position": {
+                "latitude": 51.847056,
+                "longitude": -1.272832
+            }
+        },
+        {
+            "id": 349,        
+            "name": "The Rock Of Gibraltar",
+            "town/village": "Enslow",
+            "googleplaceids": [],
+            "stopcodes": ["69347584", "69347583"],
+            "position": {
+                "latitude": 51.860612,
+                "longitude": -1.303833
+            }
+        },
+        {
+            "id": 350,        
+            "name": "Nethercote Road",
+            "town/village": "Tackley",
+            "googleplaceids": [],
+            "stopcodes": ["69342494", "69342564"],
+            "position": {
+                "latitude": 51.884187,
+                "longitude": -1.302379
+            }
+        },
+        {
+            "id": 351,        
+            "name": "Rousham Road",
+            "town/village": "Tackley",
+            "googleplaceids": [],
+            "stopcodes": ["69345682", "69345659"],
+            "position": {
+                "latitude": 51.886462,
+                "longitude": -1.3046
+            }
+        },
+        {
+            "id": 352,        
+            "name": "Tackley Green",
+            "town/village": "Tackley",
+            "googleplaceids": [],
+            "stopcodes": ["69345676", "69345725"],
+            "position": {
+                "latitude": 51.880435,
+                "longitude": -1.307019
+            }
+        },
+        {
+            "id": 353,        
+            "name": "Village Hall",
+            "town/village": "Tackley",
+            "googleplaceids": [],
+            "stopcodes": ["69347647", "69347646"],
+            "position": {
+                "latitude": 51.883187,
+                "longitude": -1.304702
+            }
+        },
+        {
+            "id": 354,        
+            "name": "Camp Road West End",
+            "town/village": "Upper Heyford",
+            "googleplaceids": [],
+            "stopcodes": ["69326949", "69326928"],
+            "position": {
+                "latitude": 51.929623,
+                "longitude": -1.275299
+            }
+        },
+        {
+            "id": 355,        
+            "name": "Kingdom Hall",
+            "town/village": "Lower Heyford",
+            "googleplaceids": [],
+            "stopcodes": ["69327579", "69327578"],
+            "position": {
+                "latitude": 51.919596,
+                "longitude": -1.28495
+            }
+        },
+        {
+            "id": 356,        
+            "name": "Lower Heyford Turn Unmarked",
+            "town/village": "Lower Heyford",
+            "googleplaceids": [],
+            "stopcodes": ["69342378"],
+            "position": {
+                "latitude": 51.919007,
+                "longitude": -1.285894
+            }
+        },
+        {
+            "id": 357,        
+            "name": "Portway Crossroads",
+            "town/village": "Lower Heyford",
+            "googleplaceids": [],
+            "stopcodes": ["69346252"],
+            "position": {
+                "latitude": 51.916274,
+                "longitude": -1.274827
+            }
+        },
+        {
+            "id": 358,        
+            "name": "Upper Heyford Shop",
+            "town/village": "Upper Heyford",
+            "googleplaceids": [],
+            "stopcodes": ["69329487"],
+            "position": {
+                "latitude": 51.928171,
+                "longitude": -1.255515
+            }
         }
 
     ],
