@@ -1418,15 +1418,14 @@
         },
         {
             "id": 119,        
-            "name": "Redbridge Bertie Place",
-            "town/village": "Abingdon Road",
+            "name": "Steventon Green",
+            "town/village": "Steventon",
             "googleplaceids": [],
-            "stopcodes": ["69324637"],
+            "stopcodes": ["69328593"],
             "position": {
-                "latitude": 51.731427,
-                "longitude": -1.250086
-            },
-            "services": ["X30", "31"]
+                "latitude": 51.625197,
+                "longitude": -1.320205
+            }
         },
         {
             "id": 120,        
@@ -1455,7 +1454,7 @@
         {
             "id": 122,        
             "name": "Lincoln Road",
-            "town/village": "Abingdon Road",
+            "town/village": "New Hinksey",
             "googleplaceids": [],
             "stopcodes": ["69323795", "69323794"],
             "position": {
@@ -1467,7 +1466,7 @@
         {
             "id": 123,        
             "name": "Lake Street",
-            "town/village": "Abingdon Road",
+            "town/village": "New Hinksey",
             "googleplaceids": [],
             "stopcodes": ["69323797", "69323796"],
             "position": {
@@ -4207,6 +4206,182 @@
             "position": {
                 "latitude": 51.928171,
                 "longitude": -1.255515
+            }
+        },
+        {
+            "id": 359,        
+            "name": "Abingdon Road",
+            "town/village": "Drayton",
+            "googleplaceids": [],
+            "stopcodes": ["69328279", "69328282"],
+            "position": {
+                "latitude": 51.649428,
+                "longitude": -1.310227
+            }
+        },
+        {
+            "id": 360,        
+            "name": "Bertie Place",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69324638", "69324637"],
+            "position": {
+                "latitude": 51.731308,
+                "longitude": -1.250119
+            }
+        },
+        {
+            "id": 361,        
+            "name": "Burcot Park",
+            "town/village": "Burcot",
+            "googleplaceids": [],
+            "stopcodes": ["69345878", "69345879"],
+            "position": {
+                "latitude": 51.661203,
+                "longitude": -1.195471
+            }
+        },
+        {
+            "id": 362,        
+            "name": "Burcot Park",
+            "town/village": "Burcot",
+            "googleplaceids": [],
+            "stopcodes": ["69345878", "69345879"],
+            "position": {
+                "latitude": 51.661203,
+                "longitude": -1.195471
+            }
+        },
+        {
+            "id": 363,        
+            "name": "Culham Science Centre",
+            "town/village": "Culham",
+            "googleplaceids": [],
+            "stopcodes": ["69326972", "69327326"],
+            "position": {
+                "latitude": 51.652903,
+                "longitude": -1.230437
+            }
+        },
+        {
+            "id": 364,        
+            "name": "Drayton Green",
+            "town/village": "Drayton",
+            "googleplaceids": [],
+            "stopcodes": ["69325834", "69325835"],
+            "position": {
+                "latitude": 51.644475,
+                "longitude": -1.31278
+            }
+        },
+        {
+            "id": 365,        
+            "name": "European School",
+            "town/village": "Culham",
+            "googleplaceids": [],
+            "stopcodes": ["69325864", "69325784"],
+            "position": {
+                "latitude": 51.654863,
+                "longitude": -1.258385
+            }
+        },
+        {
+            "id": 366,        
+            "name": "Field Gardens",
+            "town/village": "Steventon",
+            "googleplaceids": [],
+            "stopcodes": ["69327973", "69328267"],
+            "position": {
+                "latitude": 51.628934,
+                "longitude": -1.319298
+            }
+        },
+        {
+            "id": 367,        
+            "name": "Kenilworth Road",
+            "town/village": "Cumnor",
+            "googleplaceids": [],
+            "stopcodes": ["69345397", "69345436"],
+            "position": {
+                "latitude": 51.732221,
+                "longitude": -1.330676
+            }
+        },
+        {
+            "id": 368,        
+            "name": "The Chequers",
+            "town/village": "Burcot",
+            "googleplaceids": [],
+            "stopcodes": ["69326595", "69326769"],
+            "position": {
+                "latitude": 51.660065,
+                "longitude": -1.187398
+            }
+        },
+        {
+            "id": 369,        
+            "name": "The Limes",
+            "town/village": "Dorchester",
+            "googleplaceids": [],
+            "stopcodes": ["69323932", "69323953"],
+            "position": {
+                "latitude": 51.649388,
+                "longitude": -1.17006
+            }
+        },
+        {
+            "id": 370,        
+            "name": "The Lodge",
+            "town/village": "Burcot",
+            "googleplaceids": [],
+            "stopcodes": ["69345892", "69345893"],
+            "position": {
+                "latitude": 51.657868,
+                "longitude": -1.180515
+            }
+        },
+        {
+            "id": 371,        
+            "name": "Millwood Vale",
+            "town/village": "Long Hanborough",
+            "googleplaceids": [],
+            "stopcodes": ["69327652", "69327589"],
+            "position": {
+                "latitude": 51.824834,
+                "longitude": -1.400194
+            }
+        },
+        {
+            "id": 372,        
+            "name": "New Road",
+            "town/village": "Long Hanborough",
+            "googleplaceids": [],
+            "stopcodes": ["69327573", "69327825"],
+            "position": {
+                "latitude": 51.824784,
+                "longitude": -1.396197
+            }
+        },
+        {
+            "id": 373,        
+            "name": "Roosevelt Road",
+            "town/village": "Long Hanborough",
+            "googleplaceids": [],
+            "stopcodes": ["69327379", "69327382"],
+            "position": {
+                "latitude": 51.821774,
+                "longitude": -1.394073
+            }
+        },
+        {
+            "id": 374,        
+            "name": "The Hand and Shears",
+            "town/village": "Church Hanborough",
+            "googleplaceids": [],
+            "stopcodes": ["69325829", "69325828"],
+            "position": {
+                "latitude": 51.813311,
+                "longitude": -1.383242
             }
         }
 
