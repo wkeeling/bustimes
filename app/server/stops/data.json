@@ -398,15 +398,14 @@
         },
         {
             "id": 34,        
-            "name": "Market Square Stop D",
+            "name": "Tower Hill Garage",
             "town/village": "Witney",
             "googleplaceids": [],
-            "stopcodes": ["69328497"],
+            "stopcodes": ["69327425", "69327426"],
             "position": {
-                "latitude": 51.784077,
-                "longitude": -1.485601
-            },
-            "services": ["S1"]
+                "latitude": 51.789456,
+                "longitude": -1.501163
+            }
         },
         {
             "id": 35,        
@@ -4822,6 +4821,292 @@
             "position": {
                 "latitude": 51.736414,
                 "longitude": -1.203255
+            }
+        },        
+        {
+            "id": 416,        
+            "name": "A40 Flyover",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69329327"],
+            "position": {
+                "latitude": 51.77504,
+                "longitude": -1.491979
+            }
+        },        
+        {
+            "id": 417,        
+            "name": "Abbey Road",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327329", "69327343"],
+            "position": {
+                "latitude": 51.781509,
+                "longitude": -1.503448
+            }
+        },        
+        {
+            "id": 418,        
+            "name": "Blenheim Drive",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327342", "69327394"],
+            "position": {
+                "latitude": 51.778757,
+                "longitude": -1.499494
+            }
+        },        
+        {
+            "id": 419,        
+            "name": "Burwell Shops",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69328492", "69327358"],
+            "position": {
+                "latitude": 51.77887,
+                "longitude": -1.496952
+            }
+        },        
+        {
+            "id": 420,        
+            "name": "Church Lane",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69328524", "69327472"],
+            "position": {
+                "latitude": 51.786974,
+                "longitude": -1.472812
+            }
+        },        
+        {
+            "id": 421,        
+            "name": "Cogges Hill Road",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69328525"],
+            "position": {
+                "latitude": 51.785846,
+                "longitude": -1.469024
+            }
+        },        
+        {
+            "id": 422,        
+            "name": "Downs Road",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69347362", "69347363"],
+            "position": {
+                "latitude": 51.793839,
+                "longitude": -1.523575
+            }
+        },        
+        {
+            "id": 423,        
+            "name": "Ducklington Lane",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69329894", "69342649"],
+            "position": {
+                "latitude": 51.781542,
+                "longitude": -1.495691
+            }
+        },        
+        {
+            "id": 424,        
+            "name": "High Street",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327349", "69327352"],
+            "position": {
+                "latitude": 51.786871,
+                "longitude": -1.48442
+            }
+        },        
+        {
+            "id": 425,        
+            "name": "Holloway Road",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327346", "69327345"],
+            "position": {
+                "latitude": 51.783961,
+                "longitude": -1.489881
+            }
+        },        
+        {
+            "id": 426,        
+            "name": "King Georges Field",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69347878", "69346724"],
+            "position": {
+                "latitude": 51.788195,
+                "longitude": -1.474754
+            }
+        },        
+        {
+            "id": 427,        
+            "name": "Lidl",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69348568"],
+            "position": {
+                "latitude": 51.778382,
+                "longitude": -1.493663
+            }
+        },        
+        {
+            "id": 428,        
+            "name": "Madley Park",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69342823", "69342798"],
+            "position": {
+                "latitude": 51.796218,
+                "longitude": -1.467898
+            }
+        },        
+        {
+            "id": 429,        
+            "name": "Market Square Stop C",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327484"],
+            "position": {
+                "latitude": 51.783945,
+                "longitude": -1.485643
+            }
+        },        
+        {
+            "id": 430,        
+            "name": "Market Square Stop B",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327462"],
+            "position": {
+                "latitude": 51.784051,
+                "longitude": -1.485343
+            }
+        },        
+        {
+            "id": 431,        
+            "name": "Market Square Stop D",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69328497"],
+            "position": {
+                "latitude": 51.784081,
+                "longitude": -1.485649
+            }
+        },        
+        {
+            "id": 432,        
+            "name": "Marriots Walk",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327526"],
+            "position": {
+                "latitude": 51.786732,
+                "longitude": -1.48655
+            }
+        },        
+        {
+            "id": 433,        
+            "name": "Moorland Road",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69347638"],
+            "position": {
+                "latitude": 51.786148,
+                "longitude": -1.494564
+            }
+        },        
+        {
+            "id": 434,        
+            "name": "Mountfield Road",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69342786", "69327396"],
+            "position": {
+                "latitude": 51.779617,
+                "longitude": -1.502295
+            }
+        },        
+        {
+            "id": 435,        
+            "name": "Staple Hall (SE Bound)",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327469"],
+            "position": {
+                "latitude": 51.790104,
+                "longitude": -1.478327
+            }
+        },        
+        {
+            "id": 436,        
+            "name": "Staple Hall (NW Bound)",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327468"],
+            "position": {
+                "latitude": 51.790424,
+                "longitude": -1.47986
+            }
+        },        
+        {
+            "id": 437,        
+            "name": "Windrush Industrial Park",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69329232", "69328989"],
+            "position": {
+                "latitude": 51.792041,
+                "longitude": -1.513962
+            }
+        },        
+        {
+            "id": 438,        
+            "name": "Windrush Valley",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327532", "69327529"],
+            "position": {
+                "latitude": 51.790488,
+                "longitude": -1.505427
+            }
+        },        
+        {
+            "id": 439,        
+            "name": "Woodgreen Hill Church",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69327458", "69327457"],
+            "position": {
+                "latitude": 51.792005,
+                "longitude": -1.478278
+            }
+        },        
+        {
+            "id": 440,        
+            "name": "Opposite Woodgreen School",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69325793"],
+            "position": {
+                "latitude": 51.793707,
+                "longitude": -1.473305
+            }
+        },        
+        {
+            "id": 441,        
+            "name": "Woodgreen School Entrance",
+            "town/village": "Witney",
+            "googleplaceids": [],
+            "stopcodes": ["69325792"],
+            "position": {
+                "latitude": 51.793893,
+                "longitude": -1.471524
             }
         }
 
