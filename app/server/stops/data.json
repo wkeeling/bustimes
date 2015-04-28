@@ -4383,6 +4383,457 @@
                 "latitude": 51.813311,
                 "longitude": -1.383242
             }
+        },
+        {
+            "id": 375,        
+            "name": "Cassington Turn",
+            "town/village": "Cassington",
+            "googleplaceids": [],
+            "stopcodes": ["69342573", "69326747"],
+            "position": {
+                "latitude": 51.789712,
+                "longitude": -1.349693
+            }
+        },
+        {
+            "id": 376,        
+            "name": "Seacourt P&R Car Park",
+            "town/village": "Oxford",
+            "googleplaceids": [],
+            "stopcodes": ["69323475"],
+            "position": {
+                "latitude": 51.754622,
+                "longitude": -1.288919
+            }
+        },
+        {
+            "id": 377,        
+            "name": "Barracks Lane",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69329286", "69325737"],
+            "position": {
+                "latitude": 51.739975,
+                "longitude": -1.205798
+            }
+        },
+        {
+            "id": 378,        
+            "name": "Barns Road SE Bound",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69325267"],
+            "position": {
+                "latitude": 51.728686,
+                "longitude": -1.210197
+            }
+        },
+        {
+            "id": 379,        
+            "name": "Barns Road NW Bound",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324968"],
+            "position": {
+                "latitude": 51.729361,
+                "longitude": -1.211645
+            }
+        },        
+        {
+            "id": 380,        
+            "name": "Brasenose Driftway",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69346538", "69346542"],
+            "position": {
+                "latitude": 51.73939,
+                "longitude": -1.198931
+            }
+        },        
+        {
+            "id": 381,        
+            "name": "Buildbase",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69348458", "69348459"],
+            "position": {
+                "latitude": 51.726158,
+                "longitude": -1.191239
+            }
+        },        
+        {
+            "id": 382,        
+            "name": "Burbush Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69346549", "69346537"],
+            "position": {
+                "latitude": 51.734205,
+                "longitude": -1.201667
+            }
+        },        
+        {
+            "id": 383,        
+            "name": "Car Factory Gate",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324964", "69324963"],
+            "position": {
+                "latitude": 51.728995,
+                "longitude": -1.19965
+            }
+        },        
+        {
+            "id": 384,        
+            "name": "Clive Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69323585", "69323627"],
+            "position": {
+                "latitude": 51.736125,
+                "longitude": -1.216929
+            }
+        },        
+        {
+            "id": 385,        
+            "name": "Corner House",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324656", "69324654"],
+            "position": {
+                "latitude": 51.743692,
+                "longitude": -1.202086
+            }
+        },        
+        {
+            "id": 386,        
+            "name": "Cowley Tesco",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324953"],
+            "position": {
+                "latitude": 51.727603,
+                "longitude": -1.203169
+            }
+        },        
+        {
+            "id": 387,        
+            "name": "Cranmer Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324648", "69324649"],
+            "position": {
+                "latitude": 51.7399,
+                "longitude": -1.20255
+            }
+        },        
+        {
+            "id": 388,        
+            "name": "Crescent Hall",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324626", "69324645"],
+            "position": {
+                "latitude": 51.737731,
+                "longitude": -1.207466
+            }
+        },        
+        {
+            "id": 389,        
+            "name": "Crowell Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69347297", "69347298"],
+            "position": {
+                "latitude": 51.731437,
+                "longitude": -1.21842
+            }
+        },        
+        {
+            "id": 390,        
+            "name": "Fern Hill Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69346539", "69346528"],
+            "position": {
+                "latitude": 51.734338,
+                "longitude": -1.204156
+            }
+        },        
+        {
+            "id": 391,        
+            "name": "Fern Hill Road (Hollow Way)",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324673", "69324642"],
+            "position": {
+                "latitude": 51.735378,
+                "longitude": -1.209274
+            }
+        },        
+        {
+            "id": 392,        
+            "name": "Garsington Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324957", "69324958"],
+            "position": {
+                "latitude": 51.733095,
+                "longitude": -1.208453
+            }
+        },        
+        {
+            "id": 393,        
+            "name": "Horspath Road Ind. Estate",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69342968", "69342985"],
+            "position": {
+                "latitude": 51.736946,
+                "longitude": -1.195766
+            }
+        },        
+        {
+            "id": 394,        
+            "name": "Horspath Road Shops",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324647"],
+            "position": {
+                "latitude": 51.73774,
+                "longitude": -1.199716
+            }
+        },        
+        {
+            "id": 395,        
+            "name": "Horspath Road Turning Circle",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69346273"],
+            "position": {
+                "latitude": 51.73756,
+                "longitude": -1.198422
+            }
+        },        
+        {
+            "id": 396,        
+            "name": "Kersington Crescent",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69325282", "69325283"],
+            "position": {
+                "latitude": 51.726094,
+                "longitude": -1.20988
+            }
+        },        
+        {
+            "id": 397,        
+            "name": "Lytton Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69329385", "69329297"],
+            "position": {
+                "latitude": 51.73462,
+                "longitude": -1.221151
+            }
+        },        
+        {
+            "id": 398,        
+            "name": "Maidcroft Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69329365", "69329295"],
+            "position": {
+                "latitude": 51.736019,
+                "longitude": -1.220035
+            }
+        },        
+        {
+            "id": 399,        
+            "name": "Marsh Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69323629", "69323628"],
+            "position": {
+                "latitude": 51.738171,
+                "longitude": -1.219863
+            }
+        },        
+        {
+            "id": 400,        
+            "name": "Oliver Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69346536", "69346534"],
+            "position": {
+                "latitude": 51.735052,
+                "longitude": -1.202713
+            }
+        },        
+        {
+            "id": 401,        
+            "name": "Paul Kent Hall",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324652", "69324653"],
+            "position": {
+                "latitude": 51.741696,
+                "longitude": -1.204097
+            }
+        },        
+        {
+            "id": 402,        
+            "name": "Rupert Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69328925", "69328924"],
+            "position": {
+                "latitude": 51.738773,
+                "longitude": -1.204205
+            }
+        },        
+        {
+            "id": 403,        
+            "name": "Slade Park",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69347876"],
+            "position": {
+                "latitude": 51.743669,
+                "longitude": -1.20009
+            }
+        },        
+        {
+            "id": 404,        
+            "name": "Templars Square Stop A",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324975"],
+            "position": {
+                "latitude": 51.732616,
+                "longitude": -1.21601
+            }
+        },        
+        {
+            "id": 405,        
+            "name": "Templars Square Stop B",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324974"],
+            "position": {
+                "latitude": 51.73283,
+                "longitude": -1.215804
+            }
+        },        
+        {
+            "id": 406,        
+            "name": "Templars Square Stop C",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69347325"],
+            "position": {
+                "latitude": 51.732792,
+                "longitude": -1.2155
+            }
+        },        
+        {
+            "id": 407,        
+            "name": "Templars Square Stop D",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324978"],
+            "position": {
+                "latitude": 51.732029,
+                "longitude": -1.214442
+            }
+        },        
+        {
+            "id": 408,        
+            "name": "Templars Square Stop E",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324976"],
+            "position": {
+                "latitude": 51.731174,
+                "longitude": -1.2145
+            }
+        },        
+        {
+            "id": 409,        
+            "name": "The Longwall",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324965", "69324967"],
+            "position": {
+                "latitude": 51.731049,
+                "longitude": -1.204671
+            }
+        },        
+        {
+            "id": 410,        
+            "name": "The Original Swan (Oxford Rd)",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324952", "69324987", "69324969"],
+            "position": {
+                "latitude": 51.734182,
+                "longitude": -1.211715
+            }
+        },        
+        {
+            "id": 411,        
+            "name": "The Original Swan (B4495)",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324973"],
+            "position": {
+                "latitude": 51.73375,
+                "longitude": -1.212305
+            }
+        },        
+        {
+            "id": 412,        
+            "name": "The Original Swan (B4495)",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324973"],
+            "position": {
+                "latitude": 51.73375,
+                "longitude": -1.212305
+            }
+        },        
+        {
+            "id": 413,        
+            "name": "Transport Way",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69324962", "69324959"],
+            "position": {
+                "latitude": 51.726909,
+                "longitude": -1.195868
+            }
+        },        
+        {
+            "id": 414,        
+            "name": "Unipart House",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69325247"],
+            "position": {
+                "latitude": 51.729955,
+                "longitude": -1.185274
+            }
+        },        
+        {
+            "id": 415,        
+            "name": "White Road",
+            "town/village": "Cowley",
+            "googleplaceids": [],
+            "stopcodes": ["69346532", "69346582"],
+            "position": {
+                "latitude": 51.736414,
+                "longitude": -1.203255
+            }
         }
 
     ],
