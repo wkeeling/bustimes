@@ -4792,17 +4792,6 @@
             }
         },        
         {
-            "id": 412,        
-            "name": "The Original Swan (B4495)",
-            "town/village": "Cowley",
-            "googleplaceids": [],
-            "stopcodes": ["69324973"],
-            "position": {
-                "latitude": 51.73375,
-                "longitude": -1.212305
-            }
-        },        
-        {
             "id": 413,        
             "name": "Transport Way",
             "town/village": "Cowley",
