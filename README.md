@@ -17,9 +17,7 @@ Stops near me
 
 When you first open the app it will attempt to locate the bus stops nearest to you and display the latest arrival times of each service. Stops are displayed with the distance from your current location and arrival times automatically update every few seconds.
 
-<p align="center">
-    <img src="./img/image3.PNG" title="Nearest stops" alt="Nearest stops"/>
-</p>
+![Nearest stops](./img/image3.PNG "Nearest stops")
 
 Stop search
 -----------
