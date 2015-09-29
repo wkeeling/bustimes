@@ -3,9 +3,9 @@ Oxford Bus Times
 
 This is an experimental mobile web application designed to make realtime Oxford bus data accessible on your smartphone in a useful manner.
 
-A Realtime Information Service (RTI) for Oxford buses is already made available by Oxford County Council via the http://www.oxontime.com website and via bus stop SMS shortcodes. The RTI service publishes predicted arrival times of buses on the website and shortcodes by using live GPS data from buses as they travel around.
+A Realtime Information Service (RTI) for Oxford buses is already made available by Oxford County Council via the http://www.oxontime.com website and via bus stop SMS shortcodes. The RTI service uses live GPS data from buses to predict their arrival time at each stop. These times can then be looked up using the website or by texting a bus stop shortcode.
 
-Whilst the website and shortcode mechanisms are functional, they don't make use of some of the more modern technologies available in today's smartphones - such as geolocation.
+Whilst the website and shortcode mechanisms are functional, they don't make use of some of the more modern technologies available in today's smartphones - such as geolocation and rich user interfaces.
 
 The aim of the Oxford Bus Times mobile web application is to take the existing realtime data and use geolocation and a modern user interface to create a useful, user-friendly experience which is accessible to you whilst on the move.
 
