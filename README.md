@@ -15,7 +15,7 @@ Features
 Stops near me
 --------------
 
-When you first open the app it will attempt to locate the bus stops nearest to you and display the latest arrival times of each service. Stops are displayed with the distance from your current location and arrival times automatically update every few seconds.
+When you first open the app it will attempt to locate the bus stops nearest to you and display the latest arrival times of each service. Stops are displayed in increasing order of distance from your current location and arrival times automatically update every few seconds.
 
 ![Nearest stops](./img/image3.PNG "Nearest stops")
 
@@ -29,14 +29,14 @@ If you're interested in the bus times at a specific stop which isn't near to you
 Favourite stops
 ---------------
 
-If there are stops that you regularly visit, to get to and from work for example, then you can star those stops so they appear in the favourites section. This means that they will always be visible showing the latest times no matter where you are. You can even hide the nearest stops to reduce the clutter on the screen.
+If there are stops that you regularly visit, for example - to get to and from work, then you can star those stops so they appear in the favourites section. This means that they will always be visible showing the latest times no matter where you are. You can even hide the nearest stops to reduce the clutter on the screen.
 
 ![Favourite stops](./img/image2.PNG "Favourite stops")
 
-Filtering your view
--------------------
+Filtering the view
+------------------
 
-For busy stops that support a number of different bus services, you can tap the stop name to bring up a menu where you can filter the services you're interested in.
+For busy stops that are used by many bus services, you can tap the stop name to show a menu where you can filter the services you're interested in.
 
 ![Filtering your view](./img/image6.PNG "Filtering your view")
 
