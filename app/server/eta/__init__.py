@@ -1,1 +1,1 @@
-from .eta import eta_requestor
+from app.server.eta.eta import etas
