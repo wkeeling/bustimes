@@ -11,7 +11,7 @@ class StopService(object):
     
     # For nearest stops, don't return stops over 1km away
     _MAX_DISTANCE = 1
-    # For nearest stops, return more than 5 stops
+    # For nearest stops, don't return more than 5 stops
     _MAX_NEAREST_STOPS = 5
     
     def __init__(self):
@@ -155,6 +155,7 @@ class StopService(object):
              math.sin(d_lon / 2) * math.sin(d_lon / 2))
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         distance_in_km = radius * c
+
         return distance_in_km     
     
     def _deg_to_rad(self, deg):

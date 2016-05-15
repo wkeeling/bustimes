@@ -5,7 +5,7 @@ from lxml import etree
 
 
 _OXON_TIME_URL = 'http://www.buscms.com/api/REST/html/departureboard.aspx' \
-                 '?callback=c&clientid=Nimbus&stopid={stopid}&' \
+                 '?callback=c&clientid=Nimbus&stopid={}&' \
                  'format=jsonp&sourcetype=siri'
 
 
@@ -23,7 +23,7 @@ def etas(stopids):
     data = []
 
     for stopid in stopids:
-        resp = requests.get(_OXON_TIME_URL.format(stopid=stopid))
+        resp = requests.get(_OXON_TIME_URL.format(stopid))
         data += _parse(resp.text)
 
     def time_key(eta):
