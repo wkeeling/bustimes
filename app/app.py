@@ -51,8 +51,9 @@ def stops_nearest():
         raise RuntimeError('No position specified')
 
     lat, lon = request.args['position'].split(',')
+    position = float(lat), float(lon)
 
-    nearest = stop_service.get_stops_nearest((lat, lon))
+    nearest = stop_service.get_stops_nearest(position)
     
     return Response(json.dumps(nearest),  mimetype='application/json')
 
