@@ -36,26 +36,32 @@ class StopService(object):
     
     def get_stops(self, ids, position=None):
         """
-        Get a list of stops (dicts) for a specified sequence of stop ids. If
-        the position argument is supplied (a two element sequence holding the
-        latitude and longitude of the current position) then the distance in
-        km will be added to each returned stop under the property 'distance'.
+        Get list of stops (dicts) for a specified iterator of stop ids.
+        If the position argument is supplied (a two element sequence holding
+        the latitude and longitude of the current position) then the distance
+        in km will be added to each returned stop under the property
+        'distance'.
         :param ids:
-            A sequence of stop ids.
+            An iterator of stop ids.
         :param position:
             Optional two element sequence holding the latitude and longitude.
         :return:
-            A list of stops (dicts) or an empty list if no stops match.
+            An list of stops (dicts).
         """
-        stops = [copy.deepcopy(self._stops[id_]) for id_ in ids if
-                 id_ in self._stops]
+        stops = []
 
-        if position:
-            for stop in stops:
-                stop['distance'] = self._get_stop_distance(stop, position)
+        for id_ in ids:
+            try:
+                stop = copy.deepcopy(self._stops[id_])
+            except KeyError:
+                pass
+            else:
+                if position:
+                    stop['distance'] = self._get_stop_distance(stop, position)
+                stops.append(stop)
 
         return stops
-    
+
     def get_stops_matching(self, text, position=None):
         """Search for stops that contain the specified text in their name
         and/or town/village property. For stops that match, a property
@@ -117,10 +123,10 @@ class StopService(object):
 
         return nearest[:self._MAX_NEAREST_STOPS]
     
-    def get_stop_distance(self, stop_id, position):
+    def get_stop_distance(self, id_, position):
         """
         Get the distance of a stop in km from the supplied position.
-        :param stop_id:
+        :param id_:
             The id of the stop.
         :param position:
             A two element sequence holding the latitude and longitude of
@@ -128,7 +134,7 @@ class StopService(object):
         :return:
             The distance of the stop in km.
         """
-        stop = self._stops[stop_id]
+        stop = self._stops[id_]
         return {'distance': self._get_stop_distance(stop, position)}
     
     def _get_stop_distance(self, stop, position):
@@ -150,3 +156,4 @@ class StopService(object):
     
     def _deg_to_rad(self, deg):
         return deg * (math.pi / 180)
+

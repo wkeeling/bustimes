@@ -1,27 +1,22 @@
-'''
-Created on 21 Mar 2015
-
-@author: will
-'''
-from flask import Flask
-from flask import send_file
-from flask import request
-from flask import Response
-from flask import json
-from flask import send_from_directory
+from flask import (Flask,
+                   json,
+                   send_file,
+                   send_from_directory,
+                   request,
+                   Response)
 
 from flask.ext.cache import Cache
 
-from .server.stops import stop_service
-from .server.eta import eta_requestor
+from server.stops import StopService
+from server.eta import etas
 
 
 app = Flask(__name__)
 app.debug = True
-cache = Cache(app,config={'CACHE_TYPE': 'simple',
-                          'CACHE_THRESHOLD': 1000})
+cache = Cache(app, config={'CACHE_TYPE': 'simple',
+                           'CACHE_THRESHOLD': 1000})
 
-stop_service.initialise()
+stop_service = StopService()
 
 
 @app.route('/')
@@ -32,68 +27,80 @@ stop_service.initialise()
 def index():
     return send_file('templates/index.html')
 
-@app.route('/api/stop', methods=['GET'])
-def stop():
-    if not 'id' in request.args:
-        raise RuntimeError('No stop id specified')
-    
-    _id = request.args['id']
-    position = None
-    if 'position' in request.args:
-        position = [float(p) for p in request.args['position'].split(',')]
-        
-    stops = stop_service.get_stops([int(i) for i in _id.split(',')], position)
-    
-    return Response(json.dumps(stops),  mimetype='application/json')
 
-@app.route('/api/stop/nearest', methods=['GET'])
-def stops_nearest():
-    if not 'position' in request.args:
-        raise RuntimeError('No position specified')
+@app.route('/api/stops', methods=['GET'])
+def stops():
+    if 'id' not in request.args:
+        raise RuntimeError('No id specified')
     
-    nearest = stop_service.get_stops_nearest([float(p) 
-                                 for p in request.args['position'].split(',')])
+    id_ = request.args['id']
+    position = None
+
+    if 'position' in request.args:
+        lat, lon = request.args['position'].split(',')
+        position = float(lat), float(lon)
+
+    selected_stops = stop_service.get_stops((int(i) for i in id_.split(',')),
+                                            position)
+    return Response(json.dumps(selected_stops), mimetype='application/json')
+
+
+@app.route('/api/stops/nearest', methods=['GET'])
+def stops_nearest():
+    if 'position' not in request.args:
+        raise RuntimeError('No position specified')
+
+    lat, lon = request.args['position'].split(',')
+
+    nearest = stop_service.get_stops_nearest((lat, lon))
     
     return Response(json.dumps(nearest),  mimetype='application/json')
 
-@app.route('/api/stop/matching', methods=['GET'])
+
+@app.route('/api/stops/matching', methods=['GET'])
 def stops_matching():
-    if not 'text' in request.args:
+    if 'text' not in request.args:
         raise RuntimeError('No text specified')
     
     position = None
     if 'position' in request.args:
-        position = [float(p) for p in request.args['position'].split(',')]
-        
+        lat, lon = request.args['position'].split(',')
+        position = float(lat), float(lon)
+
     matching = stop_service.get_stops_matching(request.args['text'], position)
     
     return Response(json.dumps(matching),  mimetype='application/json')
 
+
 @app.route('/api/stop/distance', methods=['GET'])
 def stop_distance():
-    if not 'position' in request.args:
+    if 'position' not in request.args:
         raise RuntimeError('No position specified')
-    if not 'stop_id' in request.args:
-        raise RuntimeError('No stop_id specified')
-    
-    distance = stop_service.get_stop_distance([float(p) 
-                                 for p in request.args['position'].split(',')], 
-                                              int(request.args['stop_id']))
-    
+    if 'id' not in request.args:
+        raise RuntimeError('No id specified')
+
+    lat, lon = request.args['position'].split(',')
+    position = float(lat), float(lon)
+
+    distance = stop_service.get_stop_distance(int(request.args['id']),
+                                              position)
+
     return Response(json.dumps(distance),  mimetype='application/json')
 
-@app.route('/api/eta', methods=['GET'])
+
+@app.route('/api/etas', methods=['GET'])
 @cache.cached(timeout=30, 
-              key_prefix=lambda: request.args.get('stopcodes', ''),
+              key_prefix=lambda: request.args.get('stopids', ''),
               unless=lambda: request.args.get('no_cache') is not None)
-def eta():
-    if not 'stopcodes' in request.args:
-        raise RuntimeError('No stopcodes specified')
+def etas():
+    if 'stopids' not in request.args:
+        raise RuntimeError('No stopids specified')
     
-    stopcodes = request.args['stopcodes']
-    etas = eta_requestor.get_etas([s for s in stopcodes.split(',')])
+    stopids = request.args['stopids']
+    bus_etas = etas(stopids.split(','))
     
-    return Response(json.dumps(etas),  mimetype='application/json')
+    return Response(json.dumps(bus_etas),  mimetype='application/json')
+
 
 @app.route('/touch-icon-152x152.png')
 @app.route('/touch-icon-120x120.png')
@@ -102,4 +109,6 @@ def eta():
 @app.route('/startup.png')
 @app.route('/favicon.ico')
 def static_from_root():
-    return send_from_directory(app.static_folder, 'assets/img/' + request.path[1:])
+    return send_from_directory(app.static_folder,
+                               'assets/img/' + request.path[1:])
+
