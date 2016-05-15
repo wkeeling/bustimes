@@ -59,10 +59,10 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
         return new StopPoller(stop);
     }
         
-    var POLL_URL = '/api/eta',
+    var POLL_URL = '/api/etas',
         POLL_INTERVAL = 30000;
     
-    var stopcodes = stop.stopcodes.join(','),
+    var stopids = stop.stopids.join(','),
         updaters = [],
         running = false;
         
@@ -87,7 +87,7 @@ function StopPoller(stop, $http, $q, $interval, $timeout) {
     function doUpdate(noCache) {
         var deferred = $q.defer(),
             params = {
-                stopcodes: stopcodes
+                stopids: stopids
             };
             
         if (noCache) {

@@ -3,7 +3,7 @@ bustimes.service('StopService', ['$http', '$q', '$timeout', StopService]);
 function StopService($http, $q, $timeout) {
     'use strict';
     
-    var DATA_SOURCE = '/api/stop',
+    var DATA_SOURCE = '/api/stops',
         searchListeners = [],
         positionListeners = [],
         stopTrackers = {},
@@ -152,9 +152,9 @@ function StopService($http, $q, $timeout) {
                 // Add a listener to update the distance to any stops that are being tracked (displayed)
                 for (var id in stopTrackers) {
                     if (stopTrackers.hasOwnProperty(id)) {
-                        $http.get(DATA_SOURCE + '/distance', {params: {position: pos.coords.latitude + ',' + pos.coords.longitude, stop_id: id}}).success(function(_id) {
+                        $http.get(DATA_SOURCE + '/distance', {params: {position: pos.coords.latitude + ',' + pos.coords.longitude, id: id}}).success(function(id_) {
                             return function(resp) {
-                                var trackers = stopTrackers[_id];
+                                var trackers = stopTrackers[id_];
                                 trackers.forEach(function(tracker) {
                                     tracker.stop.distance = resp.distance;
                                 });

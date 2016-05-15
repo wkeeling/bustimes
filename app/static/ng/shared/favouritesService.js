@@ -3,7 +3,7 @@ bustimes.service('FavouritesService', ['$q', 'StopService', 'PreferencesService'
 function FavouritesService($q, StopService, PreferencesService) {
     'use strict';
     
-    var DATA_SOURCE = '/api/stop',
+    var DATA_SOURCE = '/api/stops',
         MAX_ALLOWED_FAVOURITES = 3,
         PREF_NAME = 'favouriteStops',
         listeners = [];
