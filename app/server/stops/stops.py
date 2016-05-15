@@ -1,12 +1,7 @@
-'''
-Created on 21 Mar 2015
-
-@author: will
-'''
-import os
+import copy
 import json
 import math
-import copy
+import os
 
 
 class StopService(object):
@@ -20,101 +15,138 @@ class StopService(object):
     _MAX_NEAREST_STOPS = 5
     
     def __init__(self):
-        self._stops = {}
-        
-    def initialise(self):
-        self._stops.update(self._load_stops())
+        self._stops = self._load_stops()
         print('Loaded {s} stops'.format(s=len(self._stops)))
-    
+
     def _load_stops(self):
-        with open(os.path.join(os.path.dirname(__file__), 
-                                                        self._JSON_FILE)) as f:
+        stops = {}
+
+        with open(
+                os.path.join(os.path.dirname(__file__), self._JSON_FILE)) as f:
             data = json.load(f)
-            ret = {}
-            for stop in data['stops']:
-                if stop['id'] in ret:
-                    raise RuntimeError('Duplicate stop id: {id}'
-                                                        .format(id=stop['id']))
-                ret[stop['id']] = stop
-            return ret
+
+            for stop in data:
+                stop_id = stop['id']
+                if stop_id in stops:
+                    raise RuntimeError(
+                        'Duplicate stop id: {}'.format(stop_id))
+                stops[stop_id] = stop
+
+            return stops
     
     def get_stops(self, ids, position=None):
-        stops = [copy.deepcopy(self._stops[_id]) 
-                                          for _id in ids if _id in self._stops]
+        """
+        Get a list of stops (dicts) for a specified sequence of stop ids. If
+        the position argument is supplied (a two element sequence holding the
+        latitude and longitude of the current position) then the distance in
+        km will be added to each returned stop under the property 'distance'.
+        :param ids:
+            A sequence of stop ids.
+        :param position:
+            Optional two element sequence holding the latitude and longitude.
+        :return:
+            A list of stops (dicts) or an empty list if no stops match.
+        """
+        stops = [copy.deepcopy(self._stops[id_]) for id_ in ids if
+                 id_ in self._stops]
+
         if position:
             for stop in stops:
-                stop['distance'] = self._get_stop_distance(position, stop)
+                stop['distance'] = self._get_stop_distance(stop, position)
+
         return stops
     
-    def get_stops_matching(self, free_text, position=None):
-        """Searches for the free_text substring in the stop name and 
-        town/village to find out whether the stop matches. Adds the property
-        'matched_name' to the returned stop object which is a concatenation of
-        the stop name followed by a ' - ' followed by the town/village. The 
-        list of matched stops are ordered alphabetically by matched_name.
-        If the position argument is supplied (a two element list containing 
-        the latitude and longitude of the current position) then the distance
-        in km will be added to each returned stop under the attribute 
-        'distance'.
-        
+    def get_stops_matching(self, text, position=None):
+        """Search for stops that contain the specified text in their name
+        and/or town/village property. For stops that match, a property
+        'matched_name' is added to the returned stop object which
+        is a concatenation of the stop name followed by a ' - ' followed
+        by the town/village. The list of matched stops are ordered
+        alphabetically by matched_name. If the position argument is supplied
+        (a two element list containing the latitude and longitude of the
+        current position) then the distance in km will be added to each
+        returned stop under the property 'distance'.
+        :param text:
+            The substring to search for.
+        :param position:
+            Optional two element sequence holding the latitude and longitude.
+        :return:
+            A list of stops (dicts) or an empty list if no stops match.
         """
-        free_text = free_text.lower()
+        text = text.lower()
         matching = []
+
         for stop in self._stops.values():
-            if (stop['name'].lower().find(free_text) > -1 or 
-                            stop['town/village'].lower().find(free_text) > -1):
+            fields = stop['name'].lower(), stop['town/village'].lower()
+
+            if text in fields:
                 stop = copy.deepcopy(stop)
-                stop['matched_name'] = '{s} - {t}'.format(s=stop['name'],
-                                                      t=stop['town/village'])
+                stop['matched_name'] = '{name} - {town/village}'.format(**stop)
+
                 if position:
-                    stop['distance'] = self._get_stop_distance(position, stop)
+                    stop['distance'] = self._get_stop_distance(stop, position)
                     
                 matching.append(stop)
         
         return sorted(matching, key=lambda s: s['matched_name'])
     
     def get_stops_nearest(self, position):
-        """Finds the stops nearest the specified position - a two element list
-        holding the latitude and longitude. Stops will be returned that are 
-        within 1km of the specified position up to a maximum of 5 stops. The 
-        returned list will contain the stops in increasing order of distance 
-        from the specified position. Each stop will have an attribute 
-        'distance' specifying its distance in km.
-        
+        """Find the stops nearest the specified position - a two element
+        sequence holding the latitude and longitude. Stops will be returned
+        that are within 1km of the specified position up to a maximum of 5
+        stops. The returned list will contain the stops in increasing order
+        of distance from the specified position. Each stop will have an
+        property 'distance' specifying its distance in km.
+        :param position:
+            Two element sequence holding the latitude and longitude of
+            the current position.
+        :return:
+            A list of stops (dicts) or an empty list if no stops match.
         """
         nearest = []
+
         for stop in self._stops.values():
-            dist = self._get_dist_in_km(position[0], position[1], 
-                   stop['position']['latitude'], stop['position']['longitude'])
+            dist = self._get_stop_distance(stop, position)
+
             if dist <= self._MAX_DISTANCE:
                 stop = copy.deepcopy(stop)
                 stop['distance'] = dist
                 nearest.append(stop)
+
         nearest = sorted(nearest, key=lambda s: s['distance'])
+
         return nearest[:self._MAX_NEAREST_STOPS]
     
-    def get_stop_distance(self, position, stop_id):
+    def get_stop_distance(self, stop_id, position):
+        """
+        Get the distance of a stop in km from the supplied position.
+        :param stop_id:
+            The id of the stop.
+        :param position:
+            A two element sequence holding the latitude and longitude of
+            the current position.
+        :return:
+            The distance of the stop in km.
+        """
         stop = self._stops[stop_id]
-        return {'distance': self._get_stop_distance(position, stop)}
+        return {'distance': self._get_stop_distance(stop, position)}
     
-    def _get_stop_distance(self, position, stop):
-        return self._get_dist_in_km(position[0], position[1], 
-                   stop['position']['latitude'], stop['position']['longitude'])        
+    def _get_stop_distance(self, stop, position):
+        return self._get_dist_in_km(position[0], position[1],
+                                    stop['position']['latitude'],
+                                    stop['position']['longitude'])
     
     def _get_dist_in_km(self, lat1, lon1, lat2, lon2):
-        radius = 6371 # Radius of the Earth in km
+        radius = 6371  # Radius of the Earth in km
         d_lat = self._deg_to_rad(lat2 - lat1)
         d_lon = self._deg_to_rad(lon2 - lon1)
-        a = (math.sin(d_lat / 2) * math.sin(d_lat / 2) + 
-                        math.cos(self._deg_to_rad(lat1)) * 
-                        math.cos(self._deg_to_rad(lat2)) * 
-                        math.sin(d_lon / 2) * math.sin(d_lon / 2))
+        a = (math.sin(d_lat / 2) * math.sin(d_lat / 2) +
+             math.cos(self._deg_to_rad(lat1)) *
+             math.cos(self._deg_to_rad(lat2)) *
+             math.sin(d_lon / 2) * math.sin(d_lon / 2))
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         distance_in_km = radius * c
         return distance_in_km     
     
     def _deg_to_rad(self, deg):
         return deg * (math.pi / 180)
-
-
-stop_service = StopService()

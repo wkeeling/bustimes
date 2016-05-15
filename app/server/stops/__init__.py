@@ -1,1 +1,1 @@
-from .stops import stop_service 
+from .stops import StopService
