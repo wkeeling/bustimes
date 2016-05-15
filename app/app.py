@@ -72,7 +72,7 @@ def stops_matching():
     return Response(json.dumps(matching),  mimetype='application/json')
 
 
-@app.route('/api/stop/distance', methods=['GET'])
+@app.route('/api/stops/distance', methods=['GET'])
 def stop_distance():
     if 'position' not in request.args:
         raise RuntimeError('No position specified')
