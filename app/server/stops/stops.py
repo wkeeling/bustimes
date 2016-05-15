@@ -44,7 +44,8 @@ class StopService(object):
         :param ids:
             An iterator of stop ids.
         :param position:
-            Optional two element sequence holding the latitude and longitude.
+            Optional two element sequence holding the latitude and longitude,
+            both floats.
         :return:
             An list of stops (dicts).
         """
@@ -75,7 +76,8 @@ class StopService(object):
         :param text:
             The substring to search for.
         :param position:
-            Optional two element sequence holding the latitude and longitude.
+            Optional two element sequence holding the latitude and longitude,
+            both floats.
         :return:
             A list of stops (dicts) or an empty list if no stops match.
         """
@@ -106,7 +108,7 @@ class StopService(object):
         property 'distance' specifying its distance in km.
         :param position:
             Two element sequence holding the latitude and longitude of
-            the current position.
+            the current position, both floats.
         :return:
             A list of stops (dicts) or an empty list if no stops match.
         """
@@ -131,7 +133,7 @@ class StopService(object):
             The id of the stop.
         :param position:
             A two element sequence holding the latitude and longitude of
-            the current position.
+            the current position, both floats.
         :return:
             The distance of the stop in km.
         """
