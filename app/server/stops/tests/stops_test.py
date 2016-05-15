@@ -27,7 +27,7 @@ class TestStopService(object):
         assert 'distance' in stops[0]
         
     def test_should_get_stops_matching(self):
-        stops = self._stop_service.get_stops_matching('CorNISh ROAD')
+        stops = self._stop_service.get_stops_matching('CorNISh')
         assert len(stops) == 1
         assert stops[0]['id'] == 1
         

@@ -83,9 +83,10 @@ class StopService(object):
         matching = []
 
         for stop in self._stops.values():
-            fields = stop['name'].lower(), stop['town/village'].lower()
+            stop_name = stop['name'].lower()
+            town = stop['town/village'].lower()
 
-            if text in fields:
+            if text in stop_name or text in town:
                 stop = copy.deepcopy(stop)
                 stop['matched_name'] = '{name} - {town/village}'.format(**stop)
 
