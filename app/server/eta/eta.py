@@ -10,6 +10,16 @@ _OXON_TIME_URL = 'http://www.buscms.com/api/REST/html/departureboard.aspx' \
 
 
 def etas(stopids):
+    """
+    Get the bus etas for the specified iterator of stopids. Note that 'stopids'
+    in this context refers to the 'stopids' property in the JSON data, not
+    the surrogate 'id' of a stop.
+    :param stopids:
+        An iterator of stopids.
+    :return:
+        A list of dicts, each dict representing the eta of a bus. Each
+        dict has 3 items: 'service', 'dest' and 'time'.
+    """
     data = []
 
     for stopid in stopids:
