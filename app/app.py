@@ -92,7 +92,7 @@ def stop_distance():
 @cache.cached(timeout=30, 
               key_prefix=lambda: request.args.get('stopids', ''),
               unless=lambda: request.args.get('no_cache') is not None)
-def etas():
+def get_etas():
     if 'stopids' not in request.args:
         raise RuntimeError('No stopids specified')
     
