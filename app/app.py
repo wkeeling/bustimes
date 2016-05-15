@@ -7,8 +7,8 @@ from flask import (Flask,
 
 from flask.ext.cache import Cache
 
-from server.stops import StopService
 from server.eta import etas
+from server.stops import StopService
 
 
 app = Flask(__name__)
