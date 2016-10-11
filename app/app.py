@@ -30,9 +30,8 @@ def index():
 
 @app.route('/api/stops', methods=['GET'])
 def stops():
-    if 'id' not in request.args:
-        raise RuntimeError('No id specified')
-    
+    assert 'id' in request.args, 'No id specified'
+
     id_ = request.args['id']
     position = None
 
@@ -47,8 +46,7 @@ def stops():
 
 @app.route('/api/stops/nearest', methods=['GET'])
 def stops_nearest():
-    if 'position' not in request.args:
-        raise RuntimeError('No position specified')
+    assert 'position' in request.args, 'No position specified'
 
     lat, lon = request.args['position'].split(',')
     position = float(lat), float(lon)
@@ -60,9 +58,8 @@ def stops_nearest():
 
 @app.route('/api/stops/matching', methods=['GET'])
 def stops_matching():
-    if 'text' not in request.args:
-        raise RuntimeError('No text specified')
-    
+    assert 'text' in request.args, 'No text specified'
+
     position = None
     if 'position' in request.args:
         lat, lon = request.args['position'].split(',')
@@ -75,10 +72,8 @@ def stops_matching():
 
 @app.route('/api/stops/distance', methods=['GET'])
 def stop_distance():
-    if 'position' not in request.args:
-        raise RuntimeError('No position specified')
-    if 'id' not in request.args:
-        raise RuntimeError('No id specified')
+    assert 'position' in request.args, 'No position specified'
+    assert 'id' in request.args, 'No id specified'
 
     lat, lon = request.args['position'].split(',')
     position = float(lat), float(lon)
@@ -94,8 +89,7 @@ def stop_distance():
               key_prefix=lambda: request.args.get('stopids', ''),
               unless=lambda: request.args.get('no_cache') is not None)
 def get_etas():
-    if 'stopids' not in request.args:
-        raise RuntimeError('No stopids specified')
+    assert 'stopids' in request.args, 'No stopids specified'
     
     stopids = request.args['stopids']
     bus_etas = etas(stopids.split(','))
