@@ -36,13 +36,15 @@ class StopService(object):
     
     def get_stops(self, ids, position=None):
         """
-        Get list of stops (dicts) for a specified iterator of stop ids.
+        Get list of stops (dicts) for a specified sequence of stop ids.
+
         If the position argument is supplied (a two element sequence holding
         the latitude and longitude of the current position) then the distance
         in km will be added to each returned stop under the property
         'distance'.
+
         :param ids:
-            An iterator of stop ids.
+            A sequence of stop ids.
         :param position:
             Optional two element sequence holding the latitude and longitude,
             both floats.
