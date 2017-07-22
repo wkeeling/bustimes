@@ -1,7 +1,7 @@
-import requests
 from StringIO import StringIO
 
 from lxml import etree
+import requests
 
 
 _OXON_TIME_URL = 'http://www.buscms.com/api/REST/html/departureboard.aspx' \
@@ -11,13 +11,13 @@ _OXON_TIME_URL = 'http://www.buscms.com/api/REST/html/departureboard.aspx' \
 
 def etas(stopids):
     """
-    Get the bus etas for the specified iterator of stopids.
+    Get the bus etas for the specified list of stopids.
 
     Note that 'stopids' in this context refers to the 'stopids' property in
     the JSON data, not the surrogate 'id' of a stop.
 
     :param stopids:
-        An iterator of stopids.
+        A list of stopids.
     :return:
         A list of dicts, each dict representing the eta of a bus. Each
         dict has 3 items: 'service', 'dest' and 'time'.
@@ -32,8 +32,7 @@ def etas(stopids):
         time = eta['time']
         if 'mins' in time:
             return int(time[:len(time)-4])
-        else:
-            return 0
+        return 0
 
     data.sort(key=lambda eta: eta['dest'])
     data.sort(key=time_key)
