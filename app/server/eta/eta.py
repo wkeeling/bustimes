@@ -49,9 +49,9 @@ def _parse(html):
 
     for row in root.xpath('//tr[@class="rowServiceDeparture"]'):
         if len(row) == 3:
-            eta = dict(service=row[0].text,
-                       dest=row[1].text,
-                       time=row[2].text)
+            eta = dict(service=row[0].text.split()[0].strip(),
+                       dest=row[1].text.strip(),
+                       time=row[2].text.strip())
             results.append(eta)
 
     return results
